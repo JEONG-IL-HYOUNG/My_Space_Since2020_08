@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/mysignal.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <script src="js/jquery.js">
+  </script>
+  <script>
+    $(function(){
+    		$(".headC").click(function(){
+    			$(".headB").slideToggle();
+    		});
+    	});
+    </script>
+  <title>My Signals-HOME</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="container-small">
+        <a href="index.html" class="headA">MySignals</a>
+
+        <button type="button" class="headC">
+          <span class="fa fa-bars" title="MENU"></span>
+        </button>
+      </div>
+      <nav class="headB">
+        <ul>
+          <li>
+            <a href="index.html"> HOME </a>
+          </li>
+          <li>
+            <a href="blood.html"> BLOOD PRESSURE </a>
+          </li>
+          <li>
+            <a href="gluco.html"> GLUCOMETER </a>
+          </li>
+          <li>
+            <a href="temp.html"> TEMPERATURE </a>
+          </li>
+          <li>
+            <a href="spo2.html"> SPO2 </a>
+          </li>
+          <li>
+            <a href="spiro.html"> SPIROMETER </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="conA">
+    <div class="container">
+      <img src="img/mysignal logo.svg" alt="">
+      <h1>MY SIGNALS</h1>
+      <a href="mysignal_info.html"> My Signals 건강 관리 시작하기</a>
+    </div>
+  </section>
+
+  <section class="conB">
+    <div class="container">
+      <div class="text">
+        <img src="img/blood_pressure.png" alt="" align="center">
+        <h2>BLOOD PRESSURE</h2>
+        <a href="blood.html">혈압 관리</a>
+      </div>
+
+      <div class="text">
+        <img src="img/glucometer.png" alt="" align="center">
+        <h2>GLUCO METER</h2>
+        <a href="gluco.html">혈당 관리</a>
+      </div>
+
+      <div class="text">
+        <img src="img/temp.png" alt="" align="center">
+        <h2>TEMPERATURE</h2>
+        <a href="temp.html">체온 관리</a>
+      </div>
+
+      <div class="text">
+        <img src="img/spo2.png" alt="" align="center">
+        <h2>SPO2</h2>
+        <a href="blood.html">혈중 산소 농도 관리</a>
+      </div>
+
+      <div class="text">
+        <img src="img/spirometer.png" alt="" align="center">
+        <h2>SPIRO METER</h2>
+        <a href="gluco.html">폐 활량 관리</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="conC">
+    <div class="container">
+      <div class="photo"> </div>
+      <div class="text">
+        <h2>MOBIUS & MY SIGNALS</h2>
+        <p>My Signals 홈페이지는 IoT Device인 My Signals 의 측정 결과를 나타내주는 웹 사이트이다. </p>
+        <p>혈압 / 혈당 / 체온 / 혈중 산소 농도 / 폐 활량 의 측정 값 들을 한 눈에 볼 수 있다.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footA">
+        <h2>MySignals</h2>
+        <p>MySignal HomePage</p>
+
+        <nav class="footB">
+          <ul>
+            <li>
+              <a href="https://github.com/IoTKETI/nCube-Thyme-Arduino_MySignals"><span class="fab fa-github" title="nCube MySignals"></span></a>
+            </li>
+            <li>
+              <a href="https://github.com/IoTKETI/Android_MySignal"><span class="fas fa-tablet-alt" title="Android MySignals"></span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footC">
+        © KETI. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

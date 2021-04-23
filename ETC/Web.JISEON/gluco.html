@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/mysignal.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script>
+  $(function(){
+    $(".headC").click(function(){
+      $(".headB").slideToggle();
+    });
+  });
+</script>
+    <title>My Signals-GLUCO METER</title>
+  </head>
+  <body class="nohero">
+    <header>
+    	<div class="container">
+    		<div class="container-small">
+    		<a href="index.html" class="headA">My Signals</a>
+
+    		<button type="button" class="headC">
+    			<span class="fa fa-bars" title="MENU"></span>
+    		</button>
+    		</div>
+    		<nav class="headB">
+    			<ul>
+    				<li>
+    					<a href="index.html"> HOME </a>
+    				</li>
+    				<li>
+    					<a href="blood.html"> BLOOD PRESSURE </a>
+    				</li>
+    				<li>
+    					<a href="gluco.html"> GLUCOMETER </a>
+    				</li>
+    				<li>
+    					<a href="temp.html"> TEMPERATURE </a>
+    				</li>
+            <li>
+              <a href="spo2.html"> SPO2 </a>
+            </li>
+            <li>
+              <a href="spiro.html"> SPIROMETER </a>
+            </li>
+    			</ul>
+    		</nav>
+    	</div>
+    </header>
+
+    <section class="conLatest">
+      <div class="container">
+        <img src="img/glucometer.png" alt="" align="left">
+        <div class="text_latest">
+          <h2>혈당 측정 결과</h2>
+          <p> 최근 혈당 측정된 날짜는 18.2.22 이다.</p>
+          <p>최근 혈당 측정된 값은 99 이다.</p>
+          <p>정상 혈당 입니다.</p>
+          <p>
+            <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://203.253.128.161:7579/Mobius/mysignals/glucometer/la');
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("X-M2M-RI", "12345");
+            xhr.setRequestHeader("X-M2M-Origin", "S");
+            xhr.setRequestHeader("content-type", "application/vnd.onem2m-res+json;ty=4");
+            xhr.send();
+
+            xhr.onreadystatechange = function(e){
+              if(xhr.readyState === XMLHttpRequest.DONE){
+                if(xhr.status ===200){
+                    var result= JSON.parse(xhr.responseText);
+                    console.log(reuslt);
+                }else {
+                  console.log('Error!');
+                }
+              }
+            }
+            </script>
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class = "chart">
+      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+      <script type="text/javascript">
+
+              var xhr = new XMLHttpRequest();
+              xhr.open('GET', 'http://203.253.128.161:7579/Mobius/mysignals/glucometer?rcn=4&la=10');
+              xhr.setRequestHeader("Accept", "application/json");
+              xhr.setRequestHeader("X-M2M-RI", "12345");
+              xhr.setRequestHeader("X-M2M-Origin", "S");
+              xhr.setRequestHeader("content-type", "application/vnd.onem2m-res+json;ty=4");
+              xhr.send();
+
+              xhr.onreadystatechange = function(e){
+                if(xhr.readyState === XMLHttpRequest.DONE){
+                  if(xhr.status ===200){
+                  console.log(xhr.responseText);
+                    var result= JSON.parse(xhr.responseText);
+                    console.log(result);
+                    var conValue = new Array();
+                    var ctValue = new Array();
+                    var resultlength = result["m2m:rsp"]["m2m:cin"].length;
+
+                    if(resultlength <= 10){
+                      for(var i=0; i < resultlength; i++){
+                        console.log(result["m2m:rsp"]["m2m:cin"][i].con);
+                        var con = parseInt(result["m2m:rsp"]["m2m:cin"][i].con);
+                        conValue[i] = con;
+                        ctValue[i] = dateGmt(result["m2m:rsp"]["m2m:cin"][i].ct);
+
+                        Highcharts.chart('container', {
+                          chart: {
+                              type: 'line'
+                          },
+                          title: {
+                              text: 'GlucoMeter'
+                          },
+                          xAxis: {
+                              categories: [ctValue[0], ctValue[1], ctValue[2], ctValue[3], ctValue[4], ctValue[5], ctValue[6], ctValue[7], ctValue[8], ctValue[9]]
+                          },
+                          yAxis: {
+                              title: {
+                                  text: '혈당'
+                              }
+                          },
+                          plotOptions: {
+                              line: {
+                                  dataLabels: {
+                                      enabled: true
+                                  },
+                                  enableMouseTracking: false
+                              }
+                          },
+                          series: [{
+                            name: 'Glucose 혈당/포도당',
+                            data: [conValue[0], conValue[1], conValue[2], conValue[3], conValue[4], conValue[5], conValue[6], conValue[7], conValue[8], conValue[9]]
+                          }]
+                        });
+                      }
+                    }
+
+                  }else {
+                    console.log('Error!');
+                  }
+                }
+              };
+
+    function dateGmt(ct){
+      var resultCt="test";
+      var ctDate = ct.substr(0, 8);
+      var ctTime = ct.substr(9, 4);
+      console.log(ctDate+ctTime);
+
+      var ctYear = parseInt(ctDate.substr(0, 4));
+      var ctMonth = parseInt(ctDate.substr(4, 2));
+      var ctDay = parseInt(ctDate.substr(6, 2));
+
+      var ctHour = parseInt(ctTime.substr(0, 2)) + 9;
+
+      var ctMin = ctTime.substr(2, 2);
+
+      if(ctHour < 24){
+        resultCt = ctYear+"-"+ctMonth+"-"+ctDay+" "+ctHour+":"+ctMin;
+
+      }else if(ctHour >=24){
+        ctHour = ctHour - 24;
+        ctDay = ctDay + 1;
+
+        var MonthDay = ctMonth.toString()+ctDay.toString();
+        if(MonthDay === "0132"){
+          resultCt = ctYear +"-02-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0229"){
+          resultCt = ctYear+"-03-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0332"){
+          resultCt = ctYear+"-04-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0431"){
+          resultCt = ctYear+"-05-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0532"){
+          resultCt = ctYear+"-06-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0631"){
+          resultCt = ctYear+"-07-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0732"){
+          resultCt = ctYear+"-08-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0832"){
+          resultCt = ctYear+"-09-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "0931"){
+          resultCt = ctYear+"-10-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "1032"){
+          resultCt = ctYear+"-11-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay === "1131"){
+          resultCt = ctYear+"-12-01 "+ctHour+":"+ctMin;
+        }else if(MonthDay == "1232"){
+          ctYear = ctYear+1;
+          resultCt = ctYear+"-01-01 "+ctHour+":"+ctMin;
+        }
+      }
+
+      console.log(resultCt);
+      return resultCt;
+    }
+      </script>
+    </div>
+    </section>
+
+    <section class="conSub">
+      <div class="container">
+        <div class="photo">
+        </div>
+        <div class="text_latest">
+          <h2>혈압 관리</h2>
+          <p> 혈압 관리를 잘 하기 위해서는 이런 이러한 것을 해야하고 뭐 이것도 해야되고 저것도 해야되고 아 아 ㅏㅇ ㅏ아 엄청나게 관리를 열심히 해야된다는 말인것이다 뭐라고 적지 뭘 적지 도대체 뭘 해야될까 똥똥 위에 결과화면도 맘에 안들고 바꿔버려야겠다 어떻게 바꾸지 어떤식이 좋을까 으으응므</p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footA">
+          <h2>MySignals</h2>
+          <p>MySignal HomePage</p>
+
+          <nav class="footB">
+            <ul>
+              <li>
+                <a href="https://github.com/IoTKETI/nCube-Thyme-Arduino_MySignals"><span class="fab fa-github" title="nCube MySignals"></span></a>
+              </li>
+              <li>
+                <a href="https://github.com/IoTKETI/Android_MySignal"><span class="fas fa-tablet-alt"title="Android MySignals"></span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footC">
+          © KETI. All rights reserved.
+        </div>
+      </div>
+      </footer>
+  </body>
+</html>
