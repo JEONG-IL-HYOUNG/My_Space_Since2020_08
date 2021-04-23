@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+		<table frame=void cellpadding=3 cellspacing=0>
+        {% for key, value in copyright_home.items()  %}
+            <tr>
+            <th>{{ key }}</th>
+            <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+</body>
+</html>

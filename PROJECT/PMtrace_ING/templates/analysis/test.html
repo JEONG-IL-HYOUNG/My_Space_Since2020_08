@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .fileBox .fileName {display:inline-block;width:190px;height:30px;padding-left:10px;margin-right:5px;line-height:30px;border:1px solid #aaa;background-color:#fff;vertical-align:middle}
+        .fileBox .btn_file {display:inline-block; border:1px solid #000;width:100px;height:30px;font-size:0.8em;line-height:30px;text-align:center;vertical-align:middle}
+        .fileBox input[type="file"] {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    </style>
+    {#    #}
+    <form action="{{ url_for('analysis.test1') }}" enctype="multipart/form-data" method="post" accept="video/*">
+        <p>file transmit</p>
+        <input type="file" value="abc" name="local_file">
+        <input type="submit" value="전송">
+    </form>
+    <br>
+    {#    #}
+
+
+    <div class="fileBox">
+        <input type="text" class="fileName" readonly="readonly">
+        <label for="uploadBtn" class="btn_file">찾아보기</label>
+        <input type="file" id="uploadBtn" class="uploadBtn">
+    </div>
+    <br>
+    {#    #}
+    <h3>local file play</h3>
+    <video id="videoPlay" width="300" height="200" controls autoplay>
+        <source type="video/mp4" src="/static/sample-mp4-file.mp4" type="video/mp4"/>
+        Your browser does not support HTML5 video.
+    </video>
+
+    <br>
+    {#    #}aa
+{#    <form action="{{ url_for('analysis.test1') }}"  method="post">#}
+{#        <input type="radio" name="123" value="aaaaaaa">aaa#}
+{#        <input type="text">#}
+{#        <br>#}
+{#        <input type="radio" name="123" value="bbbbbbbb">bbb#}
+{#        <input type="text">#}
+{#        <input type="submit" value="sddaf">#}
+{#    </form>#}
+
+
+    <br>
+    <br>
+    <br>
+    <input type="radio" id="rd_1" name="test"><b>유튜브 등록</b>
+    <input type="text" id="text_1">
+    <br>
+    <input type="radio" id="rd_2" name="test"><b>영상 업로드</b>
+    <input type="text" id="text_2">
+    <br>
+    <input type="button" onclick="submit_chk()" value="send">
+
+
+    {% block endscript %}
+        <script>
+            var uploadFile = $('.fileBox .uploadBtn');
+            uploadFile.on('change', function(){
+                if(window.FileReader){
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/').pop().split('\\').pop();
+                }
+                $(this).siblings('.fileName').val(filename);
+            });
+
+        </script>
+
+
+
+
+
+        <script>
+            function submit_chk(){
+                var rd_1_chk = document.getElementById('rd_1').checked;
+                var rd_2_chk = document.getElementById('rd_2').checked;
+                if(rd_1_chk){
+                    alert(document.getElementById('text_1').value);
+                } else if(rd_2_chk){
+                    alert(document.getElementById('text_2').value);
+                } else {
+                    alert('no check');
+                }
+            }
+        </script>
+
+    {% endblock %}
+{% endblock %}

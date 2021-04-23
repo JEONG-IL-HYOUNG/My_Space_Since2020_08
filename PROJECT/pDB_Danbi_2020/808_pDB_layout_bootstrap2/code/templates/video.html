@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<font size="3" color="#062b51" font-weight: bold>
+    <center>
+        <h2 class="jumbotron-heading">
+            유튜브 불법/유사 동영상 검색 서비스
+        </h2> <br>
+
+        {% if video_pair_cnt == 0 %}
+        유사 비디오가 없습니다.
+        {% else %}
+
+        {% for item in std_sim_video_info %}
+
+        <div class="row">
+            <div class="cell" style="text-align: center;">
+                <h5 class="card-text">기준동영상</h6>
+            </div>
+            <div class="cell" style="text-align: center;">
+                <h5 class="card-text">유사동영상</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell" style="background-color: #fcfcfc">
+                <center>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/{{item[1]}}?start={{item[6]}}&end={{item[7]}}"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </center>
+            </div>
+            <div class="cell" style="background-color: #fcfcfc">
+                <center>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/{{ item[4]}}?start={{item[8]}}&end={{item[9]}}"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </center>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell" style="text-indent:-5px; padding: 10px; text-align: left;">
+                <h6 class="card-text">타이틀: {{item[11]}}</h6>
+                <h6 class="card-text">동영상ID: {{item[0]}}</h6>
+                <h6 class="card-text">채널명: {{item[2]}}</h6>
+                <h6 class="card-text">유사구간: 시작 {{item[6]}}초 - 종료 {{item[7]}}초</h6>
+            </div>
+            <div class="cell" style="text-indent:-5px; padding: 10px; text-align: left;">
+                <h6 class="card-text">타이틀: {{ item[12] }}</h6>
+                <h6 class="card-text">동영상ID: {{ item[3] }}</h6>
+                <h6 class="card-text">채널명: {{item[5]}}</h6>
+                <h6 class="card-text">유사구간: 시작 {{item[8]}}초 - 종료 {{item[9]}}초</h6>
+                <h6 class="card-text">영상차이도: {{ item[10] }} 태그유사도: {{item[13]}} </h6>
+            </div>
+        </div>
+
+        {% endfor %}
+        {% endif %}
+        {% endblock %}

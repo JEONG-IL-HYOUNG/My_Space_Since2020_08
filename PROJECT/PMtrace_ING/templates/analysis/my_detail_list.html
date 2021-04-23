@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body{text-align: center; background-color: #f5f5f5;}
+        #header{width: 100%;  height: 48px; background-color: #ffffff;}
+        #logo_s{margin: 5px 5px 5px 5px; float: left;}
+        #login_round{width: 100px;  height: 40px;  float: right;  border-radius: 100px;  border: solid 2px #505050;  background-color: #505050;
+            text-align: center; margin-top: 3px; margin-right: 20px}
+        #login_text{margin: 7px auto; font-family: Roboto;  font-size: 20px;  font-weight: 500;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;
+            text-align: center;  color: #ffffff;}
+        #wk_round{width: 100px;  height: 40px;  float: right;  border-radius: 100px;  border: solid 2px #505050;  background-color: white;
+            text-align: center; margin-right: 20px; margin-top: 3px;}
+        #wk_text{margin: 7px auto; font-family: Roboto;  font-size: 20px;  font-weight: 500;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;
+            text-align: center;  color: #555555;}
+
+        #wrap{background-color: #f5f5f5}
+        #height100{height: 50px; background-color: #f5f5f5; }
+        #result{width: 1280px;  height: 200px;  margin: 0 auto;  border-radius: 20px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+            background-color: #ffffff; display: inline-block;}
+
+        #ytb_section{width: 286px; height: 160px; background-color: white; padding:20px 50px; display: inline-block; border-radius: 20px;}
+
+        #meta_section{width: 880px; height: 180px; padding-top: 20px; background-color: white; float: right; text-align: start; border-radius: 20px;}
+        #meta_section1{width: 120px; height: 20px;  display: inline-block; padding: 13px 0 24px 0;  font-family: Roboto;  font-size: 20px;  font-weight: bold;
+            font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050; }
+        #meta_section2{width: 600px; height: 20px; float: right; font-size: 20px; padding:13px 50px 14px 0;
+            font-weight: 300;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: right;  color: #505050;
+            overflow-x: hidden;  white-space: nowrap;  text-overflow: ellipsis; }
+
+        .result_n{width: 1280px; height: 880px; background-color: white; margin:20px auto; border-radius: 20px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);}
+        .result_n div{border-width: 1px;}
+        #rlt{width: 170px; height: 40px; background-color: white; padding: 50px; font-family: NotoSansCJKKR;
+            font-size: 40px;  font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;
+            letter-spacing: normal;  text-align: left;  color: #505050; border-radius: 20px;}
+
+        #meta{width: 100%; height: 140px; background-color: beige;}
+        #meta_text{width: 74px;height: 140px;  background-color:white; float: left; padding-left: 50px; font-family: Roboto;  font-size: 20px;
+            font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050;}
+        #meta_text > p {padding-bottom: 25px}
+        #meta_detail{width: 1106px; height: 140px; background-color:white; display: inline-block; padding-left: 50px; font-family: Roboto;  font-size: 16px;
+            font-weight: 300;  font-stretch: normal;  font-style: normal;  line-height: normal;  letter-spacing: normal;  text-align: left;  color: #505050;}
+        #meta_detail > p {padding-bottom: 25px}
+
+
+        #sim{width: 1280px; height: 150px; background-color: white; text-align: center; padding-top: 10px; display: inline-flex;}
+        #vid_sim{width: 640px; height: 98px; background-color: white; padding-top: 29px; padding-bottom: 23px; text-align: center; }
+        #vid_sim_text1{font-family: NotoSansCJKKR;  font-size: 20px;  font-weight: bold;  font-stretch: normal;
+            font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: center;  color: #505050; padding-bottom: 20px}
+        #vid_sim_text2{font-family: NotoSansCJKKR;  font-size: 28px;  font-weight: bold;  font-stretch: normal;
+            font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: center;  color: #0057ff;}
+
+        #vertical_bar{display: inline; background-color: #c4c4c4; height: 80px; width: 2px; margin-top: 20px;}
+        #meta_sim{width: 640px; height: 98px; background-color:white; padding-top: 29px; padding-bottom: 23px;}
+
+
+        #st_vid_text{width: 133px; height: 50px; background-color: white; padding-left: 50px;}
+        #st_vid_text > p {text-align: left;}
+        #st_vid_text1{font-family: NotoSansCJKKR;  font-size: 20px;  font-weight: bold;
+            font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050; padding-bottom: 5px;}
+        #st_vid_text2{font-family: Roboto;  font-size: 16px;  font-weight: 300;  font-stretch: normal;
+            font-style: normal;  line-height: normal;  letter-spacing: normal;  text-align: left;  color: #505050; }
+
+        img {max-width: 100%; height: 100%;}
+        #st_vid{width: 1280px; height: 125px; background-color: white; }
+        #st_vid1{width: 222px; height: 125px; display: inline-block; background-color:white; padding-left: 50px;}
+        #st_vid2{width: 222px; height: 125px; float: right; margin-right: 15px; margin-left: 12px; background-color:white; }
+
+
+        #search_vid_text{width: 133px; height: 50px; background-color: white; padding-left: 50px; margin-top: 20px;}
+        #search_vid_text >p {text-align: left;}
+        #search_vid{width: 1280px; height: 125px; background-color: white;}
+
+        #search_vid1{width: 222px; height: 125px; display: inline-block; background-color:white; padding-left: 50px;}
+        #search_vid2{width: 222px; height: 125px; float: right; margin-right: 15px; margin-left: 12px; background-color:white; }
+
+    </style>
+
+</head>
+<body>
+<div id="header">
+    <span id="logo_s">
+        <a href="{{ url_for('main.index') }}">
+            <img src="/static/logo_s.png">
+        </a>
+    </span>
+
+    {% if g.user %}
+        <a href="{{ url_for('auth.logout') }}">
+            <span id="login_round">
+                <div id="login_text">Log out</div>
+            </span>
+        </a>
+
+        <a href="{{ url_for('analysis.my_analy_list') }}">
+            <span id="wk_round">
+                <div id="wk_text">My_Works</div>
+            </span>
+        </a>
+    {% else %}
+        <a href="{{ url_for('auth.login') }}">
+            <span id="login_round">
+                <div id="login_text">Log In</div>
+            </span>
+        </a>
+    {% endif %}
+</div>
+<!-- 헤더 end -->
+<div id="wrap">
+    <div id="height100"></div>
+    <div id="result">
+        {% if result_project.mov_prov_id %}
+            <div id="ytb_section">
+                <iframe  width= "286" height= "160" src="https://www.youtube.com/embed/{{result_project.mov_prov_id}}?autoplay=1&mute=1" frameborder="0"
+                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        {% else %}
+            <div id="ytb_section">
+                <video id="videoPlay" width="286" height="160" controls autoplay>
+                    <source type="video/mp4" src="/static/815_mtrace_anal/ps8010/{{result_project.mov_id}}.mp4" type="video/mp4"/>
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+
+        {% endif %}
+
+
+
+        <div id="meta_section">
+            <div>
+                <div id="meta_section1">Title</div>
+                <div id="meta_section2">{{result_project.mov_title}}</div>
+            </div>
+            <div>
+                <div id="meta_section1">Search-Date</div>
+                <div id="meta_section2">{{result_project.cdate}}</div>
+            </div>
+            <div>
+                <div id="meta_section1">Key-word</div>
+                <div id="meta_section2">{{result_project.mov_tag}}</div>
+            </div>
+        </div>
+    </div>
+
+    {% if result_match_list and my_sim %}
+{#        {{ result_match_list }}<br>#}
+{#        {{ my_sim }}<br>#}
+        {% for a, b, c in zip(result_match_list, my_sim, my_meta) %}
+            {% for x in a %}
+                <div class="result_n">
+                    <!-- result_n -->
+                    <div id="rlt">
+                        result_1
+                    </div>
+                    <!-- 유사동영상 메타정보 부분 -->
+                    <div id="meta">
+                        <div id="meta_text">
+                            <p>URL</p>
+                            <p>Title</p>
+                            <p>Channel</p>
+                        </div>
+                        <div id="meta_detail">
+                            <p>https://www.youtube.com/watch?v={{x.mov_prov_id}}</p>
+                            <p>{{x.mov_title}}</p>
+                            <p>{{x.mov_owner}}</p>
+                        </div>
+                    </div>
+
+                    <!-- 유사도 -->
+                    <div id="sim" >
+                        <div id="vid_sim">
+                            <p id="vid_sim_text1">영상 유사도</p>
+                            <p id="vid_sim_text2">{{b.mov_sim}}%</p>
+                        </div>
+                        <div id="vertical_bar">
+
+                        </div>
+                        <div id="meta_sim">
+                            <p id="vid_sim_text1">메타 유사도</p>
+                            <p id="vid_sim_text2">{{c.meta_sim}}%</p>
+                        </div>
+                    </div>
+
+                    <!-- 기준동영상 -->
+                    <div id="st_vid_text">
+                        <p id="st_vid_text1">기준동영상</p>
+                        <p id="st_vid_text2">{{b.smov_start_sec}} - {{b.smov_end_sec}}</p>
+                    </div>
+
+                    <div id="st_vid">
+                        <div id="st_vid1">
+                            <iframe src="https://www.youtube.com/embed/{{result_project.mov_prov_id}}?autoplay=1&mute=1" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                    style="max-width: 100%; height: 100%;">
+                            </iframe>
+                        </div>
+                        <div id="st_vid2"><img src="/static/815/output/ps8020/{{result_project.mov_id}}/000001.png"></div>
+                        <div id="st_vid2"><img src="/static/815/output/ps8020/{{result_project.mov_id}}/000002.png"></div>
+                        <div id="st_vid2"><img src="/static/815/output/ps8020/{{result_project.mov_id}}/000003.png"></div>
+                        <div id="st_vid2"><img src="/static/815/output/ps8020/{{result_project.mov_id}}/000004.png"></div>
+                    </div>
+
+
+                    <!-- 유사동영상 -->
+                    <div id="search_vid_text">
+                        <p id="st_vid_text1">유사동영상</p>
+                        <p id="st_vid_text2">{{b.rmov_start_sec}} - {{b.rmov_end_sec}}</p>
+                    </div>
+
+                    <div id="search_vid">
+                        <span id="search_vid1">
+                            <iframe src="https://www.youtube.com/embed/{{x.mov_prov_id}}?autoplay=1&mute=1" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                    style="max-width: 100%; height: 100%;">
+                            </iframe>
+                        </span>
+                        <span id="search_vid2">
+                            <img src="/static/815_mtrace_anal/ps8020/{{x.mov_id}}/000001.png">
+                        </span>
+                        <span id="search_vid2">
+                            <img src="/static/815_mtrace_anal/ps8020/{{x.mov_id}}/000002.png">
+                        </span>
+                        <span id="search_vid2">
+                            <img src="/static/815_mtrace_anal/ps8020/{{x.mov_id}}/000003.png">
+                        </span>
+                        <span id="search_vid2">
+                            <img src="/static/815_mtrace_anal/ps8020/{{x.mov_id}}/000004.png">
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <title>MLAB MSTUV</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+  </head>
+
+  <body>
+      <nav include-html="/static/html/nav.html">
+      </nav>
+      <br>
+
+      <font size="3" color="#062b51" font-weight: bold>
+        <center>
+      <h2 class="jumbotron-heading">
+        유튜브 불법/유사 동영상 검색 서비스
+      </h2><br>
+
+      {% if video_pair_cnt == 0 %}
+      유사 비디오가 없습니다.
+      {% else %}
+
+      {% for item in std_sim_video_info %}
+
+      <div class="row">
+        <div class="cell" style="text-align: center;">
+        <h5 class="card-text">기준동영상</h6>
+        </div>
+        <div class="cell" style="text-align: center;">
+        <h5 class="card-text">유사동영상</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell" style="background-color: #fcfcfc">
+          <center>
+          <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/{{item[1]}}?start={{item[6]}}&end={{item[7]}}"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </center>
+        </div>
+        <div class="cell" style="background-color: #fcfcfc">
+          <center>
+          <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/{{ item[4]}}?start={{item[8]}}&end={{item[9]}}"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+          </center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell" style="text-indent:-5px; padding: 10px; text-align: left;">
+          <h6 class="card-text">타이틀: {{item[11]}}</h6>
+          <h6 class="card-text">동영상ID: {{item[0]}}</h6>
+          <h6 class="card-text">채널명: {{item[2]}}</h6>	
+          <h6 class="card-text">유사구간: 시작 {{item[6]}}초 - 종료 {{item[7]}}초</h6>
+        </div>
+        <div class="cell" style="text-indent:-5px; padding: 10px; text-align: left;">
+          <h6 class="card-text">타이틀: {{ item[12] }}</h6>
+          <h6 class="card-text">동영상ID: {{ item[3] }}</h6>
+	  <h6 class="card-text">채널명: {{item[5]}}</h6>		  
+          <h6 class="card-text">유사구간: 시작 {{item[8]}}초 - 종료 {{item[9]}}초</h6>
+          <h6 class="card-text">영상차이도: {{ item[10] }} 태그유사도: {{item[13]}} </h6>
+	</div>
+      </div>
+
+      {% endfor %}
+      {% endif %}
+
+    </body>
+      <script>
+      includeHTML( function () {
+        includeRouter( function () {
+          // do something in the future
+        });
+      });
+      </script>
+  </html>

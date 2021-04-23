@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><center>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+    maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <meta name="description" content="The Overflowing church website's main page" />
+    <meta name="author" content="unikys@gmail.com" />
+    <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+
+    <title>영상분석기반 유사/불법 동영상 검색 시연</title>
+    <script>
+      //일형 - 자바스크립트 사용해서 post방식으로 넘기기
+      //강효씨 수정
+
+      function goData(e){
+        var y_e = e.dataset.y_e;
+        var form = document.getElementById(y_e);
+        form.submit();
+        }
+    </script>
+
+ </head>
+ <body>
+     <nav include-html="/static/html/nav.html">
+    </nav>
+    <br>
+
+  <section class="jumbotron">
+    <div class="container">
+      <font size="5" font-weight: bold>
+      <h1 class="jumbotron-heading">유튜브 불법/유사 동영상 검색 서비스</h1>
+      </font>
+    </div>
+  </section>
+
+    <div class="parent">
+      <div class="first">
+        <div>
+          <font size="4" color="#04243e" font-weight: bold>
+        <h1><p>기준 영상 검색</p></h1></font>
+        <br>
+	      <form action="copyright_result" method="post">
+        <font size="5" color="#04243e" font-weight: bold><p>
+          동영상 아이디로 검색</p>
+          <input type="text" name="imgbase_search_videoid"  style="width:250;
+            border:transparent">
+          <input type="submit" value="클릭" style="border:2px solid #2e94d7" >
+          <p class="p_tooltip"><span class="p_btn">
+          <p>
+          <font size="3" color="#04243e" font-weight: lighter>sample:<br>
+          21C93939-65B0-4C4F-B41D-150204EC226D <br>
+          2E6F1B44-43EF-4632-B5E2-60DEBBDF0245 <br>
+	        361E72EB-3837-4BF5-BE43-68375D6DAB10
+          </p></font>
+          <br>
+      
+    	<form action="copyright_result" method="post">
+      <p><font size="5" font-weight: bold>YouTube 아이디로 검색</p>
+      <input type="text" name="imgbase_search_youtubeid" style="width:250;
+            border:transparent">
+	    <input type="submit" value="클릭" style="border:2px solid #2e94d7" >
+	    </form>
+      <p class="p_tooltip"><span class="p_btn">
+        <font size="4" font-weight: bold>
+        <p>유튜브아이디로 엠스터브에서 보유중인 동영상을 검색합니다.</p>
+        <p>
+          <font size="2" color="#04243e" font-weight: lighter>SAMPLE:<br>
+          2A316EA9-106E-4A12-9946-A0E03BA68690 <br>
+          067B0EC2-ADF2-4F03-9DDF-AD39F27DE04E <br>
+          2E6F1B44-43EF-4632-B5E2-60DEBBDF0245
+          </p></font>
+          <br>
+        
+	    <form action="copyright_result_showall" method="post">
+        <div size="5" font-weight: bold><P>전체보기
+      <input type="submit" value="클릭" style="border:2px solid #2e94d7"></P>
+      <p class="p_tooltip"><span class="p_btn">
+        <font size="4" color="#04243e" font-weight: lighter>
+        전체 유사동영상을 10개씩 랜덤하게 표출(동일채널 검색안함)</p>
+        </div></font></form></div></div>
+    </div>
+
+    <div class="second">
+    <div size="4" color="#04243e" font-weight: bold>
+    <h1><p>{{ today_str }} 일자 현황</p></h1>
+      <br>
+      <br>
+      <form method="post" action="/post">
+        <table id="table1_copyright" frame=void cellpadding=3 cellspacing=0>
+          <tr>
+            <th><input type="text" value="총검색결과" name="imgbase_search_videoid"  style="width:250; height:40;
+            border:1px solid transparent"></th>
+            <td><input type="text" value="{{ video_cnt }}건" name="imgbase_search_videoid"  style="width:250; height:40;
+            border:1px solid transparent"></td>
+            </tr>
+            <tr>
+            <th><input type="text" value="신규검색결과" name="imgbase_search_videoid"  style="width:250; height:40;
+            border:1px solid transparent"></th>
+            <td><input type="text" value="{{ video_today_cnt }}건" name="imgbase_search_videoid"  style="width:250; height:40;
+            border:1px solid transparent"></td>
+            </tr>
+        </table>
+        </form>
+        <br>
+        <br>
+        
+
+      <h1><p>신규검색 리스트</p></h1>
+      <br>
+      <table id="table1_copyright" border="1" style="color:black; text-align: center;">
+        <tr>
+          <td style="text-align: center;">검 색 일 자</td>
+          <td style="text-align: center;" colspan="2">YouTube 동영상</td>
+        </tr>
+                 
+        {% for youtube_id, title, date in same_video_info %}
+        <tr>
+          <td style="text-align: center;">
+            {{date}}
+          </td>
+          <td style="text-align: center;">
+            <form action="copyright_result" method="post" name="userinput" id=y_{{ youtube_id }}>
+              <input type="hidden" value= 1 name= "youtube_id" >
+              <input type="hidden" value = "" name="imgbase_search_videoid"> 
+              <input type="hidden"  value = {{ youtube_id }} name="imgbase_search_youtubeid">
+              <a href="#" onclick="goData(this)" data-y_e = y_{{ youtube_id }}>{{ title[:30] }}</a><!--강효씨 수정-->
+            </form>
+          </td>
+          <!-- <td>
+
+            <form action="copyright_result" method="post">
+              <input type="hidden" value = "" name="imgbase_search_videoid"> 
+              <input type="hidden"  value = {{ youtube_id }} name="imgbase_search_youtubeid">
+            </form> 
+
+            <form action="copyright_result" method="post">
+              <input type="hidden" name="youtube_id"> 이 줄은 원래 주석처리해놨엇음
+              <input type="hidden" value = "" name="imgbase_search_videoid"> 
+              <input type="hidden"  value = {{ youtube_id }} name="imgbase_search_youtubeid"> 
+              <input type="submit"  value="click">
+            </form>
+          </td>    
+               -->
+        </tr>
+        {% endfor %}
+               
+        </table>
+        </div></font>
+      </form>
+      </div>
+    </div>
+        
+ </body>
+<script>
+includeHTML( function () {
+  includeRouter( function () {
+    // do something in the future
+  });
+});
+</script>
+</html>

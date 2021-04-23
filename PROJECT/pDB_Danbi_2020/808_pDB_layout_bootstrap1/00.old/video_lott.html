@@ -1,0 +1,132 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+	<meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+	<meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+	<meta name="format-detection" content="telephone=no"> <!--// iOS safari 전화번호 자동탐색 제어 -->
+	<title>롯데홈쇼핑</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    
+    <script src="/static/js/includeHTML.js"></script>
+	<script src="/static/js/includeRouter.js"></script>
+	
+</head>
+
+<body>
+	<nav include-html="/static/html/nav.html">
+	</nav>
+
+	<!-- 아래는 MLAB에서 제작한 MSTUV 동영상 매칭 코드 참조한 부분임 -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div class="video_list_wrap view">
+				<div class="broadcast_area view">
+					<div class="area_content">
+						<video id="event_video" controls="controls" width="100%" playsinline></video>
+					</div>
+				</div>
+				<!-- MSTUV 동영상 정보 시작 -->
+				<div class="content_head view"></div>
+				<!--// 동영상 정보 끝 -->
+
+				<!-- 연관 상품 -->
+				<div class="pdt_list_wrap view">
+					<button type="button" class="pdt_list_btn">
+						<img src="/resources/images/pdt_list_btn_icon.png"></button> 
+						<!-- pdt_list button -->
+					<div class="swiper-container">
+						<ul class="swiper-wrapper"></ul>
+					</div>
+				</div>
+			</div>
+			<section class="pd_detail tab_wrap">
+				<!-- 탭 -->
+				<div class="pd_detail_tab tab_menu" id="goods_detail_tab">
+					<ul class="ea4 tab_menu">
+						<li class="tab_btn detail on">
+							<a href="javascript:;">
+								<span>
+									<span>쇼핑 매칭</span>
+									<p class="p_tooltip"><span class="p_btn">?
+									</span>
+									<span class="p_cont">
+										쇼핑 매칭은 비디오 정보와 대표상품의 카테고리 정보를 조합하여 제품을 추천합니다.
+									</span></p>
+								</span>
+							</a>
+						</li>
+						<li class="tab_btn gdas">
+							<a href="javascript:;">
+								<span>이벤트 정보</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 쇼핑 매칭 section 시작 -->
+				<section class="tab_cont pd_detail_content on" id="gdas_content">
+					<div class="showroom_prod">
+						<ul class="prod_list"></ul>
+					</div>
+				</section>
+				<!--// 쇼핑 매칭 section 끝 -->
+				<!-- 이벤트 정보 section 시작 -->
+				<section class="tab_cont pd_detail_content on">
+					<div class="line_section">
+						<ul class="event_list"></ul>
+					</div>
+				</section>
+				<!-- // 이벤트 정보 section 끝 -->
+		</section>
+		</div>
+		<!-- 상세보기 팝업 -->
+		<div class="slideTogglebox">
+			<a class="slidebox_close_btn">
+				<img src="/resources/images/close_icon.png"></a>
+			<div class="slide_box_wrap">
+				<div class="pdt_cont">
+					<div class="img_thumb">
+						<img class="completed-lazyload" src=''>
+					</div>
+					<div class="info_thumb">
+						<div class="prod_tit_p" data-link-info=""></div>
+					</div>
+				</div> <!-- pdt_cont -->
+				<div class="detail_popup img_statem" id="zoomWrap"></div>
+			</div> <!-- slide_box_wrap -->
+
+			<div class="popup_extend_btn"></div> <!-- 상세보기 팝업 확장버튼 -->
+
+			<div class="pd_buy_section">
+				<div class="btn_area">
+					<span><button type="button" class="btn_ltype1 c2">구매 바로가기</button></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/resources/js/pdt_list.js"></script>
+	<!--// pdt_list js -->
+	<script type="text/javascript" src="/resources/js/event_video_detail.js"></script>
+	<script type="text/javascript" src="/resources/js/video_timeline.js"></script>
+	<script type="text/javascript">
+		var mapping_obj = JSON.parse('<%= request.getAttribute("videoDetailView").toString()%>');
+		event_video_parse();
+	</script>
+	</body>
+	<script>
+		includeHTML( function () {
+		  includeRouter( function () {
+			// do something in the future
+		  });
+		});
+	  </script>
+</html>

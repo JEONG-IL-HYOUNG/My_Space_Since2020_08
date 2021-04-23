@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>UI_TEST</title>
+    <style>
+    /* 리셋 */
+    * {margin: 0; padding: 0;}
+
+    /* 전체 레이아웃 */
+    body{background-color: #f0f0f0;}
+    #header{width: 100%;  height: 48px; background-color: #ffffff;}
+    #logo_s{width: 158px; height: 40px; margin-top: 4px;}
+    #login_round{width: 100px;  height: 40px;  float: right;  border-radius: 100px;  border: solid 2px #505050;  background-color: #505050;
+        text-align: center; margin-right: 40px;}
+
+    #login_text{margin: 7px auto; font-family: Roboto;  font-size: 20px;  font-weight: 500;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;
+                text-align: center;  color: #ffffff;}    
+    #search_main{ width: 960px;  height: 400px;  margin: 80px auto;    border-radius: 20px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff; text-align: center;}
+    #logo_m{width:100%; height: 58px; padding-top: 50px; }
+    #text_100{ margin-top: 20px; font-family: NotoSansCJKKR;  font-size: 18px;  font-weight: 900;  font-stretch: normal;  font-style: normal;
+            font-style: normal;  line-height: 1;  letter-spacing: normal;  color: #505050; }
+    #input{}
+    input[type=text]{width:300px; height:40px; margin:60px 30px auto; padding: 0px 352px 0px 15px; border-radius: 100px;
+                    border: solid 2px #505050; background-color: #ffffff;}
+    input[type=submit]{ width: 120px;  height: 40px;  margin: 20px auto;  padding: 12px 45px;  border-radius: 100px; 
+                    border: solid 2px #505050; background-color: #505050;  font-size: 16px;  font-weight: 500;  font-stretch: normal;  font-style: normal; 
+                    line-height: 1; letter-spacing: normal;  text-align: center;  color: #ffffff;}    
+    #search_content{width: 920px;  height: 200px;  margin: 50px auto;  padding: 20px 20px;  border-radius: 20px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff; }               
+    #ytb_section{width: 326px; height: 100%; display: inline-block;}
+    .content_section{width: 590px; height: 100%; float: right; background-color: aqua;}
+    .content_section p{padding-top: 6px; padding-bottom: 14px;}
+    .content_section span[id=meta_text2]{ text-align: right;}
+
+    #mlogo{width: 132px; height: 100px;  float: right; padding: 0 50px 0 0 ;}
+        
+    </style> 
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 헤더부분 -->
+        <div id="header">
+            <span id="logo_s">
+                <a href="#">
+                    <img src="img/logo_s.png">
+                </a>
+            </span>
+            <span id="login_round">
+                <div id="login_text">Log In</div>
+            </span>          
+        </div>
+        <!-- #UI-100 메인 -->
+        <div id="search_main">
+            <div id="logo_m">
+                <img src="img/logo_m.png" alt="">
+            </div>
+            <div id="text_100">
+                -유사 영상 검색 및 분석-
+            </div>
+            <div id="input">
+                <input type="text" name="" value=""><br>
+                <input type="submit" name="" value="검색">
+            </div>
+        </div>
+
+        <!-- #UI-100_1검색 버튼 눌렀을 때 나오는 페이지 -->
+
+        <div id="search_content">
+            <div id="ytb_section">      
+                <iframe  height="200" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>            
+            <div class="content_section">                               
+               <p>
+                   <span id="meta_text1">URL::</span>
+                   <span id="meta_text2">aaa</span>
+                </p>
+                <p>
+                    <span id="meta_text1">Title::</span>
+                    <span id="meta_text2"></span>
+                 </p>
+                 <p>
+                    <span id="meta_text1">Channel::</span>
+                    <span id="meta_text2"></span>
+                 </p>
+                 <p>
+                    <span id="meta_text1">Key-word::</span>
+                    <span id="meta_text2"></span>
+                 </p>
+                 <p>
+                    <span id="meta_text1">View::</span>
+                    <span id="meta_text2"></span>
+                 </p>
+                
+            </div>
+        </div>
+        <div id="mlogo">
+            <img src="img/logo_mlab.png" alt="">
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+            
+            <!-- <table border="1" width="900" height="250">
+                <tr>
+                    <td rowspan="3"><iframe id="ytb_section" width="300"height="220" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td>aa</td>
+                    <td>aa</td>
+                    <td>aa</td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table> -->

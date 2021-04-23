@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <title>0918 TEST PAGE</title>
+
+    <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+        <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">;
+
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+
+    <!-- <script>
+        일형 - 자바스크립트 사용해서 post방식으로 넘기기
+        강효씨 수정
+  
+        function goData(e){
+          var y_e = e.dataset.y_e;
+          var form = document.getElementById(y_e);
+          form.submit();
+          }
+      </script> -->
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Flask App</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('search') }}">Search</a></li>                    
+                </ul>
+            </nav>
+        </div>
+    </header>   
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>

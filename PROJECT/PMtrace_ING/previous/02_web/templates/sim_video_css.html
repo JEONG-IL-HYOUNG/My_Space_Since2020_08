@@ -1,0 +1,351 @@
+<html lang="ko">
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+	maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+	<meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+	<meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <meta name="description" content="The Overflowing church website's main page" />
+    <meta name="author" content="unikys@gmail.com" />
+    <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>MLAB MSTUV</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+
+    </head>
+    <body>
+        <nav include-html="/static/html/nav.html">
+        </nav>
+        <br>
+
+    {% if std_video_cnt == 0 %}
+    데이터가 없습니다. 되돌아가서 다시 검색해주세요. 
+    <SCRIPT language="javaScript">
+        function goBack(){
+            window.history.back();
+        }
+    </SCRIPT>
+    <input type = 'button' value='뒤로가기' onclick="goBack();" />
+
+    {% else %}
+
+    <main role="main">
+        <!--<section class="jumbotron">-->
+            <div class="container">
+            <font size="4" color="white" font-weight: bold><center>
+                <h3>비디오 유사도 테스트</h3><br>
+                <h5>검색어: "{{ keyword }}"</h5>
+            </center></font>
+            </div>
+        <!-- </section> -->
+    <!-- <form enctype="multipart/form-data"><center>-->
+            <span style="font-weight:bold;"></span>
+            <div class="table-responsive">
+            <center>
+            <table id="table2_sim" frame=void cellpadding=3 cellspacing=0>
+                <tr>
+                    <center>
+                <th colspan=5 text-align=center bgcolor=#004d7a>
+                    <font color="white"><b>기준동영상</b></font></th>
+                <td colspan=5 text-align=center bgcolor=#004d7a>
+                    <font color="white"><b>유사동영상</b></font></td>
+                </center>
+                </tr>
+                <tr>
+                    <th>
+                        <iframe width="336" height="189" 
+                        src="https://www.youtube.com/embed/{{std_video_df['youtube_id'].iloc[0]}}"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </th>
+                    <td></td><td></td><td></td><td></td></td><td></td>
+                <td>
+                    <iframe width="336" height="189" 
+                    src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[0]}}"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                    </iframe></td>
+                    <td>
+                    <iframe width="336" height="189" 
+                    src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[1]}}"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                     </iframe></td>
+                    <td>
+                    <iframe width="336" height="189" 
+                    src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[2]}}"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                    </iframe></td>
+                    <td>
+                    <iframe width="336" height="189" 
+                    src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[3]}}"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                    </iframe></td>
+                </tr>
+                <tr>
+                  <th>
+                    <h6 class="card-text">
+                        {{ std_video_df['title'].iloc[0] }}
+                    </h6>
+                  </th>
+                  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+                  <td></td>
+                <td>{{ sim_video_df['title'].iloc[0] }}</td>
+                <td>{{ sim_video_df['title'].iloc[1] }}</td>
+                <td>{{ sim_video_df['title'].iloc[2] }}</td>
+                <td>{{ sim_video_df['title'].iloc[3] }}</td></tr>
+                <tr>
+                <th>
+                    <h6 class="card-text"> {{ std_video_df['video_id'].iloc[0] }}</h6>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[0] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[1] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[2] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[3] }}</td>
+               </tr>
+               
+                <tr>
+                <th class="card-text"></th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[0] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[1] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[2] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[3] }}</td></tr>
+                <tr>
+                    <th>
+                        <iframe width="336" height="189" src="https://www.youtube.com/embed/{{std_video_df['youtube_id'].iloc[1]}}" 
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                        </iframe>
+                    </th>
+                    <td></td><td></td><td></td><td></td></td><td></td>
+                    <td><iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[4]}}" 
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                        </iframe>
+                    </td>
+                    <td><iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[5]}}" 
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    </td>
+                    <td><iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[6]}}" 
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    </td>
+                    <td><iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[7]}}" 
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                <th>
+                <h6 class="card-text">{{ std_video_df['title'].iloc[1] }}</h6>
+                </th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>{{ sim_video_df['title'].iloc[4] }}</td>
+                <td>{{ sim_video_df['title'].iloc[5] }}</td>
+                <td>{{ sim_video_df['title'].iloc[6] }}</td>
+                <td>{{ sim_video_df['title'].iloc[7] }}</td></tr>
+                <tr>
+                    <th>
+                        <h6 class="card-text"> {{ std_video_df['video_id'].iloc[1] }}</h6>
+                    </th>
+                  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+                  <td></td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[4] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[5] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[6] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[7] }}</td>
+               </tr>
+
+                <tr>
+                <th class="card-text"></th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[4] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[5] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[6] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[7] }}</td></tr>
+                <tr>
+                    <th>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{std_video_df['youtube_id'].iloc[2]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[8]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+                <td><iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[9]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[10]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[11]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe>
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <th>
+                    <h6 class="card-text">{{ std_video_df['title'].iloc[2] }}</h6>
+                    </th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>{{ sim_video_df['title'].iloc[8] }}</td>
+                <td>{{ sim_video_df['title'].iloc[9] }}</td>
+                <td>{{ sim_video_df['title'].iloc[10] }}</td>
+                <td>{{ sim_video_df['title'].iloc[11] }}</td></tr>
+                <tr>
+                    <th>
+                        <h6 class="card-text"> {{ std_video_df['video_id'].iloc[2] }}</h6>
+                    </th>
+                  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+                  <td></td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[8] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[9] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[10] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[11] }}</td>
+               </tr>
+
+                <tr>
+                <th class="card-text"></th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[8] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[9] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[10] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[11] }}</td></tr>
+            <tr>
+                <th>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{std_video_df['youtube_id'].iloc[3]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[12]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[13]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[14]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+                <td>
+                <iframe width="336" height="189" src="https://www.youtube.com/embed/{{sim_video_df['youtube_id'].iloc[15]}}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+                </iframe></td>
+            </tr>
+            </tr>
+            <tr>
+                <th>
+                    <h6 class="card-text">{{ std_video_df['title'].iloc[3] }}</h6>
+                    </th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>{{ sim_video_df['title'].iloc[12] }}</td>
+                <td>{{ sim_video_df['title'].iloc[13] }}</td>
+                <td>{{ sim_video_df['title'].iloc[14] }}</td>
+                <td>{{ sim_video_df['title'].iloc[15] }}</td></tr>
+                <tr>
+                    <th>
+                        <h6 class="card-text"> {{ std_video_df['video_id'].iloc[3] }}</h6>
+                    </th>
+                  <td></td>
+		  <td></td>
+		  <td></td>
+		  <td></td>
+                  <td></td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[12] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[13] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[14] }}</td>
+                <td>VID: {{ sim_video_df['video_id'].iloc[15] }}</td>
+               </tr>
+                <tr>
+                <th class="card-text"></th>
+                <td></td><td></td><td></td><td></td></td><td></td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[12] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[13] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[14] }}</td>
+                <td>유사도: {{ sim_video_df['sim'].iloc[15] }}</td></tr>
+        </table>
+        </center>
+    </div>
+    <!-- </form> -->
+
+    {% endif %}
+    </body>
+    <script>
+        includeHTML( function () {
+        includeRouter( function () {
+            // do something in the future
+        });
+        });
+    </script>
+    </html>

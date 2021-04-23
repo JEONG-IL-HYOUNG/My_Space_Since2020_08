@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h2>{{ g.user.user_nm }}의 분석목록 페이지 로그인 해야 볼 수 있음</h2>
+
+    <form action="{{url_for('analysis.upload_files')}}" method="post" enctype="multipart/form-data">
+        <p>파일 업로드
+            <input type ="file" name="file">
+            <input type="submit">
+        </p>
+    </form>
+    <br>
+
+
+    {% if my_analy_list1 %}
+        {% for x in my_analy_list1%}
+            <li>{{x.prj_nm}} {{x.user_nm}}</li>
+        {% endfor %}
+    {% else %}
+        <p>받아오는 게 없다..실패!</p>
+    {% endif %}
+
+    <br>
+    <br>
+
+    <h3>분석중 status = 0</h3>
+    {% if status_ing %}
+        {% for y in status_ing%}
+            <li>{{y.prj_nm}} {{y.user_nm}} status상태:{{y.status}}</li>
+        {% endfor %}
+    {% else %}
+        <p>받아오는 게 없다..실패!</p>
+    {% endif %}
+    <br>
+    <h3>분석완료 status = 1</h3>
+    {% if status_end %}
+        {% for z in status_end%}
+            <li>{{z.prj_nm}} {{z.user_nm}} status상태:{{z.status}}</li>
+        {% endfor %}
+    {% else %}
+        <p>받아오는 게 없다..실패!</p>
+    {% endif %}
+
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <h3>분석결과 상세보기</h3>
+    <h4>동일구간 검색결과</h4>
+    <h4>동일구간 설명</h4>
+
+    <table border="1">
+        {%%}
+
+
+
+
+        <tr>
+        <td>기준동영상</td>
+        <td>동영상정보</td>
+        <td>동일구간 썸네일1</td>
+        <td>동일구간 썸네일2</td>
+        </tr>
+        <tr>
+        <td>유사동영상</td>
+        <td>동영상정보</td>
+        <td>동일구간 썸네일1</td>
+        <td>동일구간 썸네일2</td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+{% endblock %}

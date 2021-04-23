@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+	maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+	<meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+	<meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+  <meta name="description" content="The Overflowing church website's main page" />
+  <meta name="author" content="unikys@gmail.com" />
+  <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+	maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+
+  <script>
+	//<!--
+	$(document).ready(
+			function(){
+				init();
+			}
+		);
+	function init()	{
+	    var message = "";
+        if(message.length != '0' ||message != "") {
+            alert(message);
+        }
+	}
+
+	function loginAction(url) {
+		location.href=url;
+	}
+
+	function mainDirect() {
+		location.href="/web_search_similar_video"
+	}
+
+	function fn_potalLogin() {
+		location.href = "https://easypass.smes.go.kr/?RelayState=https://www.smtech.go.kr/front";
+	}
+	//-->
+  </script>
+  <script src="/static/js/includeHTML.js"></script>
+
+    <title>
+        pDB_로컬 동영상 파일 플레이
+    </title>
+
+<style>
+video, input {
+    display: block;
+}
+
+input {
+    width: 100%;
+}
+
+.info {
+    background-color: aqua;
+}
+
+.error {
+    background-color: red;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #3547a1;
+    vertical-align: middle;
+    .sidebar-menu li {
+        width:200px;
+    }
+}
+ul:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 20px 20px;
+    text-decoration: none;
+    }
+}
+li a:hover:not(.active) {
+    background-color: #608ee7;
+}
+.sidebar-menu li a {
+width:400px;
+padding: 20px 20px;
+    }
+
+#blogMenu ul ul {
+display:none;
+}
+
+#blogMenu ul li:hover ul {
+ display: block;
+}
+
+#nav_menu ul ul li {
+
+float:none;
+
+}
+div, ul, li { margin:0; padding:0; }
+
+#blogMenu {
+	margin:3px 5px 3px 5px;
+	padding:0 3 3px 0;
+	box-shadow: 0px 0px 15px rgba(0,0,0,.3);
+	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,.3);
+	-o-box-shadow: 0px 0px 15px rgba(0,0,0,.3);
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color:#5c5c5c;
+    line-height: 2.6;
+    z-index:1;
+}
+
+#blogMenu ul li {
+	float:left;
+	list-style-type:none;
+    vertical-align: middle;
+    line-height: 2.6;
+}
+
+#blogMenu a {
+	height:50px;
+	color:#f1f1f1;
+	font-family:arial;
+	font-size:20px;
+	padding:0 10px 0 10px;
+	text-decoration:none;
+}
+
+#blogMenu a:hover {
+	color:#D4F4FA;
+	border-bottom:3px solid #59e0e5;
+}
+
+#blogMenu ul ul {
+	display:none;
+	position:absolute;
+	background-color:#5c5c5c;
+}
+
+#blogMenu ul li:hover ul {
+	display: block;
+}
+
+#blogMenu ul ul li {
+	float:none;
+}
+#nav {
+    position:relative;
+    z-index:1
+}
+</style>
+
+<script src="/static/js/includeHTML.js"></script>
+<script src="/static/js/includeRouter.js"></script>
+
+</head>
+
+<body>
+     <div id="nav" include-html="/static/html/nav.html"></div>
+<br>
+
+<center>
+  <video
+    id="my-video"
+    class="video-js"
+    preload="auto"
+    width="1280"
+    height="628"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+    controls=""
+    autoplay=""
+    name="media"
+  >
+   <source src={{ url_for('static', filename="./mov/11_원본 비디오(1234).mp4")}} type="video/mp4" >
+
+    <p class='vjs-no-js'>
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href='https://videojs.com/html5-video-support/' target='_blank'>
+          supports HTML5 video</a>
+    </p>
+  </video>
+
+  <!--=> 파일명 확인용-->
+<!-- <input type="file" accept="/*"/>
+<video controls autoplay></video> -->
+
+  <script src='https://vjs.zencdn.net/7.8.3/video.js'></script>
+</body>
+
+<script>
+includeHTML( function () {
+  includeRouter( function () {
+    // do something in the future
+  });
+});
+</script>
+
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+	maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+	<meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+	<meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+<title>MLAB MSTUV</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--// css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/resources/css/common.css">
+	<link rel="stylesheet" href="/resources/css/style.css">
+	<link rel="stylesheet" href="/resources/css/swiper.min.css">
+	<link rel="stylesheet" href="/resources/css/category.css">
+	<link rel="stylesheet" href="/resources/css/goods.css">
+<style>
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .entry-content img,
+    .entry-content iframe,
+    .entry-content object,
+    .entry-content embed {
+    max-width: 100%;
+    }
+.card-title {
+    text-indent:20px;
+}
+button[type=submit]{
+    background-color: #318448;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold
+}
+
+</style>
+
+</head>
+
+
+ <p>Date/Time: <span id="datetime"></span></p>
+ <script language="javascript">
+
+        var currentDate = new Date();
+        var current_minute= currentDate.getMinutes()+"분:";
+        document.getElementById("datetime").innerHTML = current_minute.toLocaleString();
+
+        var currentDate = new Date();
+        var current_second= currentDate.getSeconds()+"초 ";
+        var time_str = document.getElementById("datetime").innerHTML = current_minute.toLocaleString() + current_second.toLocaleString();
+
+</script>
+
+ <script>
+        // 유용한 내장 생성자 함수(class)들 [Date, Number, String, Math, Array]
+        // 1. Date
+        var a= new Date(); //현재 날짜를 가지고 있는 객체
+        document.write(a+"<br>"); //자동 toString()
+        document.write(typeof(a)+"<br>"); //모든 객체의 자료형은 object임
+
+        // 주요 기능들(메소드)
+        document.write(a.toDateString()+"<br>");
+        document.write(a.toLocaleString()+"<br>");
+        document.write(a.getYear()+"<br>"); //1900년부터 기준.. 2019년은 119
+        document.write(a.getFullYear()+"<br>"); //2019
+        document.write(a.getMonth()+"<br>"); //0~11
+        document.write(a.getDate()+"<br>");
+        document.write(a.getHours()+"<br>"); // 0~23
+        document.write(a.getMinutes()+"<br>");
+        document.write(a.getSeconds()+"<br>");
+        document.write(a.getTime()+"<br>"); //currentTimeMillis() 1970/01/01 09:00기준
+
+        //set도 가능함
+        var b= new Date();
+        document.write(b.toLocaleString()+"<br>");
+        b.setFullYear(2018);
+        document.write(b.toLocaleString()+"<br><br>");
+
+        // 생성자의 파라미터로 특정 날짜 지정가능
+        var c= new Date(2025,7,23); //2025년 8월 23일
+        document.write(c.toLocaleString()+"<br>");
+
+        var c= new Date("Wed Sep 13 2017 13:40:13 GMT+0900");
+        document.write(c.toLocaleString()+"<br>");
+
+        var c= new Date("Wed Sep 13 2017");
+        document.write(c.toLocaleString()+"<br>");
+
+        var c= new Date("2017. 9. 13");
+        document.write(c.toLocaleString()+"<br>");
+
+        var c= new Date("154789424100"); //밀리세컨드 시간
+        document.write(c.toLocaleString()+"<br>");
+
+        // 두 날짜사이의 비교
+        var a=new Date("2018. 12. 13");
+        var b=new Date();
+        var diff= b.getTime()- a.getTime();
+        diff=b-a; //이렇게 써도 자동으로 getTime()의 결과로 연산을 함
+
+        document.write("두 날짜 차이 : "+diff+"<br>");
+
+        var sec= diff/1000; //밀리초 => 초
+        var min= sec/60; //초->분
+        var hour= min/60; //분->시
+        var day= hour/24; //시->일
+
+
+        document.write("두 날짜 일수 차이 : "+day+"<br>");
+
+        // 소수점 제거
+        day= Math.floor(day);
+        document.write("두 날짜 일수 차이 : "+day+"<br>");
+
+        // 기준일 계산하는 웹페이지
+        function clickBtn(){
+            // 입력된 날짜 얻어오기
+            var e= document.getElementById('ss');
+            var s=e.value;
+            document.write(s+'<br>');
+
+            var a= new Date(s); // 입력된 날짜로 Date()객체 생성
+            var b= new Date(); //현재 날짜
+
+            // 입력된 날짜와 현재 날짜의 차이 계산
+            var diff= b-a;
+            day= Math.floor(diff/(1000*60*60*24)); //floor 반올림을 안하고 없애버림.
+
+            if(day>0) document.write('오늘로 부터 :'+day+'일전 <br>');
+            else if(day<0) document.write('오늘로 부터 :'+(-day)+'일후 <br>');
+            else document.write('오늘 <br>');
+        }
+
+        // 디지털 시계... 일정시간(1초)마다 현재 날짜 출력
+        function showClock(){
+
+            var s =new Date(); //현재 시간
+            var e= document.getElementById('kk');
+            e.value=s.toLocaleString();
+
+            // 1초 후에 showClock()함수를 실행하시오.
+            setTimeout('showClock()', 1000); //JS에 이미 존재하는 함수
+        }
+
+    </script>
+
+<body>
+    <hr>
+
+ <h2><font size="3" color="#1a5aa8" font-weight: bold><center>태그기반 유사동영상 검색 모바일 시연</font></h2>
+<main role="main">
+  <section class="jumbotron" style="color: #54efea; min-height: 10px">
+    <div class="container">
+      <font size="4" color="#082e3b" font-weight: bold><center>
+        <h3 class="jumbotron-heading">기준 동영상 검색결과</h3><br>
+                    <p class="jumbotron-heading">
+
+          <form action = "/result" method = "POST">
+                <input type="text" id="value" name ="분:초", value="{{ start_time }}">
+          <input type="submit">시:분:초: SUBMIT(HIDDEN 상태)</button>
+                  </form></div></div>
+        </div></center>
+    <input type="date" id="ss">
+    <button onclick="clickBtn()">기준일 입력</button>
+
+    <hr>
+    <h4>Digital Clock</h4>
+                <form action = "/result" method = "POST">
+    <button onclick="showClock()">show clock
+    <input type="text" id="kk" name ="kk", value="{{ kk }}" size="30" readonly>
+          <input type="submit">시:분:초: SUBMIT(HIDDEN 상태)</button>
+                  </form></div></div>
+
+  </section>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

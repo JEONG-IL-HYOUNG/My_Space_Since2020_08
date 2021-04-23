@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>pSV_TEST PAGE</h1>
+
+    <h1>유사 영상 검색 및 분석</h1>
+    <form action="{{ url_for('analysis.analysis') }}", method="post">
+
+        <p>유튜브 영상검색
+            <input type="text" name="video_url" {% if not g.user %}disabled{% endif %}>
+        </p>
+        <p>키워드 입력
+            <input type="text" name="keyword" {% if not g.user %}disabled{% endif %}>
+        </p>
+        <input type="submit" value="분석"{% if not g.user %}disabled{% endif %}>
+    </form>
+    <br>
+    <br>
+
+
+
+    <br>
+    <th>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/t3KZnCgiMW0?autoplay=1&mute=1"
+             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </th>
+
+
+{% endblock %}

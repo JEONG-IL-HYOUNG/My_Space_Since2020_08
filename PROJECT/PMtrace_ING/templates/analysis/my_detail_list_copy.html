@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="item-center py-5 px-3">
+            <br>
+            <br>
+            <br>
+            <h3>#300</h3>
+            <h3>작업 결과페이지</h3>
+
+            <div class="card mb-3" style="max-width: 640px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+
+{#                        <img src="{{ url_for('static', filename="/ps3020/{{result_project.mov_id}}/000001.png")}}" >#}
+                        <img src="/static/815_mtrace_anal/output/ps3020/{{result_project.mov_id}}/000001.png" style="max-width: 100%; height: 210px;">
+{#                        <img src="/output/ps3020/{{result_project.mov_id}}/000001.png" style="max-width: 100%; height: auto;>#}
+
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><<동영상 썸네일</h5>
+                            <p class="card-text">
+                                {% if result_project %}
+                                    동영상 타이틀:{{result_project.mov_title}} <br>
+                                    검색 날짜: {{result_project.cdate}}<br>
+                                    키워드: {{result_project.mov_id}}<br>
+                                {% else %}
+                                {% endif %}
+                            </p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            {% if result_match_list and my_sim %}
+                {{ result_match_list }}<br>
+                {{ my_sim }}<br>
+                {% for a, b in zip(result_match_list, my_sim) %}
+                    {% for x in a %}
+                        <div class="container">
+                            검색결과<br>
+                            URL:https://www.youtube.com/watch?v={{ x.mov_prov_id}}<br>
+                            타이틀:{{ x.mov_title}}<br>
+                            채널명:{{ x.mov_owner}}<br>
+
+                            구간대: 기준동영상{{b.smov_start_sec}} - {{b.smov_end_sec}}
+                            유사동영상{{b.rmov_start_sec}} - {{b.rmov_end_sec}}<br>
+                            영상 유사도:{{b.mov_sim}}<br>
+                            테스트용:{{ x.mov_id }}
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                            <iframe src="https://www.youtube.com/embed/{{result_project.mov_prov_id}}?autoplay=1&mute=1" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                                    style="max-width: 100%; height: 200px;">
+                                            </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="/static/815_mtrace_anal/output/ps3020/{{result_project.mov_id}}/000001.png" style="max-width: 100%; height: 200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="/static/815_mtrace_anal/output/ps3020/{{result_project.mov_id}}/000002.png" style="max-width: 100%; height: 200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <img src="/static/815_mtrace_anal/output/ps3020/{{result_project.mov_id}}/000003.png" style="max-width: 100%; height: 200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card">
+                                            <iframe src="https://www.youtube.com/embed/{{x.mov_prov_id}}?autoplay=1&mute=1" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                                                    style="max-width: 100%; height: 200px;">
+                                            </iframe>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                           <img src="/static/815_mtrace_anal/output/ps3020/{{x.mov_id}}/000001.png" style="max-width: 100%; height:200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                             <img src="/static/815_mtrace_anal/output/ps3020/{{x.mov_id}}/000002.png" style="max-width: 100%; height: 200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                           <img src="/static/815_mtrace_anal/output/ps3020/{{x.mov_id}}/000003.png" style="max-width: 100%; height: 200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

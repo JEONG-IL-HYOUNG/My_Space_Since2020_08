@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><center>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+	<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+	<meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+	<meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <meta name="description" content="The Overflowing church website's main page" />
+    <meta name="author" content="unikys@gmail.com" />
+    <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>WEB SEARCH</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+
+</head>
+    <SCRIPT language="javaScript">
+        function check_onclick(){
+            warning_message = document.warning;
+            if(warning_message.input.value==""){
+                alert("입력란이 비어있습니다. 확인해주세요");
+            }
+            else{
+                warning_message.submit();
+            }
+        }
+    </SCRIPT>
+
+    <!-- <body onLoad="load_time()"> -->
+<body>
+        <center>
+        <nav include-html="/static/html/nav.html">
+        </nav>
+        <br>
+        <section class="jumbotron">
+            <div class="container">
+                <font size="6" font-weight: bold>
+            <h1 class="jumbotron-heading">태그기반 유튜브 유사동영상 웹검색</h1>
+            </div>
+        </section>       
+        <br>
+        <font size="5" color="white" font-weight: bold>
+        <form name= warning action = "/sim_video_css" method = "POST">
+            <p>비디오검색
+                <input type="text" name=input id="sim_video_css"
+                    style="width:250; height:40; border:2px solid transparent">
+                <input type="submit" value="검색" style="border:2px solid #2e94d7"
+                    onclick="check_onclick()">
+            </p>
+        </form>
+	<p> 킹덤, BTS, 한류 </p>
+
+</body>
+    <script>
+    includeHTML( function () {
+        includeRouter( function () {
+            // do something in the future
+        });
+    });
+    </script>
+</html>

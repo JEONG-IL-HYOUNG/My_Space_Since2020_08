@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <title>영상분석기반 유사/불법 동영상 검색 시연</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+
+  <body>
+    <nav include-html="/static/html/nav.html">
+    </nav>
+    <center><br>
+    <section class="jumbotron text-center">
+      <div class="container">
+          <font size="5" font-weight: bold>
+        <h1 class="jumbotron-heading">영상분석기반 유사/불법 동영상 검색 시연</h1>
+      </div>
+    </section>
+
+      <font size="5" color="#f6f6f6" font-weight: bold>
+      <h1>기준 영상 검색 </h1>
+        <br>
+        <form action="imgbase_keyword_search" method="post">
+          <font size="5" color="#04243e" font-weight: bold>검색어 검색<br>
+          <input type="text" name="imgbase_search_videoid"  style="width:250;
+              border: transparent">
+              <input type="submit" value="클릭" style="border:2px solid #2e94d7" >
+              <p class="p_tooltip"><span class="p_btn">
+          <font size="4" color="#04243e" font-weight: lighter>
+          <p>YOUTUBE 영상 중 유사 동영상을 찾기 위한 기준동영상을 검색어로 검색합니다.</p>
+          <br>
+
+        <form action="imgbase_youtubeid_search" method="post">
+          <font size="5" color="#04243e" font-weight: bold>YouTube 아이디로 검색<br>
+          <input type="text" name="imgbase_search_youtubeid"  style="width:250;
+              border: transparent">
+              <input type="submit" value="클릭" style="border:2px solid #2e94d7" >
+        </form>
+          <p class="p_tooltip"><span class="p_btn">
+          <font size="4" color="#04243e" font-weight: lighter>
+          <p>YOUTUBE ID로 엠스터브에서 보유중인 동영상을 검색합니다.</p>
+          <br>
+
+        <form action="imgbase_show_all" method="post">
+          <font size="5" color="#04243e" font-weight: bold>전체보기
+            <input type="submit" value="클릭" style="border:2px solid #2e94d7">
+            <p class="p_tooltip"><span class="p_btn">
+          <font size="4" color="#062b51" font-weight: lighter>
+          <p>엠스터브에서 찾아놓은 전체 유사동영상을 봅니다.
+                  <br>(페이징 처리전 10개 한정이며 새로고침하면 랜덤으로 유사동영상이 갱신됩니다)</p>
+        </body>
+      <script>
+        includeHTML( function () {
+          includeRouter( function () {
+            // do something in the future
+          });
+        });
+        </script>
+</html>

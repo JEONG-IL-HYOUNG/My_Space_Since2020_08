@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="item-center py-5 px-3">
+        <br>
+        <br>
+        <br>
+        <h4>#400</h4>
+        <h3>신규 작업 생성</h3>
+
+        <br>
+        <form action="{{url_for('analysis.make_work')}}" method="post">
+            <table class="table">
+                <div class="row justify-content-start">
+                    <div class="col-1">
+                        작업명
+                    </div>
+                    <div class="col-0.5">
+                    </div>
+                    <div class="col-5">
+                        <!-- gb_works 작업명저장 work_nm-->
+                        <input type="text" name="work_nm">
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-4">
+                        영상등록(택일)
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-0.5">
+                        <input type="radio" name="foo">
+                    </div>
+                    <div class="col-4">
+                        유튜브 등록
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-1">
+                        URL
+                    </div>
+                <!--나중에 삭제-->
+{#                  <div class="col-7">#}
+{#                        <!--gb_works 기준동영상저장 smov_id-->#}
+{#                        <input type="text" name="smov_id">#}
+{#                        <input type="submit" value="URL확인" formaction={{ url_for('analysis.url_test') }}>                       #}
+{#                        {% with messages = get_flashed_messages() %}#}
+{#                            {% if messages %}#}
+{#                                <ul class=flashes>#}
+{#                                    {% for message in messages %}#}
+{#                                       	<script>#}
+{#		                                    alert('{{message}}') #}
+{#	                                    </script>#}
+{#                                    {% endfor %}#}
+{#                                </ul>#}
+{#                            {% endif %}#}
+{#                        {% endwith %}#}
+{#                    </div>#}
+
+                <!--     -->
+                     <div class="col-7">
+                        <!--gb_works 기준동영상저장 smov_id-->
+                        <input type="text" name="smov_id">
+{#                        <input type="submit" value="URL확인" formaction={{ url_for('analysis.url_test') }}>#}
+                        <input type="button" value="URL" onclick="test()">
+{#                        {% with messages = get_flashed_messages() %}#}
+{#                            {% if messages %}#}
+{#                                <ul class=flashes>#}
+{#                                    {% for message in messages %}#}
+{#                                       	<script>#}
+{#		                                    alert('{{message}}')#}
+{#	                                    </script>#}
+{#                                    {% endfor %}#}
+{#                                </ul>#}
+{#                            {% endif %}#}
+{#                        {% endwith %}#}
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-0.5">
+                        <input type="radio" name="foo">
+                    </div>
+                    <div class="col-4">
+                        동영상 업로드
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-1">
+                        동영상 업로드
+                    </div>
+                    <div class="col-7">
+                        <input type="text">
+                        <input type="button" value="동영상 업로드">
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-1">
+                        영상 설명
+                    </div>
+                    <div class="col-7">
+                        <input type="text">
+
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-1">
+                        키워드
+                    </div>
+                    <div class="col-7">
+                        <input type="text">
+
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6">
+                        <input type="submit" value="저장">
+                        <input type="button" value="취소">
+                    </div>
+                </div>
+                <br>
+            </table>
+        </form>
+
+    </div>
+</div>
+</form>
+
+{% endblock %}
+{% block endscript %}
+<script>
+    function test(){
+          var text_data = $('input[name=smov_id]').val();
+                $.ajax({
+                        type : 'POST',                                  <!--GET / POST-->
+                        url : "{{url_for('analysis.url_test')}}",
+                        data : {
+                                smov_id:text_data                       //<!-- key : "value" -->
+                        },
+                        dataType : 'JSON',
+                        success : function(result){
+                                alert("result = "+ result["status"]);
+                        },
+                        error : function(xtr,status,error){
+                                alert(xtr +":"+status+":"+error);
+                        }
+                });
+
+    }
+</script>
+{% endblock %}

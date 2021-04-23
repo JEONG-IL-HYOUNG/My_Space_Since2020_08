@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <title>MLAB MSTUV</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+      
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+  </head>
+  <body>
+    <nav include-html="/static/html/nav.html">
+    </nav>
+  <h2>
+    <font size="3" font-weight: bold>
+      <center>태그기반 유사동영상 검색 모바일 시연</font></h2>
+  <main role="main">
+    <section class="jumbotron"><center>
+      <div class="container">
+        <font size="4" font-weight: bold><center>
+        <h2 class="jumbotron-heading" style="min-height: 10px">기준비디오</h2>
+      </div></center>
+
+  <!-- 기준비디오 VIDEO 정보 -->
+          <div id="wrap">
+          <!-- container -->
+          <div id="container">
+              <div class="video_list_wrap view">
+                  <div class="broadcast_area view">
+                      <div class="area_content">
+                          <div class="video-container">
+                              <div class="row">
+                  <h5 style="text-indent:10px;text-align: left">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{std_youtube_id}}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  </iframe></h5>
+                              </div>
+                          </div>
+            <!-- 동영상 정보 시작 -->
+            <!-- <div class="content_head view"></div>
+                <div class="card-body"> -->
+                <font size="2.5" color="#010b26" font-weight: bold>
+                <h6 class="card-text">{{std_title}}</h6>
+                <h6 class="card-text">동영상ID: {{std_video_id}}</h6>
+                </div>
+              </div>
+            </div>
+    </section>
+  {% if sim_video_cnt == 0 %}
+  유사 비디오가 없습니다.
+
+  {% else %}
+    <section class="jumbotron style="color:#54efea; min-height: 10px" text-center"><center>
+      <div class="container">
+        <font size="4" font-weight: bold><center>
+        <h2 class="jumbotron-heading" style="min-height: 10px">유사비디오</h2>
+      </div></center>
+
+  {% for item in sim_video_info %}
+
+  <!-- 유사비디오 VIDEO 정보 -->
+          <div id="wrap">
+          <!-- container -->
+          <div id="container">
+              <div class="video_list_wrap view">
+                  <div class="broadcast_area view">
+                      <div class="area_content">
+                          <div class="video-container">
+                              <div class="row">
+                  <p style="text-indent:10px;text-align: left">
+                  <iframe width="560" height="315"  src="https://www.youtube.com/embed/{{ item[0]}}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                  </iframe></p>
+              </div>
+          </div>
+            <!-- 동영상 정보 시작 -->
+              <!-- <p style="text-indent:10px"></p>
+                <div class="card-body">-->
+                <!--<font size="2.5" color="#010b26" font-weight: bold>-->
+                <h6 class="card-text">{{ item[1] }}</h6>
+                <h6 class="card-text">유사도: {{ item[2] }}</h6>
+                <h6 class="card-text">동영상ID: {{ item[3] }}</h6>
+                </div>
+              </div>
+            </div><hr>
+
+  {% endfor %}
+  {% endif %}
+    </section>
+  </main>
+  </body>
+  <script>
+    includeHTML( function () {
+      includeRouter( function () {
+        // do something in the future
+      });
+    });
+  </script>
+</html>

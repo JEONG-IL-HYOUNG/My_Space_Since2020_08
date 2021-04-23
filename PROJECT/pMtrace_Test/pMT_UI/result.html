@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+         /* 리셋 */
+        * {margin: 0; padding: 0;}
+        body{background-color:  #f0f0f0;}
+        .header {width: 100%; height: 48px; background-color: #ffffff; }
+        .header div {display: inline-block;}
+        #logo_s {width: 158px; height: 40px; background-color: green;}
+        #wk_btn { width: 120px; height: 40px; background-color: yellow; float: right; }
+        #logout_btn {width: 120px;  height: 40px; background-color: aqua; float: right;}
+        #result{width: 1280px;  height: 200px;  margin: 100px auto;  border-radius: 20px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff;}        
+        
+        #ytb_section{width: 286px; height: 160px; background-color: white; padding:20px 50px; display: inline-block; border-radius: 20px;}
+        #meta_section{width: 880px; height: 180px; padding-top: 20px; background-color: yellow ; float: right;}
+
+
+        .result_n{width: 1280px; height: 880px; background-color: white; margin:20px auto; border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);}
+        .result_n div{border-width: 1px;}
+        #rlt{width: 170px; height: 40px; background-color: gray; padding: 50px; font-family: NotoSansCJKKR;
+            font-size: 40px;  font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;
+            letter-spacing: normal;  text-align: left;  color: #505050;}
+
+        #meta{width: 100%; height: 140px; background-color: beige;}
+        #meta_text{width: 74px;height: 140px;  background-color:green; float: left; padding-left: 50px; }
+        #meta_detail{width: 1106px;height: 140px; display: inline-block; background-color: yellow; padding-left: 50px;}
+
+        #sim{width: 1280px; height: 150px; background-color: gray; text-align: center; padding-top: 30px;}
+        #vid_sim{width: 640px; height: 98px; display: inline-block; background-color: aqua; padding-top: 29px; padding-bottom: 23px; }
+        #meta_sim{width: 640px; height: 98px; float: right; background-color:green; padding-top: 29px; padding-bottom: 23px;}
+
+
+
+        #st_vid_text{width: 133px; height: 50px; background-color: teal; padding-left: 50px;}
+        #st_vid{width: 1280px; height: 125px; background-color: gray;  }
+        #st_vid1{width: 222px; height: 125px; display: inline-block; background-color:yellow; padding-left: 50px;}
+        #st_vid2{width: 222px; height: 125px; float: right; margin-right: 15px; margin-left: 12px; background-color:yellow; }
+
+
+        #search_vid_text{width: 133px; height: 50px; background-color: teal; padding-left: 50px;}
+        #search_vid{width: 1280px; height: 125px; background-color: gray;}
+        #search_vid1{width: 222px; height: 125px; display: inline-block; background-color:yellow; padding-left: 50px;}
+        #search_vid2{width: 222px; height: 125px; float: right; margin-right: 15px; margin-left: 12px; background-color:yellow; }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="header">
+        <div id="logo_s"></div>
+        <div id="wk_btn"></div>
+        <div id="logout_btn"></div>
+    </div>
+
+    <div id="result">
+        <div id="ytb_section">
+            <iframe  width= "286" height= "160" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div id="meta_section">aaa 
+            bbb
+            ccc
+
+        </div>
+    </div>
+    <div class="result_n">
+        <!-- result_n -->
+        <div id="rlt">
+            result_1
+        </div>
+        <!-- 유사동영상 메타정보 부분 -->
+        <div id="meta">
+            <div id="meta_text">                
+                <p>URL</p>
+                <p>Title</p>
+                <p>Channel</p>
+            </div>
+            <div id="meta_detail">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+        
+        <!-- 유사도 -->
+        <div id="sim" >
+            <div id="vid_sim">
+                <p>영상 유사도</p>
+                <p>88%%</p>
+
+            </div>
+            <div id="meta_sim">
+                <p>메타 유사도</p>
+                <p>90%%</p>
+                <p>90%%</p>
+                
+            </div>
+        </div>
+
+        <!-- 기준동영상 -->
+        <div id="st_vid_text">  
+            <p>기준동영상</p>
+            <p>1:00  - 13:00</p>          
+        </div>
+
+        <div id="st_vid">
+            <div id="st_vid1">aa</div>
+            <div id="st_vid2"><img src="" alt=""></div>
+            <div id="st_vid2">aa</div>
+            <div id="st_vid2"></div>
+            <div id="st_vid2"></div>
+        </div>                     
+       
+
+        <!-- 유사동영상 -->
+        <div id="search_vid_text">
+            <p>유사동영상</p>
+            <p>13:00  - 14:00</p>            
+        </div>
+
+        <div id="search_vid">
+            <span id="search_vid1"></span>
+            <span id="search_vid2"></span>  
+            <span id="search_vid2"></span>  
+            <span id="search_vid2"></span>  
+            <span id="search_vid2"></span>  
+                                      
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

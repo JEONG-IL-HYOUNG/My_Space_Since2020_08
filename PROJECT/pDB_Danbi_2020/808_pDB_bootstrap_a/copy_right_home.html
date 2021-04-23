@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>M.LAB Presentation</title>
+    <style>
+        #left {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+        
+            background: #ff0;
+        }
+        #right {
+            width: 50%;
+            float: right;
+            box-sizing: border-box;
+        
+            background: #0ff;
+        }
+    </style>
+  </head>
+
+  <body>
+    <br/> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">웹</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown08">
+                <a class="dropdown-item" href="web_search_similar_video.html">01. 태그기반 유사동영상 검색</a>
+                <a class="dropdown-item" href="copy_right_home.html">02. 불법/유사동영상 검색</a>
+                <a class="dropdown-item" href="#">03. 불법데이터 가시화</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">모바일</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown08">
+                  <a class="dropdown-item" href="#">01. ABCD</a>
+                  <a class="dropdown-item" href="#">02. ABCD</a>
+                  <a class="dropdown-item" href="#">03. ABCD</a>
+                </div>
+              </li>
+            
+          </ul>
+        </div>
+    </nav>
+    <br>
+    
+    <section class="jumbotron" >
+        <div class="container text-center">
+            <h2 class="jumbotron-heading" style="text-align: center"> 
+            <strong>유튜브 불법/ 유사 동영상 검색 서비스</strong>
+            </h2>
+        </div>
+    </section>
+
+    <div class="row">
+        <!--left side-->
+        <div class="col mb-6 text-center">
+            <div class="container">
+                <h3>기준 영상 검색</h3>
+                <br/>
+                <h5>동영상 아이디로 검색</h5>
+                <input type="text" name="imgbase_search_videoid"  style="width:250;">
+                <input type="submit" value="클릭" style="border:2px solid #2e94d7" >
+                
+                <p>
+                    Sample:<br>
+                    21C93939-65B0-4C4F-B41D-150204EC226D <br>
+                    2E6F1B44-43EF-4632-B5E2-60DEBBDF0245 <br>
+                    361E72EB-3837-4BF5-BE43-68375D6DAB10
+                </p>
+                <br>
+
+                <h5>YOUTUBE 아이디로 검색</h5>
+                <input type="text" name="imgbase_search_videoid"  style="width:250;">
+                <input type="submit" value="클릭" style="border:2px solid #2e94d7" >
+                
+                <p>
+                    유튜브아이디로 엠스터브에서 보유중인 동영상을 검색합니다<br>
+                    Sample:<br>
+                    2A316EA9-106E-4A12-9946-A0E03BA68690 <br>
+                    067B0EC2-ADF2-4F03-9DDF-AD39F27DE04E <br>
+                    2E6F1B44-43EF-4632-B5E2-60DEBBDF0245
+                </p>    
+                <br>
+                <p>전체보기
+                    <input type="submit" value="클릭" style="border:2px solid #2e94d7">
+                </p>
+                <p>전체 유사동영상을 10개씩 랜덤하게 표출<br>
+                   (동일채널 검색안함)
+                </p>            
+            </div>
+        </div>
+        <!--right side-->
+        <div class="col mb-6 text-center">
+            <div class="container">
+                <h3>09/09 일자 현황</h3>
+                <br>
+                <table class="table table-striped table-bordered table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">총 검색 결과</th>
+                        <td scope="col">123156건</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">신규 검색결과</th>
+                        <td>1235건</td>                  
+                      </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h3>신규검색 리스트</h3>
+                <br>
+                <table class="table table-striped table-bordered table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">검 색 일 자</th>
+                        <td scope="col">YOUTUBE 동영상</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">09/09</th>
+                        <td>YOUTUBE ID</td>                  
+                      </tr>
+                      <tr>
+                        <th scope="row">09/09</th>
+                        <td>YOUTUBE ID</td>                  
+                      </tr>
+                      <tr>
+                        <th scope="row">09/09</th>
+                        <td>YOUTUBE ID</td>                  
+                      </tr>
+                      <tr>
+                        <th scope="row">09/09</th>
+                        <td>YOUTUBE ID</td>                  
+                      </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+
+
+
+            </div>                
+        </div>
+    </div>    
+
+
+    <footer class="footer mt-bottom py-3">
+        <div class="container">
+          <span class="text-center">JIH.MLAB.FOOTER</span>
+        </div>
+    </footer>
+   
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

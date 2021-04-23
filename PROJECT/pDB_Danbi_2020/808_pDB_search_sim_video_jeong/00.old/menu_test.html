@@ -1,0 +1,4374 @@
+<html lang="ko"><head>
+
+    <title>중소기업기술개발사업 종합관리시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta name="title" content="중소기업기술개발사업 종합관리시스템">
+	<meta name="description" content="중소벤처기업부가 시행하는 중소기업기술개발지원사업의 신청, 협약, 연구비집행 등을 지원하는 종합관리시스템">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="중소기업기술개발사업 종합관리시스템">
+	<meta property="og:description" content="중소벤처기업부가 시행하는 중소기업기술개발지원사업의 신청, 협약, 연구비집행 등을 지원하는 종합관리시스템">
+	<meta property="og:image" content="https://www.smtech.go.kr/front/images/gov_logo.jpg">
+	<meta property="og:url" content="https://www.smtech.go.kr">
+
+	<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" src="/front/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/front/js/jquery.cookie.js"></script>
+
+
+
+	<script type="text/javascript">
+	if(window.opener != undefined) {
+		if(window.opener.length != 0) {
+			window.opener.parent.mainDirect();
+			close();
+		}
+	}
+	</script>
+
+<script type="text/javascript" src="/js/menu2.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/quick.js"></script>
+<script type="text/javascript" src="/js/analytics.js"></script>
+<!-- 2018홈페이지 개편 -->
+
+	<!-- login 관련 js -->
+	<script type="text/javascript" src="/js/sba_common.js"></script>
+	<script type="text/javascript" src="/js/check.js"></script>
+
+
+
+	<script type="text/javascript" src="/js/rsa.js"></script>
+	<script type="text/javascript" src="/js/jsbn.js"></script>
+	<script type="text/javascript" src="/js/prng4.js"></script>
+	<script type="text/javascript" src="/js/rng.js"></script>
+
+
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+ul:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #608ee7;
+}
+.active {
+    background-color: #4c90af;
+}
+
+.hover-text{display:none;}
+
+.topMenu{
+	position:fixed;
+	text-align:center;
+	background-color:white;
+	width:100%;
+	z-index:9999;
+}
+/*
+.topFixed{
+	position: fixed;
+	top: 0px;
+}
+*/
+
+</style>
+
+<script type="text/javascript" defer="" async="" src="https://asp7.http.or.kr/HTTP_MSN/UsrConfig/kieejo/js/ASP_Conf.js?s=r11378407382117.809"></script></head>
+
+<body>
+    <!-- SKIPNAVI -->
+    <div id="skipNavi">
+        <ul>
+            <li><a href="#container">본문으로 이동</a></li>
+            <li><a href="#header">대메뉴로 이동</a></li>
+            <li><a href="#footer">하단정보 바로가기</a></li>
+        </ul>
+    </div>
+    <!--// SKIPNAVI -->
+
+    <!-- wrap  -->
+    <div class="wrap" id="wrap">
+
+
+<div class="section" name="1"></div>
+	<div class="topMenu" id="topMenu">
+
+
+
+<!-- 전산번호 :: 93015 , 윤정수 차장 요청으로 파비콘 추가 -->
+<link rel="shortcut icon" href="/images/url_logo.ico">
+<link rel="stylesheet" href="/css/calendar_ahmax.css" type="text/css">
+<style>
+.sessionBlock {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(51,51,51,0.7);
+	z-index: 9999;
+}
+.sessionBlockContent {
+	position: fixed;
+	width: 30%;
+	left: 67%;
+	margin-left: -30%;
+	height: 380px;
+	top: 50%;
+	margin-top: -150px;
+	overflow: auto;
+
+	border: 1px solid #000;
+	background-color: #fff;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+.bt4 {  /**2018 테이블 하단 실행 버튼 **/
+	background-color:#757a85;
+	height:30px;
+	color:#fff;
+	font-weight:700;
+    text-align:center;
+	padding:0px 15px 2px 15px;
+    border:none;
+}
+
+.bt4:hover  {   /**2018 테이블 하단 실행 버튼 **/
+	background-color:#1f4bb4;
+	height:30px;
+	color:#fff;
+	font-weight:700;
+    text-align:center;
+	padding:0px 15px 2px 15px;
+    border:none;
+}
+
+.ac        {text-align:center;}
+#blogMenu ul ul {
+display:none;
+}
+
+</style>
+
+<script type="text/javascript" src="/front/js/showModalDialog.js"></script>
+<script type="text/javascript">
+
+
+var min, sec, sTime, cTime;
+
+
+$(document).ready(function(){
+	sTime = 3600;
+	min = sTime / 60;
+	sec = sTime % 60;
+
+
+
+	$('#allmenu').click(function() {
+    	$('#allmenuview').show();
+    	$('#searchview').hide();
+   	});
+
+   	$('#allmenu_close').click(function() {
+    	$('#allmenuview').hide();
+   	});
+
+   	$('#searchmenu').click(function() {
+    	$('#searchview').show();
+    	$('#searchvalue').focus();
+   	});
+
+   	$('#searchview_close').click(function() {
+    	$('#searchview').hide();
+   	});
+
+	// CORONA-19 VIRUS 상단배너추가 2020.04.24
+   	$("#coronaDiv").animate({
+   		'marginTop' : "0px"
+   		//'opacity'  : "0.5"
+   	}, 0);
+
+});
+
+function search_includeHeader(){
+	if ($('#searchvalue').val() == "") {
+		alert("검색어를 입력해주세요!");
+		return false;
+	}else{
+    	$('#searchvalue').focus();
+		var param = $('#searchvalue').val();
+		param = encodeURIComponent(param);
+		location.href = "/front/main/mainSearch.do?keyword="+ param;
+	}
+
+}
+
+function fn_valueClear(){
+	if($('#searchvalue').val() == "검색어를 입력하세요") {
+		$('#searchvalue').val('');
+	}
+}
+
+
+
+
+function logCorpAScript_full(){
+	HTTP_MSN_MEMBER_NAME="";/*member name*/
+	var prtc=(document.location.protocol=="https:")?"https://":"http://";
+	var hst=prtc+"asp7.http.or.kr";
+	var rnd="r"+(new  Date().getTime()*Math.random()*9);
+	this.ch=function(){
+		if(document.getElementsByTagName("head")[0]){this.dls();}else{window.setTimeout(logCorpAnalysis_full.ch,30)}
+	}
+	this.dls=function(){
+		var  h=document.getElementsByTagName("head")[0];
+		var  s=document.createElement("script");s.type="text/jav"+"ascript";try{s.defer=true;}catch(e){};try{s.async=true;}catch(e){};
+		if(h){s.src=hst+"/HTTP_MSN/UsrConfig/kieejo/js/ASP_Conf.js?s="+rnd;h.appendChild(s);}
+	}
+	this.init= function(){
+		document.write('<img src="'+hst+'/sr.gif?d='+rnd+'"  style="width:1px;height:1px;position:absolute;" alt="" onload="logCorpAnalysis_full.ch()" />');
+	}
+}
+if(typeof logCorpAnalysis_full=="undefined"){	var logCorpAnalysis_full=new logCorpAScript_full();logCorpAnalysis_full.init();}
+
+function fn_showMenuList() {
+	document.getElementById('mw_temp').style.display='block';
+}
+
+//실명인증전환팝업
+function fn_showRnameConfirmPop(){
+	var renameConfirmPop = "";
+	//if(document.location.protocol == "http:") {
+	//	renameConfirmPop = "https://www.smtech.go.kr/front/comn/RnameConfirmPop.do";
+	//} else {
+		renameConfirmPop = "/front/comn/RnameConfirmPop.do";
+	//}
+
+	//winMbr = window.open("/front/comn/RnameConfirmPop.do","res_link","width=720,height=370,scrollbars=yes,status=no,resizable=yes");
+	winMbr = window.open(renameConfirmPop,"res_link","width=720,height=370,scrollbars=no,status=no,resizable=yes");
+	winMbr.focus();
+	checkChild();
+}
+
+function checkChild(){
+	if(winMbr.closed){
+		window.location.reload(true);
+	}else{
+	  	setTimeout("checkChild()",1);
+	}
+}
+
+/*메뉴보이도록 컨트롤 함수 재활용 2018*/
+function fn_menuFunc(menu) {
+
+	for(var i=0; i<7; i++) {
+		var bro = $('.lst'+(i+1)).children('.depth2-wrap');
+		bro.css('display', '');
+	}
+
+	if(menu == 'menu1') {
+		var chld = $('.lst1').children('.depth2-wrap');
+		chld.css('display', 'block');
+	} else if(menu == 'menu2') {
+		var chld = $('.lst2').children('.depth2-wrap');
+		chld.css('display', 'block');
+	} else if(menu == 'menu3') {
+		var chld = $('.lst3').children('.depth2-wrap');
+		chld.css('display', 'block');
+	} else if(menu == 'menu4') {
+		var chld = $('.lst4').children('.depth2-wrap');
+		chld.css('display', 'block');
+	} else if(menu == 'menu5') {
+		var chld = $('.lst5').children('.depth2-wrap');
+		chld.css('display', 'block');
+	} else if(menu == 'menu6') {
+		var chld = $('.lst6').children('.depth2-wrap');
+		chld.css('display', 'block');
+	} else if(menu == 'menu7') {
+		var chld = $('.lst7').children('.depth2-wrap');
+		chld.css('display', 'block');
+	}
+
+}
+
+/*메뉴보이도록 컨트롤 함수 재활용 2018*/
+function fn_disMenuFunc() {
+	for(var i=0; i<7; i++) {
+		var bro = $('.lst'+(i+1)).children('.depth2-wrap');
+		bro.css('display', '');
+	}
+}
+
+/*사업화지원정보제공동의팝업*/
+/*//2018.11.23 김형우연구원 전산요청으로 사업화지원동의여부 팝업 내림
+function plifOrgnYnPop(){
+	$.ajax({
+		type:"POST",
+		url:"/front/CHK/plifPuseCnt.do",
+		data:null,
+		async:false,
+		dataType:"json",
+		success:function(json){
+			if(json.resultCode!="-1"){
+				var url = "/front/CHK/plifPuseCsnt.do";
+				var winMbr = window.open(url,"사업화정보지원제공동의","left=0,top=0,width=686,height=655,menubar=no,location=no,scrollbars=no,status=no,directories=no,toolbar=no,resizable=no");
+				winMbr.focus();
+			}
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		}
+	});
+}
+plifOrgnYnPop();
+*/
+
+
+/* ==================================== 258677_이은희_[평가위원] 개인정보 제3자동의처리 추가 기능 구현 요청사항 Start ==================================== */
+// 평가위원 동의서 안내 팝업
+function ecmsnCsntPop(){
+	$.ajax({
+		type:"POST",
+		url:"/front/CHK/ecmsnCsntCnt.do",
+		data:null,
+		async:false,
+		dataType:"json",
+		success:function(json){
+			if(json.resultCode=="1"){
+				// alert('json.CSNT_YN = ' + json.CSNT_YN);
+				// 동의 하지 않은 평가위원만 나오도록 함.
+				if(json.CSNT_YN == 'N'){
+					var url = "/front/CHK/ecmsnCsntGuidPop.do";
+					var winMbr = window.open(url,"평가위원 동의서","left=0,top=0,width=920,height=555,menubar=no,location=no,scrollbars=no,status=no,directories=no,toolbar=no,resizable=no");
+					winMbr.focus();
+				}
+
+			}
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		}
+	});
+
+}
+
+ecmsnCsntPop();
+
+// 평가위원 동의서 메뉴로 이동 페이지
+function fn_MenuEcmsnMove(){
+	location.href = "/front/mpa/SP/rechSprtCsntEcmsnWrt.do";
+}
+/* ==================================== 258677_이은희_[평가위원] 개인정보 제3자동의처리 추가 기능 구현 요청사항 End ==================================== */
+
+/* ============================ 258686_이은희_[범부처PMS] SMTECH 과제참여연구원 개인정보 제3자 제공 및 활용 동의 처리 기능 추가 Start ============================ */
+// 참여자 동의서 안내 팝업
+function ptcpManPop(){
+	$.ajax({
+		type:"POST",
+		url:"/front/CHK/ptcpManCsntCnt.do",
+		data:null,
+		async:false,
+		dataType:"json",
+		success:function(json){
+			if(json.resultCode=="1"){
+				// alert('json.CSNT_YN = ' + json.CSNT_YN);
+				// 동의 하지 않은 평가위원만 나오도록 함.
+				if(json.CSNT_YN == 'N'){
+					if(getCookie('100000') == '' || getCookie('100000') == null) {
+						var url = "/front/CHK/ptcpManCsntGuidPop.do";
+						var winMbr = window.open(url,"참여자 동의서","left=0,top=0,width=920,height=390,menubar=no,location=no,scrollbars=no,status=no,directories=no,toolbar=no,resizable=no");
+						winMbr.focus();
+					}
+				}
+
+			}
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+		}
+	});
+
+}
+
+var getCookie4 = function(name) {
+	var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+	return value? value[2] : null;
+};
+
+ptcpManPop();
+
+//평가위원 동의서 메뉴로 이동 페이지
+function fn_MenuPtcpManMove(){
+	location.href = "/front/mpa/SP/rechSprtCsntPtcpManWrt.do";
+}
+
+// 로그인필요한 페이지 이동(로그인 되지 않았을 경우 로그인 페이지로 이동)
+function fn_MenuMrfnPageMove(url){
+	location.href = ""+url+"";
+}
+
+/* ============================ 258686_이은희_[범부처PMS] SMTECH 과제참여연구원 개인정보 제3자 제공 및 활용 동의 처리 기능 추가 End ============================ */
+
+
+	//타이머
+	function fn_timer() {
+
+		sec = sec - 1;
+		if(sec == -1) {
+			min = min-1;
+			sec = 59;
+		}
+		cTime = window.setTimeout('fn_timer()', 1000);
+		if(min > 0) {
+			//if(min == 1 && sec == 50) {
+			if(min == 10 && sec == 0){
+				sessionIngPopup();
+			}
+
+			if(sec > 9) {
+				$('#inactive_time').html("<b>" + min + ":" + sec + "</b>");
+
+
+				if($("#sessionAlarmPop").css("visibility") == "visible") {
+					$("#inactive_pop_time").html("<b><font size='4' color='red'>만료시간이 " + min + "분 " + sec + "초 남았습니다.</font></b>");
+				}
+
+			} else {
+				$('#inactive_time').html("<b>" + min + ":0" + sec + "</b>");
+				if($("#sessionAlarmPop").css("visibility") == "visible") {
+					$("#inactive_pop_time").html("<b><font size='4' color='red'>만료시간이 " + min + "분 0" + sec + "초 남았습니다.</font></b>");
+				}
+			}
+		} else {
+			if(sec >= 1) {
+				$('#inactive_time').html("<b>0:" + sec + "</b>");
+				if($("#sessionAlarmPop").css("visibility") == "visible") {
+					$("#inactive_pop_time").html("<b><font size='4' color='red'>만료시간이 " + "0분 " + sec + "초 남았습니다.</font></b>");
+				}
+			} else {
+				$('#inactive_time').html("<b>0:00</b>");
+				if($("#sessionAlarmPop").css("visibility") == "visible") {
+					$("#inactive_pop_time").html("<b><font size='4' color='red'>시간이 만료되었습니다.</font></b>");
+				}
+				alert("로그인 시간이 만료되어 로그아웃됩니다.");
+				clearTimeout(cTime);
+
+				location = "/front/log/logoutProc.do";
+
+
+			}
+		}
+	}
+
+	// 로그아웃 처리
+	function fn_timer_over() {
+		clearTimeout(cTime);
+		$("#sessionAlarmPop").css("visibility", "hidden");
+
+		location = "/front/log/logoutProc.do";
+
+	}
+
+	// 세션리셋
+	function fn_timer_reset() {
+		sTime = 3600;
+		min = sTime / 60;
+		sec = sTime % 60;
+	}
+
+	// 세션리셋(서버호출)
+	function fn_timer_reset_call() {
+
+		$.ajax({
+				url: "/front/COMN/refreshFrontSession.do",
+				type: "POST",
+				async: false,
+				dataType: "json",
+				success: function(data, textStatus, jqXHR) {
+					fn_timer_reset();
+					$("#sessionAlarmPop").css("visibility", "hidden");
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert("다시 로그인 후 실행해 주세요.");
+					$("#sessionAlarmPop").css("visibility", "hidden");
+				}
+		});
+	}
+
+	// 타이머 연장 DIV팝업 나타내기
+	function sessionIngPopup() {
+		$("#sessionAlarmPop").css("visibility", "visible");
+
+
+
+		//var sessionPopAddr = "/front/COMN/sessionExPop.do";
+		//var sessionPop = window.open(sessionPopAddr,"session_pop","width=345,height=350,scrollbars=no,status=no,resizable=no");
+		//sessionPop.focus();
+	}
+
+	// 로그인 연장 클릭시
+	function fn_LoginTimerEx() {
+		if(!confirm("로그인 시간을 연장하시겠습니까?")) {
+			return;
+		}
+
+		fn_timer_reset_call();
+	}
+
+	// 로그아웃 클릭시
+	function fn_LoginTimerLogout() {
+		if(!confirm("로그아웃 하시겠습니까?")) {
+			return;
+		}
+
+		$("#sessionAlarmPop").css("visibility", "hidden");
+		fn_timer_over();
+	}
+
+	function showModalDialogCallback(retVal) {
+  		if(retVal == "ok") { // 로그인 연장시
+			fn_timer_reset_call();
+		} else if(retVal == "logout") {	// 로그아웃시
+			fn_timer_over();
+		} else { // 변경안할시 (세션종료)
+			alert("연장하지 않으면 5분뒤 자동으로 로그아웃됩니다.");
+
+			clearTimeout(cTime);
+
+			//$('#session_time').val("120");
+		}
+  	}
+
+	// 타이머 session 연장 Callback
+	function sessionIngCall(val) {
+		if(val == "ok") {
+			fn_timer_reset_call();
+			return;
+		} else {
+			return;
+		}
+	}
+
+
+	/*상단메뉴 시안변경에 따른 수정요청 2018*/
+	$(document).ready(function(){
+
+		$(".inbN8 li a[name=navN8Tit]").mouseover(function(){
+			var inbN8a = $(".inbN8 li a[name=navN8Tit]");
+			var idx = $(this).parent().index();
+
+			for(var i=0;i<inbN8a.length;i++){
+				if(i==idx){
+					continue;
+				}
+				inbN8a.eq(i).removeClass("inb_on");
+			}
+
+			$(this).addClass("inb_on");
+		});
+
+		var subTit = $(".snbN8 div.titleN8").text();
+		var inbN8a = $(".inbN8 li a[name=navN8Tit]");
+		if(subTit=="과제신청"){
+			inbN8a.eq(0).addClass("inb_on");
+		}
+		if(subTit=="과제평가"){
+			inbN8a.eq(1).addClass("inb_on");
+		}
+		if(subTit=="과제수행"){
+			inbN8a.eq(2).addClass("inb_on");
+		}
+		if(subTit=="연구비집행"){
+			inbN8a.eq(3).addClass("inb_on");
+		}
+		if(subTit=="연구비정산"){
+			inbN8a.eq(4).addClass("inb_on");
+		}
+		if(subTit=="정보마당"){
+			inbN8a.eq(5).addClass("inb_on");
+		}
+		if(subTit=="고객지원"){
+			inbN8a.eq(6).addClass("inb_on");
+		}
+
+	});
+
+	function fn_ssoInterPop() {
+		window.open('/front/main/ssoInterPop.do' ,'onlnInfoPop','scrollbars=yes,width=820,height=728' );
+	}
+
+	document.addEventListener('keydown', function(e){
+        var keyCode = e.keyCode;
+        if(e.shiftKey && e.ctrlKey && keyCode === 90){
+        	document.getElementById("ssoT").style.display = "inline-block";
+        	//document.getElementById("body").style.overflow = "auto";
+        	//setCookie("open", "true", 1);
+        }
+    });
+
+	function fn_ssoUrl(url) {
+		window.open(url, "connSsoPopup");
+	}
+
+
+</script><img src="https://asp7.http.or.kr/sr.gif?d=r11378407382117.809" style="width:1px;height:1px;position:absolute;" alt="" onload="logCorpAnalysis_full.ch()">
+
+
+<div id="sessionAlarmPop" class="sessionBlock" style="visibility: hidden">
+	<div class="sessionBlockContent">
+			<div>
+
+
+				<div class="ac" style="width:100%;">
+					<span id="inactive_pop_time"></span><br><br><br>
+					<input type="button" class="bt4" onclick="fn_LoginTimerEx();" value="로그인 시간 연장" title="로그인 시간 연장">
+					<input type="button" class="bt4" onclick="fn_LoginTimerLogout();" value="로그아웃" title="로그아웃">
+				</div>
+			</div>
+	</div>
+</div>
+
+
+<div id="header">
+
+
+<br>
+				<img src="/front/images/coronaTop-2.jpg" usemap="#imgmap" alt="단비 유사동영상 검색 시스템 MLAB PRESENTATION 시연회"
+                     style="width:100%; vertical-align:middle; max-height:150px; max-width:1300px; min-height:102px; min-width:1300px;">
+            <div class="gnbNaviN8">
+                <!-- gnb -->
+                <div class="gnbN8">
+                    <ul>
+                        <li><a href="/front/main/main.do" class="homeN8">HOME</a></li>
+                            <li><a href="https://www.smtech.go.kr/front/log/Info_Correction_Request.do">웹검색</a></li>
+                            <li><a href="https://www.smtech.go.kr/front/log/Info_Correction_Request.do">모바일검색</a></li>
+                    </ul>
+                    <ul>
+<li><a href="#">Sub Menu 1</a></li>
+<li><a href="#">Sub Menu 2</a></li>
+<li><a href="#">Sub Menu 3</a></li>
+</ul>
+                </div>
+
+                <!--// gnb -->
+            </div>
+        </div>
+        <!-- // maintop -->
+        <!-- mainNavi -->
+        <!-- // CORONA-19 VIRUS 상단배너추가 2020.04.24 -->
+        <div class="mainNaviN8" style="z-index:7777; margin-top:102px;">
+        <!--<div class="mainNaviN8" style="z-index:7777;">-->
+            <!-- inb -->
+            <div class="inbN8">
+               <ul>
+                    <li class="navN8">
+                     <a name="navN8Tit" href="/front/SBA/SA/ApplGuid_advnPrprMatrGuid.do">과제신청</a>
+                     <div class="open_menuN8">
+                         <ul class="navlinkN8">
+                             <li>
+                                 <a href="/front/SBA/DR/DemResearch_forwardDemResearchApplMain.do">01. 태그기반 유사동영상 검색</a>
+                                 <a href="/front/SBA/DR/DemResearch_forwardDemResearchApplMain.do">02. 불법/유사 콘텐츠 검색</a>
+                                 <a href="/front/SBA/DR/DemResearch_forwardDemResearchApplMain.do">03</a>
+                             </li>
+
+                 <li class="navN8">
+                 	 <a name="navN8Tit" href="/front/sba/ee/ElecEvalSbjtLst.do">모바일검색</a>
+                     <div class="open_menuN8">
+                         <ul class="navlinkN8">
+                             <li>
+                                 <a href="/front/SBA/DR/DemResearch_forwardDemResearchApplMain.do">01. 태그기반 유사동영상 검색</a>
+                                 <a href="/front/SBA/DR/DemResearch_forwardDemResearchApplMain.do">02. 동영상-상품 매칭</a>
+                                 <a href="/front/SBA/DR/DemResearch_forwardDemResearchApplMain.do">03. 불법/유사 동영상 검색</a>
+                             </li>
+
+    <!--subheader //-->
+<!-- 2018홈페이지 개편 -->
+	</div>
+       <!-- contaner -->
+       <!--<div id="container" style="padding-top:100px;">-->
+       <!-- // CORONA-19 VIRUS BANNER OPEN 2020.04.21 -->
+       <div id="container" style="padding-top:50px;">
+            <!--즐겨찾는서비스-->
+
+<div class="section" name="1"></div>
+            <!-- // CORONA-19 VIRUS BANNER OPEN 2020.04.21 -->
+            <!--<div class="service_con">-->
+            <!-- // CORONA-19 VIRUS BANNER OPEN 2020.04.21 -->
+            <div class="service_con" style="margin-top:150px;">
+                <div class="service_box" id="topBox1">
+                    <span class="title">즐겨찾는 서비스</span>
+                    <ul class="menu_icon">
+
+
+                    <li><a class="favicon1" href="/front/SBA/SA/ApplGuid_advnPrprMatrGuid.do">과제신청</a>
+                        <span>과제신청</span></li><li><a class="favicon4" href="/front/SBA/EA/AgreChng_selectAgreChngObjtSbjt.do">협약변경관리</a><span>협약변경관리</span></li><li><a class="favicon7" href="/front/REX/SR/SR_OallExecSitu.do">연구비 총괄 조회</a><span>연구비 총괄 조회</span></li><li><a class="favicon13" href="/front/ifg/no/notice02_intro.do">R&amp;D사업공고</a><span>R&amp;D사업공고</span></li><li><a class="favicon14" href="/front/sig/st/prjtIntro.do">사업소개</a><span>사업소개</span></li><li><a class="favicon17" href="/front/csg/qn/qna_list.do">질의 및 응답(Q&amp;A)</a><span>질의 및 응답(Q&amp;A)</span></li></ul>
+                    <a href="#" onclick="javascript:fn_topMenuCont(1);return false;" class="my_service">MY 서비스 현황</a>
+                    <a href="#" onclick="javascript:fn_topMenuCont(2);return false;" class="menu_edit">메뉴 설정하기</a>
+
+                    <!-- 즐겨찾는 메뉴 설정하기 -->
+                    <div class="menu_add" id="menu_add" style="display:none;z-index:2000;">
+                        <p>
+                            * 즐겨찾기 원하시는 메뉴를 설정하세요. 최대 6자리까지 선택 가능합니다.
+                            <span>
+                                <a href="#" onclick="javascript:fn_topMenuRefresh();return false;" class="refresh_bt">초기화</a>
+                                <a href="#" onclick="javascript:fn_topMenuSetting();return false;" class="edit_bt">설정하기</a>
+                                <a href="#" onclick="javascript:fn_topMenuClose();return false;" class="cancel_bt">취소하기</a>
+                            </span>
+                        </p>
+
+
+                    </div>
+                    <!-- 즐겨찾는 메뉴 설정하기 -->
+                </div>
+            </div>
+            <!--// 즐겨찾는서비스-->
+            <!--로그인 서비스-->
+            <div class="service_con" id="topBox2" style="display:none;">
+                <div class="service_box">
+				    <!-- 로그인 -->
+
+					<form id="loginForm" name="loginForm" method="post">
+					<input type="hidden" name="isLckSe" value="">
+					<input type="hidden" name="cmd" value="homeLogin2">
+					<input type="hidden" name="ServerName" value="www.smtech.go.kr">
+					<input type="hidden" name="SystemId" value="DI8011">
+					<input type="hidden" name="successRedir" value="/log/loginProc.do?returnUrl=/front/main/main.do">
+					<input type="hidden" name="failRedir" value="/log/login.do?returnUrl=/front/main/main.do">
+
+                    <dl class="login_con">
+                        <dt>로그인</dt>
+                        <dd><span>I &nbsp; D</span><input type="text" value="" name="loginId" id="id01" title="아이디 입력창" npkencrypt="key"></dd>
+                        <dd><span>PW</span><input type="password" name="loginPasswd" id="pw01" title="비밀번호 입력창" npkencrypt="key" onkeyup="javascript:login();"></dd>
+                        <dd><a href="#" onclick="javascript:loginProc('usual');return false;">로그인</a></dd>
+                    </dl>
+					</form>
+
+                    <form id="actfLoginForm" name="actfLoginForm" method="post">
+                    <dl class="ipin_con">
+                        <dt>아이핀 로그인</dt>
+                        <dd><a href="#" class="btn_ipin" onclick="fn_ipinOpenPopup()">아이핀 인증받기</a>
+                        <iframe id="go_sso_login" name="go_sso_login" width="0" height="0" style="display:none" title="공인인증 프레임"></iframe>
+                        </dd>
+                        <dd>주민번호 대신 식별 ID를 행정안전부로부터 발급받아 본인 확인을 하는 서비스 입니다. </dd>
+                    </dl>
+ 					</form>
+				    <form id="chkPersonForm" name="chkPersonForm" method="post">
+				        <input type="hidden" name="isLckSe" value="">
+				    </form>
+
+                    <a href="#" onclick="javascript:fn_topMenuClose();" class="close_bt">닫기</a>
+                </div>
+            </div>
+            <!--// 로그인 서비스-->
+
+
+            <!--마이현황 서비스-->
+            <div class="service_con" id="topBox3" style="display:none">
+                <div class="service_box">
+                    <span class="title">MY 서비스 현황</span>
+                    <ul class="myservice">
+                        <li>
+                            <dl>
+                                <dt>공 통</dt>
+                                <dd>전자공문(알림)<a id="notiCount" href="/front/mpa/ep/ElecPubl_viewPublList.do">0</a></dd>
+                                <dd>협약변경<a id="agreChngCount" href="/front/SBA/EA/AgreChng_selectAgreChngObjtSbjt.do">0</a></dd>
+                                <dd>MY Q&amp;A 조회<a id="iqCount" href="/front/mpa/iq/IndyQust.do">0</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>연구비</dt>
+                                <dd>일반납부<a id="paym2Count" href="/front/OSA/PS/PS_PaymPlanRead.do">0</a></dd>
+                                <dd>포인트 환원<a id="restnCount" href="/front/OSA/BR/BR_RtrtSituRead.do">0</a></dd>
+                                <dd>민간부담금 납부요청<a id="paym1Count" href="/front/OSA/PS/PS_PaymPlanRead.do">0</a></dd>
+                            </dl>
+                        </li>
+
+                        <li>
+                            <dl>
+                                <dt>정 산</dt>
+                                <dd>회계법인 상시점검<a id="bconsCityChkCount" href="/front/OSA/BA/BA_RegularChk.do">0</a></dd>
+                                <dd>납부계획서<a id="tfeePlanCount" href="/front/OSA/PS/PaymPlanWriteRead.do">0</a></dd>
+                                <dd>회계법인 질의응답<a id="bconsQnaCount" href="/front/OSA/BA/BA_QustAnsr.do">0</a></dd>
+                                <dd>회계법인 공지/ 안내<a id="bconsNotiCount" href="/front/mpa/ep/ElecPubl_viewPublList.do">0</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <a href="#" onclick="javascript:fn_topMenuClose();" class="close_bt">닫기</a>
+                </div>
+            </div>
+            <!--// 마이현황 서비스-->
+
+            <!-- content -->
+            <div class="content">
+
+                <!-- 공공별사업보기 -->
+                <div class="notice_busin" name="ancmList1">
+                    <div class="notice_con">
+                        <!-- 공지 알림 / 탭 -->
+                        <div class="notice_text">
+                        	<ul id="ticker" style="height:35px; overflow: hidden;">
+
+                        	</ul>
+                        </div>
+                        <div class="tab_con">
+                        	<a id="mainIdx1" href="#" onclick="javascript:fn_mainIdx(1);" class="tab_on">공고별 보기</a>
+                        	<a id="mainIdx2" href="#" onclick="javascript:fn_mainIdx(2);" class="tab_off">사업별 보기</a>
+                        	<a id="ancm_prev1" href="#" class="prev_bt">이전</a>
+                        	<a id="ancm_next1" href="#" class="next_bt">다음</a>
+                        	<!-- <a href="#" onclick="javascript:fn_mainDtl();" class="more_bt">목록보기</a> -->
+                        	<a href="#" onclick="javascript:fn_mainDtl();" class="tab_off">전체공고 보기</a>
+                        	<input type="hidden" id="mainIdx" value="1">
+                        	<input type="hidden" id="ancm_conValue" value="1">
+                        </div>
+                        <!-- // 공지 알림 / 탭 -->
+                        <!--공지리스트-->
+                        <div class="notice_list" name="ancmList">
+                            <ul>
+
+                                <li id="ancmDetail_idx1" style="">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 12. 31</span>
+
+
+
+
+                                            		2020년도 연구기반활용사업 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 02. 17 ~ 2020. 12. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00887&amp;buclCd=S4410&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=2&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 연구기반활용사업 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx2" style="">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="com_icon">접수예정</span> <span class="endday">마감일 2020. 09. 14</span>
+
+
+
+                                            		2020년도 중소기업 지원 선도연구기관 협력기술개발사업(산연협력기술개발) ...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 08. 10 ~ 2020. 09. 14</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00943&amp;buclCd=S7221&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업 지원 선도연구기관 협력기술개발사업(산연협력기술개발) 시행계획 공고">상세보기</a>
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applying_bt">접수예정</a>
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+
+                                <li id="ancmDetail_idx6" style="">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="com_icon">접수예정</span> <span class="endday">마감일 2020. 08. 28</span>
+
+
+
+
+                                            		2020년 고경력 연구인력 채용지원사업 2차 접수
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 08. 10 ~ 2020. 08. 28</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00973&amp;buclCd=S6043&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 고경력 연구인력 채용지원사업 2차 접수">상세보기</a>
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applying_bt">접수예정</a>
+
+                                        </dd>
+                                    </dl>
+
+
+                                <li id="ancmDetail_idx8" style="">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 08. 10</span>
+
+
+
+                                            		2020년도 현장수요형 스마트공장 기술개발사업 시행계획 추가공고(클라우드기...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 09 ~ 2020. 08. 10</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00967&amp;buclCd=S2301&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 현장수요형 스마트공장 기술개발사업 시행계획 추가공고(클라우드기반 데이터플랫폼 개발)">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx9" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 08. 10</span>
+
+
+
+
+                                            		2020년 공정품질기술개발사업(혁신형R&amp;D) 2차 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 10 ~ 2020. 08. 10</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00899&amp;buclCd=S202A&amp;dtlAncmSn=3&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 공정품질기술개발사업(혁신형R&amp;D) 2차 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx10" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 08. 10</span>
+
+
+
+
+                                            		2020년 공정품질기술개발사업(현장형R&amp;D) 2차 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 10 ~ 2020. 08. 10</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00900&amp;buclCd=S202B&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 공정품질기술개발사업(현장형R&amp;D) 2차 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx11" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 08. 06</span>
+
+
+
+
+                                            		2020년도 예비가젤형 기술개발사업 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 08. 06</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00963&amp;buclCd=S2B11&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 예비가젤형 기술개발사업 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx12" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 08. 06</span>
+
+
+
+
+                                            		(본선)2020년도 맞춤형 기술파트너 지원사업 시행계획 2차 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 14 ~ 2020. 08. 06</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00949&amp;buclCd=S7197&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="(본선)2020년도 맞춤형 기술파트너 지원사업 시행계획 2차 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx13" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 08. 03</span>
+
+
+
+
+                                            		2020년도 테크브릿지활용 상용화 기술개발사업 제2차 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 08. 03</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00966&amp;buclCd=S2C11&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=2&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 테크브릿지활용 상용화 기술개발사업 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx14" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 31</span>
+
+
+
+
+                                            		2020년도 공공연 연구인력 파견사업(07월 신청)
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 01 ~ 2020. 07. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00904&amp;buclCd=S6041&amp;dtlAncmSn=6&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 공공연 연구인력 파견사업(07월 신청)">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx15" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 31</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 공동투자형 과제 자유응모(4차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 30 ~ 2020. 07. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00960&amp;buclCd=S203D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 공동투자형 과제 자유응모(4차) 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx16" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 31</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 구매연계형 과제 지정공모(2차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 30 ~ 2020. 07. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00962&amp;buclCd=S203C&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 구매연계형 과제 지정공모(2차) 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx17" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 31</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 공동투자형 과제 지정공모(2차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 30 ~ 2020. 07. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00961&amp;buclCd=S203D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 공동투자형 과제 지정공모(2차) 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx18" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 31</span>
+
+
+
+
+                                            		2020년도 중소기업 R&amp;D 수행기업 수출지원프로그램 제2차 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00964&amp;buclCd=S9121&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업 R&amp;D 수행기업 수출지원프로그램 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx19" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 중소기업 창업성장기술개발사업 '디딤돌 창업과제' 제3차 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 10 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00969&amp;buclCd=S205D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업 창업성장기술개발사업 '디딤돌 창업과제' 제3차 시행계획 공고(비대면 분야)">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx20" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 중소기업기술혁신개발사업 ‘시장확대형 과제’ 제3차 시행계획 공...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 10 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00968&amp;buclCd=S2018&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업기술혁신개발사업 ‘시장확대형 과제’ 제3차 시행계획 공고(비대면 분야)">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx21" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 중소기업기술혁신개발사업 ‘시장확대형 과제’ 제2차 시행계획 수...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00952&amp;buclCd=S2018&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업기술혁신개발사업 ‘시장확대형 과제’ 제2차 시행계획 수정공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx22" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 창업성장기술개발사업 '디딤돌창업과제(소셜벤처)' 제2차 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00957&amp;buclCd=S205D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 창업성장기술개발사업 '디딤돌창업과제(소셜벤처)' 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx23" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+
+                                            		2020년도 중소기업기술혁신개발사업 ‘수출지향형 과제’ 제2차 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00951&amp;buclCd=S2017&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업기술혁신개발사업 ‘수출지향형 과제’ 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx24" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 창업성장기술개발사업 '디딤돌창업과제(여성참여)' 제2차 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00956&amp;buclCd=S205D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 창업성장기술개발사업 '디딤돌창업과제(여성참여)' 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx25" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 창업성장기술개발사업 '전략형 창업과제(4IR)' 제2차 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00955&amp;buclCd=S205E&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 창업성장기술개발사업 '전략형 창업과제(4IR)' 제2차 시행계획 수정 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx26" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 창업성장기술개발사업 '디딤돌 창업과제(재창업)' 제2차 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00959&amp;buclCd=S205D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 창업성장기술개발사업 '디딤돌 창업과제(재창업)' 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx27" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 창업성장기술개발사업 '디딤돌 창업과제(첫걸음)' 제2차 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00958&amp;buclCd=S205D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 창업성장기술개발사업 '디딤돌 창업과제(첫걸음)' 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx28" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+
+                                            		2020년도 중소기업기술혁신개발사업 ‘시장대응형 과제’ 제2차 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00954&amp;buclCd=S2019&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 중소기업기술혁신개발사업 ‘시장대응형 과제’ 제2차 시행계획 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx29" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 30</span>
+
+
+
+                                            		2020년도 창업성장기술개발사업 '전략형 창업과제(소재·부품·장비)' 제2...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 13 ~ 2020. 07. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00953&amp;buclCd=S205E&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 창업성장기술개발사업 '전략형 창업과제(소재·부품·장비)' 제2차 시행계획 수정 공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx30" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 27</span>
+
+
+
+
+                                            		2020년도 기술규제 해결형 기술개발사업 시행계획 2차 공고(1단계)
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 06 ~ 2020. 07. 27</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00948&amp;buclCd=S2C21&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=2&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 기술규제 해결형 기술개발사업 시행계획 2차 공고(1단계)">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx31" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 24</span>
+
+
+
+
+                                            		2020년 중소기업 R&amp;D기획지원사업 시행계획 공고_강소 100 패키지
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 24 ~ 2020. 07. 24</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00950&amp;buclCd=S2061&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 중소기업 R&amp;D기획지원사업 시행계획 공고_강소 100 패키지">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx32" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 24</span>
+
+
+
+
+                                            		2020년 중소기업 R&amp;D기획지원사업 시행계획 공고_첫걸음기획
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 24 ~ 2020. 07. 24</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00950&amp;buclCd=S2061&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 중소기업 R&amp;D기획지원사업 시행계획 공고_첫걸음기획">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx33" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 21</span>
+
+
+
+
+                                            		2020년도 우수연구개발 혁신제품 제1차 지정예정공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 07. 01 ~ 2020. 07. 21</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00965&amp;buclCd=S9111&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 우수연구개발 혁신제품 제1차 지정예정공고">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx34" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="ing_icon">접수중</span> <span class="endday">마감일 2020. 07. 17</span>
+
+
+
+
+                                            		2020년도 AI기반 고부가 신제품 기술개발사업 시행계획 공고 2차
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 29 ~ 2020. 07. 17</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00947&amp;buclCd=S2A11&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 AI기반 고부가 신제품 기술개발사업 시행계획 공고 2차">상세보기</a>
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="apply_bt">신청하기</a>
+
+
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx35" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 07. 13</span>
+
+
+
+
+                                            		(예선) 2020년도 맞춤형 기술파트너 지원사업 시행계획 2차 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 29 ~ 2020. 07. 13</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00949&amp;buclCd=S7197&amp;dtlAncmSn=1&amp;schdSe=MO5006&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="(예선) 2020년도 맞춤형 기술파트너 지원사업 시행계획 2차 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx36" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 07. 10</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 구매연계형 과제 자유응모(2차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 15 ~ 2020. 07. 10</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00935&amp;buclCd=S203C&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 구매연계형 과제 자유응모(2차) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx37" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 07. 08</span>
+
+
+
+
+                                            		2020년도 해외원천기술 상용화기술개발사업(상용화기술개발) 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 18 ~ 2020. 07. 08</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00932&amp;buclCd=S2E11&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 해외원천기술 상용화기술개발사업(상용화기술개발) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx38" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 07. 03</span>
+
+
+
+
+                                            		(7월) 팁스(TIPS) 창업팀 지원계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 30 ~ 2020. 07. 03</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00869&amp;buclCd=S205F&amp;dtlAncmSn=7&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="(7월) 팁스(TIPS) 창업팀 지원계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx39" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 30</span>
+
+
+
+
+                                            		2020년도 공공연 연구인력 파견지원(06월 신청)
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 01 ~ 2020. 06. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00904&amp;buclCd=S6041&amp;dtlAncmSn=5&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 공공연 연구인력 파견지원(06월 신청)">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx40" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 30</span>
+
+
+
+                                            		[지정공모] 2020년도 소상공인 자영업자를 위한 생활혁신형 기술개발사업 ...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 11 ~ 2020. 06. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00933&amp;buclCd=S2B21&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="[지정공모] 2020년도 소상공인 자영업자를 위한 생활혁신형 기술개발사업 BM개발과제(BM기획) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx41" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 30</span>
+
+
+
+                                            		[자유응모] 2020년도 소상공인 자영업자를 위한 생활혁신형 기술개발사업 ...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 11 ~ 2020. 06. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00940&amp;buclCd=S2B21&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="[자유응모] 2020년도 소상공인 자영업자를 위한 생활혁신형 기술개발사업 BM개발과제(BM기획) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx42" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 22</span>
+
+
+
+                                            		2020년도 제1차 기술규제 해결형 기술개발사업 2단계 기술규제해결형기술개...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 05 ~ 2020. 06. 22</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00939&amp;buclCd=S2C21&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 제1차 기술규제 해결형 기술개발사업 2단계 기술규제해결형기술개발(RnD) 접수 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx43" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 22</span>
+
+
+
+
+                                            		2020년 중소기업 스마트서비스 지원사업 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 21 ~ 2020. 06. 22</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00934&amp;buclCd=S9311&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 중소기업 스마트서비스 지원사업 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx44" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 19</span>
+
+
+
+
+                                            		(3,5월 재도전) 팁스(TIPS) 창업팀 지원계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 15 ~ 2020. 06. 19</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00869&amp;buclCd=S205F&amp;dtlAncmSn=6&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="(3,5월 재도전) 팁스(TIPS) 창업팀 지원계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx45" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 17</span>
+
+
+
+
+                                            		2020년 제2차 기술혁신센터 기술교류 연계과제 모집
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 01 ~ 2020. 06. 17</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00941&amp;buclCd=S9211&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 제2차 기술혁신센터 기술교류 연계과제 모집">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx46" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 15</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 공동투자형 과제 자유응모(3차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 15 ~ 2020. 06. 15</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00936&amp;buclCd=S203D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 공동투자형 과제 자유응모(3차) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx47" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 12</span>
+
+
+
+                                            		2020년도 소상공인 자영업자를 위한 생활혁신형 기술개발사업 생활혁신개발과...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 06. 12 ~ 2020. 06. 12</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00946&amp;buclCd=S2B22&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 소상공인 자영업자를 위한 생활혁신형 기술개발사업 생활혁신개발과제(진단기획) 제1차 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx48" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 06. 08</span>
+
+
+
+
+                                            		코로나19 위기극복을 위한 경영안정자금 융자 지원계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 03. 17 ~ 2020. 06. 08</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00921&amp;buclCd=S9131&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="코로나19 위기극복을 위한 경영안정자금 융자 지원계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx49" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 05. 31</span>
+
+
+
+
+                                            		2020년도 공공연 연구인력 파견사업(05월 신청)
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 01 ~ 2020. 05. 31</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00904&amp;buclCd=S6041&amp;dtlAncmSn=4&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 공공연 연구인력 파견사업(05월 신청)">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx50" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 05. 29</span>
+
+
+
+
+                                            		(6월) 팁스(TIPS) 창업팀 지원계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 26 ~ 2020. 05. 29</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00869&amp;buclCd=S205F&amp;dtlAncmSn=5&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="(6월) 팁스(TIPS) 창업팀 지원계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx51" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 05. 22</span>
+
+
+
+
+                                            		(사업계획서) 스마트센서 선도프로젝트 기술개발사업 시행계획 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 05. 07 ~ 2020. 05. 22</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00906&amp;buclCd=S2311&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="(사업계획서) 스마트센서 선도프로젝트 기술개발사업 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx52" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 05. 14</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 구매연계형 과제 지정공모(1차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 04. 01 ~ 2020. 05. 14</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00927&amp;buclCd=S203C&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 구매연계형 과제 지정공모(1차) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx53" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 05. 14</span>
+
+
+
+                                            		2020년도 구매조건부신제품개발사업 공동투자형 과제 자유응모(2차) 시행계...
+
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 04. 01 ~ 2020. 05. 14</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00928&amp;buclCd=S203D&amp;dtlAncmSn=1&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 구매조건부신제품개발사업 공동투자형 과제 자유응모(2차) 시행계획 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx54" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 05. 04</span>
+
+
+
+
+                                            		2020년 공정품질기술개발사업(혁신형R&amp;D) 상반기 추가 공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 04. 02 ~ 2020. 05. 04</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00899&amp;buclCd=S202A&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년 공정품질기술개발사업(혁신형R&amp;D) 상반기 추가 공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx55" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 04. 30</span>
+
+
+
+
+                                            		2020년도 공공연 연구인력 파견지원(04월 신청)
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 04. 01 ~ 2020. 04. 30</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00904&amp;buclCd=S6041&amp;dtlAncmSn=3&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 공공연 연구인력 파견지원(04월 신청)">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li id="ancmDetail_idx56" style="display:none;">
+                                    <dl>
+                                        <dt style="min-height:100px;">
+                                            <span class="end_icon">접수완료</span> <span class="endday">마감일 2020. 04. 29</span>
+
+
+
+
+                                            		2020년도 테크브릿지활용 상용화 기술개발사업 제1차 시행계획 수정공고
+
+
+                                            <!-- 20190212 메인수정 -->
+                                        </dt>
+                                        <dd>접수기간: 2020. 03. 23 ~ 2020. 04. 29</dd>
+                                        <dd>
+
+
+                                        	<a href="/front/ifg/no/notice02_detail.do?buclYy=&amp;ancmId=S00916&amp;buclCd=S2C11&amp;dtlAncmSn=2&amp;schdSe=MO5005&amp;aplySn=1&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" class="detail_bt" title="2020년도 테크브릿지활용 상용화 기술개발사업 제1차 시행계획 수정공고">상세보기</a>
+
+
+                                        	 <a href="/front/SBA/SA/SbjtAppl_selectSbjtAncmList.do?buclTpSe=ALL" class="applyend_bt">신청마감</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!--// 공지리스트-->
+                </div>
+                <!-- // 공공별사업보기 -->
+
+                <!-- 사업별보기 -->
+                <div class="group_box" name="ancmList2" style="display:none">
+                    <div class="group_con">
+                      <div class="group_name">
+
+                      </div>
+                      <div class="tab_list">
+                      <a id="mainIdx3" href="#" onclick="javascript:fn_mainIdx(1);">공고별 보기</a>
+                      <a id="mainIdx4" href="#" onclick="javascript:fn_mainIdx(2);" class="tab_on">사업별 보기</a>
+                      </div>
+
+                      <ul class="group_list">
+                      	<li>
+
+
+
+								<a busicd="S2A10" name="busiIdx" id="busiT_1" class="blue_on first sp_none ">AI기반고부가 신제품 기술개발</a>
+
+
+
+
+								<a busicd="S2C10" name="busiIdx" id="busiT_2" class="blue_on sp_none ">Tech-Bridge 활용상용화 기술개발</a>
+
+
+
+
+								<a busicd="S2C20" name="busiIdx" id="busiT_3" class="blue_on sp_none ">기술규제 해결형 기술개발</a>
+
+
+
+
+								<a busicd="S2310" name="busiIdx" id="busiT_4" class="blue_off sp_none ">스마트센서 선도프로젝트 기술개발</a>
+
+
+
+
+								<a busicd="S4400" name="busiIdx" id="busiT_5" class="blue_on ">연구기반 활용사업</a>
+
+
+
+
+								<a busicd="S2B10" name="busiIdx" id="busiT_6" class="blue_on ">예비가젤형 기술개발</a>
+
+
+
+
+								<a busicd="S2C30" name="busiIdx" id="busiT_7" class="blue_off last ">해외인증/규격 적합제품R&amp;D</a>
+
+
+						</li>
+						<li>
+
+
+
+								<a busicd="S2A30" name="busiIdx" id="busiM_1" class="blue_off first sp_none ">미세먼지저감 실용화 기술개발</a>
+
+
+
+
+								<a busicd="S2A20" name="busiIdx" id="busiM_2" class="blue_off ">빅데이터기반 서비스개발</a>
+
+
+
+
+								<a busicd="S7210" name="busiIdx" id="busiM_3" class="blue_off sp_none ">산학연 Collabo R&amp;D</a>
+
+
+
+
+								<a busicd="S2060" name="busiIdx" id="busiM_4" class="blue_on sp_none ">중소기업 R&amp;D기획역량 제고사업</a>
+
+
+
+
+								<a busicd="S2A40" name="busiIdx" id="busiM_5" class="blue_off sp_none ">중소기업 기술사업화 역량강화사업</a>
+
+
+
+
+								<a busicd="S2010" name="busiIdx" id="busiM_6" class="blue_on sp_none ">중소기업 기술혁신 개발사업</a>
+
+
+
+
+								<a busicd="S2E10" name="busiIdx" id="busiM_7" class="blue_off last ">해외원천기술 상용화R&amp;D</a>
+
+
+						</li>
+						<li>
+
+
+
+								<a busicd="S7230" name="busiIdx" id="busiB_1" class="blue_off first sp_none ">산학협력 거점형 플랫폼(R&amp;D)</a>
+
+
+
+
+								<a busicd="S2030" name="busiIdx" id="busiB_2" class="blue_on ">상용화 기술개발사업</a>
+
+
+
+
+								<a busicd="S2B20" name="busiIdx" id="busiB_3" class="blue_off sp_none ">소상공인 자영업자위한 생활혁신형</a>
+
+
+
+
+								<a busicd="S7220" name="busiIdx" id="busiB_4" class="blue_on sp_none ">중소기업지원 선도연구기관 협력기술개발</a>
+
+
+
+
+								<a busicd="S7240" name="busiIdx" id="busiB_5" class="blue_off sp_none ">지역중소기업 공동수요 기술개발</a>
+
+
+
+
+								<a busicd="S2050" name="busiIdx" id="busiB_6" class="blue_on ">창업성장 기술개발사업</a>
+
+
+
+
+								<a busicd="S2300" name="busiIdx" id="busiB_7" class="blue_on last sp_none ">현장수요형 스마트공장 기술개발사업</a>
+
+
+                    	</li>
+                      </ul>
+
+					  <!--event 공고없음 -->
+                        <div class="noticeNo" name="noticeNo" style="display:none;">
+                          <span> 현재 진행중인 공고가 없습니다.</span>
+                          <a href="/front/sig/st/prjtIntro.do">사업소개 바로가기</a>
+                        </div>
+                        <!--event 공고없음 -->
+
+                        <!--event BLUE 기업성장촉진 -->
+                        <div class="tab_event1" name="tab_event" style="display:none;">
+                        </div>
+                        <!--// event BLUE 기업성장촉진 -->
+
+                        <!--event RIVERB 생태계활성화 -->
+                        <div class="tab_event2" name="tab_event" style="display:none;">
+                        </div>
+                        <!--// event RIVERB 생태계활성화 -->
+
+                        <!--event YELLOW R&D인력양성 -->
+                        <div class="tab_event3" name="tab_event" style="display:none;">
+                        </div>
+                        <!--//event YELLOW R&D인력양성 -->
+
+                        <!--event PURPLE 지역기업육성 -->
+                        <div class="tab_event4" name="tab_event" style="display:none;">
+                        </div>
+                        <!--// event PURPLE 지역기업육성 -->
+                      <div class="mouse_icon">색상이 진한 사업명이 접수중입니다. 해당 색상영역을 클릭해 주세요.</div>
+                    </div>
+                </div>
+                <!-- // 사업별보기 -->
+
+				<!--질의 및 응답-->
+                <div class="qna_bg">
+                    <div class="qna_con">
+                        <div class="qna_title">
+                            <h3>질의 및 응답</h3>
+                            <p>문의주신 내용에 성심 성의껏 답변드리겠습니다.</p>
+                            <a href="/front/csg/qn/qna_list.do" class="more_bt">더보기</a>
+                        </div>
+                        <div class="qna_list">
+                            <ul>
+
+                                <li><a href="#" onclick="javascript:fn_qnaRead(299427,'N');"><p>대표자가 동일한 2개 기업을 주관기업/참여기업으로 하여 과제 신청이 가능한 지 문의드립니다. </p></a>
+                                    <span class="data">2020-07-16</span>
+
+
+                                    	<span class="lock">
+
+                                    	답변대기</span>
+
+                                </li>
+
+                                <li><a href="#" onclick="javascript:fn_qnaRead(299425,'N');"><p>전문가 활용비 -  코로나 상황 화상회의</p></a>
+                                    <span class="data">2020-07-16</span>
+
+
+                                    	<span class="lock">
+
+                                    	답변대기</span>
+
+                                </li>
+
+                                <li><a href="#" onclick="javascript:fn_qnaRead(299424,'N');"><p>디딤돌 창업 접수 문의</p></a>
+                                    <span class="data">2020-07-16</span>
+
+
+                                    	<span class="lock">
+
+                                    	답변대기</span>
+
+                                </li>
+
+                                <li><a href="#" onclick="javascript:fn_qnaRead(299423,'N');"><p>과제 중도 포기</p></a>
+                                    <span class="data">2020-07-16</span>
+
+
+                                    	<span class="lock">
+
+                                    	답변대기</span>
+
+                                </li>
+
+                                <li><a href="#" onclick="javascript:fn_qnaRead(299419,'N');"><p>정산 환수금관련 유예신청 관련 문의</p></a>
+                                    <span class="data">2020-07-16</span>
+
+
+                                    	<span class="lock">
+
+                                    	답변대기</span>
+
+                                </li>
+
+                                <li><a href="#" onclick="javascript:fn_qnaRead(299413,'N');"><p>사업비 관련 조정의견 반영에 대한 질의</p></a>
+                                    <span class="data">2020-07-16</span>
+
+
+                                    	<span class="lock">
+
+                                    	답변대기</span>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--// 질의 및 응답-->
+
+
+
+
+
+<div class="section" name="2"></div>
+                <!-- 공지사항 및 배너 -->
+                <div class="notice_banner">
+                    <div class="notice_box">
+                        <!-- 공지사항 / 기타공고 -->
+                        <div class="news_con">
+                            <a name="news_con_idx" href="#" onclick="javascript:news_con_clicked(0);" class="title1 title_on">공지사항</a><a href="/front/ifg/no/notice01_detail.do" class="more_bt">더보기</a>
+                            <ul class="notice_list">
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=286892">코로나-19 대비 중소기업 R&amp;D 부담완화 대책 안내</a>
+								 	<span>2020-04-17</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=263185">『2020년도 중기부 R&amp;D 국민평가단』 모집 공고</a>
+								 	<span>2020-03-11</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=261260">코로나19 발생에 따른 사업비 인정 기준 안내</a>
+								 	<span>2020-02-27</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=261152">2020년도 중소기업기술개발 지원사업 접수기간 연장 ...</a>
+								 	<span>2020-02-26</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=260386">2020년 '중소기업 기술혁신개발사업 및 창업성장기술...</a>
+								 	<span>2020-02-19</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=256987">2020년 중소기업 기술개발 지원사업 통합공고 및 설명...</a>
+								 	<span>2020-01-06</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice01_detail.do?bitmSeq=204077">경상기술료(매출기반 약정기술료) 매뉴얼</a>
+								 	<span>2019-01-31</span>
+								 </li>
+
+                            </ul>
+                            <a name="news_con_idx" href="#" onclick="javascript:news_con_clicked(1);" class="title2 title_off">기타공고</a>
+							<ul class="notice_list" style="display:none;">
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=297634">[기업모집] 기술개발제품 시범구매 참여기업 모집 안...</a>
+								 	<span>2020-07-01</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=296989">2020년 중소기업 스마트 서비스 지원사업 원가계산기...</a>
+								 	<span>2020-06-25</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=293975">2020년도 현안 긴급대응 혁신시제품 지정 구매 공고</a>
+								 	<span>2020-06-01</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=292791">'2020년 디자인 개발 지원사업' 시행공고</a>
+								 	<span>2020-05-21</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=292000">2020년 수요자제안형 혁신시제품 지정 구매 공고</a>
+								 	<span>2020-05-14</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=291999">2020년 혁신시제품 지정 구매 공고</a>
+								 	<span>2020-05-14</span>
+								 </li>
+
+								<li>
+									<a href="/front/ifg/no/notice03_detail.do?bitmSeq=291348">2020년 KB굿잡 우수기업 취업박람회 신청안내(온라인...</a>
+								 	<span>2020-05-08</span>
+								 </li>
+
+                            </ul>
+                            <!--
+                            <a name="news_con_idx" href="#" onclick="javascript:news_con_clicked(2);" class="title3 title_off">기업마당</a>
+                            <ul id="bizinfoUl" class="notice_list" style="display:none;"><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056088">[경영]2020년 산단 내 클린팩토리 구축 지원 사업 공...</a><span>2020-07-16</span></li><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056115">[수출]농업기술실용화재단 코로나19 대응 온라인 매칭...</a><span>2020-07-16</span></li><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056094">[수출]2020년 글로벌 의약품 화상 수출상담회 참가기...</a><span>2020-07-16</span></li><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056096">[수출]2020년 3차 해외 진출 콘텐츠 지재권 보호 컨설...</a><span>2020-07-16</span></li><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056118">[기술]기술탈취피해기업 구제강화를 위한 디지털포렌...</a><span>2020-07-16</span></li><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056154">[제도]성실사업자 등에 대한 의료비, 교육비 및 월세...</a><span>2020-07-16</span></li><li><a href="	http://www.bizinfo.go.kr/see/seea/selectSEEA140Detail.do?menuId=80001001001&amp;pblancId=PBLN_000000000056155">[제도]성실신고 확인비용에 대한 세액공제(2020년 중...</a><span>2020-07-16</span></li></ul>
+                        -->
+                        </div>
+                        <!-- // 공지사항 / 기타공고 -->
+                        <!-- 중기청 관련 배너 -->
+                        <div class="banner_con1">
+                            <div class="banner_navi">
+
+
+                                	<a name="dzIndex" href="#" class="navi_on" id="dzn1" onclick="mmDz(this)">배너회전시작</a>
+
+
+
+                                <a href="#" class="navi_prev">이전보기</a>
+                                <a name="dzStart" href="#" class="navi_next">다음보기</a>
+                                <a name="dzStop" href="#" class="navi_pause">배너회전정지</a>
+                            </div>
+
+
+                            <div name="dzCon" class="smbanner" id="dz1" style="">
+                            	 <a href="https://smtech.go.kr/front/csg/om/manual01_detail.do?bitmSeq=185992&amp;selBitmClSe=MB6167&amp;searchCondition=&amp;searchKeyword=&amp;pageIndex=1" target="_blank"><img src="/front/comn/AtchFileDownload.do?atchFileId=S00008756888" alt="청년인력 고용연계 기술료 감면제도안내" width="290" height="290"></a>
+                            </div>
+
+
+
+                        </div>
+                        <!-- // 중기청 관련 배너 -->
+                        <!-- SMTECH 시스템 배너 -->
+                        <div class="banner_con2">
+                            <div class="banner_navi">
+
+
+                                	<a name="pzIndex" href="#" class="navi_off" id="pzn1" onclick="mmPz(this)">배너회전시작</a>
+
+									<a name="pzIndex" href="#" class="navi_off" id="pzn2" onclick="mmPz(this)">배너회전종료</a>
+
+
+									<a name="pzIndex" href="#" class="navi_off" id="pzn3" onclick="mmPz(this)">배너회전종료</a>
+
+									<a name="pzIndex" href="#" class="navi_off" id="pzn4" onclick="mmPz(this)">배너회전종료</a>
+
+
+									<a name="pzIndex" href="#" class="navi_on" id="pzn5" onclick="mmPz(this)">배너회전종료</a>
+
+									<a name="pzIndex" href="#" class="navi_off" id="pzn6" onclick="mmPz(this)">배너회전종료</a>
+
+                                <a href="#" class="navi_prev">이전보기</a>
+                                <a name="pzStart" href="#" class="navi_next">다음보기</a>
+                                <a name="pzStop" href="#" class="navi_pause">배너회전정지</a>
+                            </div>
+
+
+                            <div name="pzCon" class="smbanner" id="pz1" style="display: none;">
+                            	 <a href="http://www.smtech.go.kr/front/ifg/no/notice01_detail.do?searchCondition=&amp;searchKeyword=&amp;bitmSeq=87329&amp;pageIndex=1" target="_blank"><img src="/front/comn/AtchFileDownload.do?atchFileId=S00004657363" alt="SMTECH 회원가입등 이용중 오류발생시 인터넷 설정방법 안내" width="290" height="290"></a>
+                            </div>
+
+
+                            <div name="pzCon" class="smbanner" id="pz2" style="display: none;">
+                            	 <a href="https://1398.acrc.go.kr/hpg/req/hpgPssStep1.do#next" target="_blank"><img src="/front/comn/AtchFileDownload.do?atchFileId=S00004630923" alt="복지보조금신고센터 배너" width="290" height="290"></a>
+                            </div>
+
+                            <div name="pzCon" class="smbanner" id="pz3" style="display: none;">
+                            	 <a href="https://www.osmb.go.kr" target="_blank"><img src="/front/comn/AtchFileDownload.do?atchFileId=S00011725258" alt="옴부즈만 지원단 배너" width="290" height="290"></a>
+                            </div>
+
+                            <div name="pzCon" class="smbanner" id="pz4" style="display: none;">
+                            	 <a href="https://www.smtech.go.kr" target="_blank"><img src="/front/comn/AtchFileDownload.do?atchFileId=S00011842831" alt="중소기업 기술보호 배너" width="290" height="290"></a>
+                            </div>
+
+
+                            <div name="pzCon" class="smbanner" id="pz6" style="display:none;">
+                            	 <a href="https://www.nrf.re.kr/biz/info/notice/list?menu_no=378&amp;biz_no=372" target="_blank"><img src="/front/comn/AtchFileDownload.do?atchFileId=S00012344785" alt="기업의 우수한 외국인 및 재외한인 연구자 유치를 지원하는 Brain Pool 사업 공고" width="290" height="290"></a>
+                            </div>
+
+                            <!-- // SMTECH 시스템 배너 -->
+                        </div>
+                        </div>
+                    </div>
+                </div>
+				<!-- // 공지사항 및 배너 -->
+                <!-- 과제현황조회 및 기타 링크 -->
+                <div class="search_link">
+                    <!-- 과제현황조회 상세진행화면-->
+                    <div id="sbjtPrg" class="progress" style="display:none;">
+                        <a href="#" onclick="javascript:fn_sbjtPrgClose();" class="close_bt">닫기</a>
+                        <div class="progress_con">
+                            <h3>과제현황 상세보기</h3>
+                            <a href="#" onclick="javascript:sbjt_searchBtn_clicked('PREV');" class="prev_bt" id="sbjt_prev_bt">이전보기</a>
+                            <ul class="detail"></ul>
+                            <a href="#" onclick="javascript:sbjt_searchBtn_clicked('NEXT');" class="next_bt" id="sbjt_next_bt">다음보기</a>
+                        </div>
+                    </div>
+					<input type="hidden" id="flatCardValue" value="">
+                    <div class="search_box">
+                        <div class="num_search">
+                            <dl>
+                                <dt><label for="sbjtPrgInput">과제현황 조회</label></dt>
+                                <dd>
+                                    <input id="sbjtPrgInput" name="sbjtPrgInput" type="text" value="접수번호를 입력하세요." onkeydown="javascript:if(event.keyCode==13){fn_sbjtPrgSearch();return false;}" onclick="fn_sbjtPrgValueClear();" tabindex="1">
+                                    <a href="#" onclick="fn_sbjtPrgSearch();" class="search_bt" tabindex="2">검색</a>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <!-- 퀵메뉴
+                        <div class="quick_navi1">
+                            <ul>
+                                <li>시스템 매뉴얼 <a href="/front/csg/om/manual01_intro.do" class="more_bt">바로가기</a> </li>
+                                <li>시뮬레이션 <a href="/front/csg/om/manual02_list.do" class="more_bt">바로가기</a> </li>
+                                <li>동영상 강의 <a href="/front/csg/om/manual03_list.do" class="more_bt">바로가기</a></li>
+                            </ul>
+-->
+
+                        </div>
+
+
+<div class="section" name="3"></div>
+
+                <!-- // 과제현황조회 및 기타 링크 -->
+                <!--자주묻는질문-->
+                <div class="faq_bg">
+                    <div class="faq_con">
+                    	<input type="hidden" id="faq_tabValue" value="1">
+                    	<input type="hidden" id="faq_conValue" value="1">
+                        <h3>자주묻는질문</h3>
+
+                        <div class="faq_navi">
+                            <a href="#" onclick="javascript:faq_tab_clicked('PREV');" class="faq_prev" id="faq_prev">이전보기</a>
+							<div class="tab_con">
+
+                            	<a name="faqCount" id="faqCount_idx1" style="" href="#" onclick="javascript:faq_ajax_request('1','ALL');" class="tab_on">전체(250)</a>
+
+                            	<a name="faqCount" id="faqCount_idx2" style="" href="#" onclick="javascript:faq_ajax_request('2','MB6123');" class="tab">과제신청(39)</a>
+
+                            	<a name="faqCount" id="faqCount_idx3" style="" href="#" onclick="javascript:faq_ajax_request('3','MB6124');" class="tab">연구비집행(52)</a>
+
+                            	<a name="faqCount" id="faqCount_idx4" style="" href="#" onclick="javascript:faq_ajax_request('4','MB6125');" class="tab">기술성평가(10)</a>
+
+                            	<a name="faqCount" id="faqCount_idx5" style="" href="#" onclick="javascript:faq_ajax_request('5','MB6126');" class="tab">협약(38)</a>
+
+                            	<a name="faqCount" id="faqCount_idx6" style="" href="#" onclick="javascript:faq_ajax_request('6','MB6127');" class="tab">보고서(15)</a>
+
+                            	<a name="faqCount" id="faqCount_idx7" style="" href="#" onclick="javascript:faq_ajax_request('7','MB6128');" class="tab">기술료(9)</a>
+
+                            	<a name="faqCount" id="faqCount_idx8" style="display:none;" href="#" onclick="javascript:faq_ajax_request('8','MB6129');" class="tab">기타(36)</a>
+
+                            	<a name="faqCount" id="faqCount_idx9" style="display:none;" href="#" onclick="javascript:faq_ajax_request('9','MB6185');" class="tab">시스템(31)</a>
+
+                            	<a name="faqCount" id="faqCount_idx10" style="display:none;" href="#" onclick="javascript:faq_ajax_request('10','MB6200');" class="tab">클린평가(중소기업)(11)</a>
+
+                            	<a name="faqCount" id="faqCount_idx11" style="display:none;" href="#" onclick="javascript:faq_ajax_request('11','MB6201');" class="tab">클린평가(평가위원)(9)</a>
+
+                            	<a name="faqCount" id="faqCount_idx12" style="display:none;" href="#" onclick="javascript:faq_ajax_request('12','MB6210');" class="tab">온라인서면평가(중소기업)(0)</a>
+
+                            	<a name="faqCount" id="faqCount_idx13" style="display:none;" href="#" onclick="javascript:faq_ajax_request('13','MB6211');" class="tab">온라인서면평가(평가위원)(0)</a>
+
+                            </div>
+
+                            	<li id="faqDetail_idx2" style="">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=185269"><dt>[기타] SMTECH 홈페이지 메뉴개편으로 변경된 메뉴위치를 알고 싶어요</dt></a>
+                                        <dd>첨부파일 다운받으셔서
+
+변경전과 변경후 메뉴 확인 가능합니다.
+</dd>
+                                    </dl>
+                                </li>
+
+                            	<li id="faqDetail_idx3" style="">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=127379"><dt>[협약] 2017년 창업성장기술개발사업 창업과제 3차 협약설명회 질의응답 요약 공지</dt></a>
+                                        <dd>아래의 첨부파일을 확인하시고 사업수행에 도움 되시기 바랍니다. </dd>
+                                    </dl>
+                                </li>
+
+                            	<li id="faqDetail_idx4" style="">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=113621"><dt>[클린평가(평가위원)] 평가위원 현행화 단계중 기술분류 수정을 할 수 없나요?</dt></a>
+                                        <dd>평가위원 기술분류 수정은 가능합니다.
+
+마이페이지&gt;평가위원&gt;평가위원신청 화면에서 수...</dd>
+                                    </dl>
+                                </li>
+
+                            	<li id="faqDetail_idx5" style="display:none;">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=104379"><dt>[연구비집행] 참여연구원별 인건비 지급시 원천징수액(4대보험, 소득세 등 세금)을 꼭...</dt></a>
+                                        <dd>협약당시 인건비 계상기준에 따라 선택적으로 달라 질수 있습니다.
+
+연구원의 원천징수액...</dd>
+                                    </dl>
+                                </li>
+
+                            	<li id="faqDetail_idx6" style="display:none;">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=104377"><dt>[연구비집행] 참여기업의 연구비(연구원 인건비 포함) 사용은 주관기관에서 이체요청 ...</dt></a>
+                                        <dd>- 참여기업의 연구비 사용은 참여기업이 이체요청을 하고, 주관기관에서 이체실행하는 방식...</dd>
+                                    </dl>
+                                </li>
+
+                            	<li id="faqDetail_idx7" style="display:none;">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=104375"><dt>[연구비집행] 참여기업의 자계좌이체용계좌 및 원천징수계좌는 꼭 등록 해야 하나요?</dt></a>
+                                        <dd>- 참여기업의 과제책임자/정산담당자는 자계좌이체용계좌, 원천징수계좌 및 연구원별인건비...</dd>
+                                    </dl>
+                                </li>
+
+                            	<li id="faqDetail_idx8" style="display:none;">
+                                    <dl>
+                                        <a href="/front/csg/fq/faq_detail.do?bitmSeq=104112"><dt>[연구비집행] 연구비 사용 순서는 어떻게 되나요 </dt></a>
+                                        <dd>- 연구비 사용등록 메뉴에서 비목을 등록 합니다.
+- 임시등록 또는 사용요청한 연구비를 ...</dd>
+                                    </dl>
+                                </li>
+
+                            </ul>
+                            <a href="#" onclick="javascript:faq_con_clicked('NEXT');" class="faq_next" id="faq_next1">다음보기</a>
+                        </div>
+                        <a href="/front/csg/fq/faq_list.do" class="more_bt">더보기</a>
+                    </div>
+                </div>
+
+<div class="section" name="4"></div>
+
+                <!--// 자주묻는질문-->
+
+                <!-- 고객센터 -->
+                <div class="custom_bg">
+                    <div class="custom_con">
+                        <h3>중소기업 통합콜센터</h3>
+                        <ul class="cell_center">
+                            <li>
+                                1357 <span class="cell">(국번없이)</span>
+                                <span class="busy">평일 : AM 09:00 ~ PM 18:00</span>
+                            </li>
+                            <li>
+                                <div class="kakao">
+                                    KAKAO <br> 실시간무료상담가능
+                                    <span class="guide">중소기업 통합콜센터를 검색하세요!</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="http://as82.kr/1357" target="_blank">
+                                <div class="network">
+                                   	고객PC 지원
+                                    <span class="guide2">1:1 원격지원 서비스</span>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// 고객센터-->
+
+<div class="section" name="5"></div>
+
+            </div>
+                    <!-- // content -->
+
+                </div>
+                <!--// contaner -->
+
+				<!--footer 시작입니다-->
+
+
+
+
+
+	<div class="cb"></div>
+
+
+        <!-- footer -->
+        <div id="footer">
+            <div class="footer_conN8">
+                <ul class="etcN8">
+                    <li style="background-color: #777;"><a href="/front/etc/care.do" style="color: #FFE400"><b>개인정보처리방침</b></a></li>
+                    <li><a href="/front/etc/guide.do">이용약관</a></li>
+                    <li><a href="/front/etc/rejection.do">이메일 무단수집거부</a></li>
+                    <li><a href="mailto:smtech1@tipa.or.kr">Contact Us</a></li>
+                    <!--<li><a href="/front/etc/sitemap.do">SiteMap</a></li>
+                    <li><a href="http://m.smtech.go.kr">Mobile App</a></li>
+                    <li><a href="#" onclick="appcheck();">App Down</a></li>
+                    -->
+                    <li>
+                        <a href="#" class="site_link">관계사이트</a>
+                        <div class="site_conet">
+                            <ul>
+                            	<li></li>
+                                <li><a href="http://www.mss.go.kr/site/smba/main.do#btn_topBarNav" target="_blank">중소기업벤처기업부</a></li>
+                                <li><a href="https://www.tipa.or.kr/" target="_blank">중소기업기술정보진흥원</a></li>
+                                <li><a href="http://smroadmap.smtech.go.kr/" target="_blank">중소기업기술로드맵</a></li>
+                                <li><a href="http://www.ntis.go.kr/ThMain.do" target="_blank">국가과학기술지식정보서비스</a></li>
+                                <!-- <li><a href="http://www.startup.go.kr/" target="_blank">창조경제</a></li> -->
+                                <li><a href="http://www.innobiz.net/" target="_blank">기술혁신형중소기업</a></li>
+                                <li><a href="http://webzine.tipa.or.kr:8080/" target="_blank">중소기업기술정보진흥원 웹진</a></li>
+                                <li><a href="http://www.bizinfo.go.kr/cmm/main/introPage.do" target="_blank">기업마당 비즈인포</a></li>
+                                <li><a href="http://bridge.smtech.go.kr/brg/home.do" target="_blank">중소기업기술혁신센터</a></li>
+                                <li><a href="http://www.osmb.go.kr/intro_new.jsp" target="_blank">중소기업옴브즈만</a></li>
+                                <li><a href="https://www.smart-factory.kr" target="_blank">스마트공장 사업관리시스템</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div style="position:relative; margin: 0 auto; width:1280px; float: left;"> -->
+            <div style="position:relative; margin: 0 auto; width:1280px;">
+	            <div style="margin: 0 auto; margin-top:20px; float:left;">
+	            	<img src="/images/main/logo_footer.png" alt="중소벤처기업부">
+	            </div>
+	            <div style="margin: 0 auto; margin-top:20px; float:left;">
+	            	<img src="/images/main/logo_footer_2.png" alt="중소기업기술정보진흥원">
+	            </div>
+	            <!-- <div class="foot_addrN8" style="float:left;"> -->
+	            <div style="margin: 0 auto; margin-top:20px; margin-left:15px; float:left; padding-top: 8px;">
+	                <ul class="addrsN8">
+	                    <!-- <li>[중소벤처기업부] (35208) 대전광역시 서구 청사로 189 (둔산동) 1동</li> -->
+	                    <li style="display:flex;">34112 대전광역시 유성구 대덕대로 593 (도룡동) 대덕테크비즈센터 6,7층 중소기업기술정보진흥원</li>
+	                    <li>Copyright ⓒ 중소기업기술정보진흥원. All rights Reserved. </li>
+	                </ul>
+	                <div class="foot_logoN8">
+
+	                </div>
+	            </div>
+            </div>
+
+        </div>
+        <!-- // footer -->
+
+
+
+				<!--footer//-->
+
+    <!-- // wrap -->
+
+    <script type="text/javascript">
+
+ 	var pLeft = 100;
+	var pTop = 100;
+
+  	$(document).ready(function(){
+
+
+
+
+  	  	// 팝업
+
+
+			if ((pLeft + 600) >= screen.width) {
+				//pLeft = 0;
+				pTop = pTop + 300;
+			}
+
+			// 박지열 수정-당분간 유지(2012.07.04)
+			if (getCookie4("270780") == null || getCookie4("270780") == "") {
+				window.open("https://www.smtech.go.kr/front/popup/sysChK/20200323_2_notice.jsp", 'p270780','width=600,height=480,left=' + pLeft + ',top=' + pTop + ',menubars=no,statusbar=yes,scrollbars=no');
+			}
+			pLeft = pLeft + 600 + 60;
+
+
+
+			if ((pLeft + 720) >= screen.width) {
+				//pLeft = 0;
+				pTop = pTop + 300;
+			}
+
+			// 박지열 수정-당분간 유지(2012.07.04)
+			if (getCookie4("297563") == null || getCookie4("297563") == "") {
+				window.open("https://www.smtech.go.kr/front/popup/sysChK/20200630_notice.jsp", 'p297563','width=720,height=380,left=' + pLeft + ',top=' + pTop + ',menubars=no,statusbar=yes,scrollbars=no');
+			}
+			pLeft = pLeft + 720 + 60;
+
+
+
+			if ((pLeft + 460) >= screen.width) {
+				//pLeft = 0;
+				pTop = pTop + 300;
+			}
+
+			// 박지열 수정-당분간 유지(2012.07.04)
+			if (getCookie4("298394") == null || getCookie4("298394") == "") {
+				window.open("https://www.smtech.go.kr/front/popup/sysChK/20200707_notice.jsp", 'p298394','width=460,height=580,left=' + pLeft + ',top=' + pTop + ',menubars=no,statusbar=yes,scrollbars=no');
+			}
+			pLeft = pLeft + 460 + 60;
+
+
+
+  		$(document).on('click','a[href="#"]',function(e){e.preventDefault();});
+
+  		//사업별보기 게시판
+  		$("a[name=news_con_idx]").bind("mouseover",function(){
+  			var index = $("a[name=news_con_idx]").index(this);
+  			news_con_clicked(index);
+  		});
+
+		//div팝업 좌
+  		var rolling1 = new RollingBanner("div[name=dzCon]","a[name=dzIndex]",-1,5000, 1000);
+  		$("a[name=dzStart]").click(function(){
+  			rolling1._start();
+  		});
+  		$("a[name=dzStop]").click(function(){
+  			rolling1._stop();
+  		});
+  		$("a[name=dzIndex]").mouseover(function(){
+  			rolling1._stop();
+  		});
+  		$("a[name=dzIndex]").mouseout(function(){
+  			rolling1._start();
+  		});
+
+  		//div팝업 우
+  		var rolling2 = new RollingBanner("div[name=pzCon]","a[name=pzIndex]",-2,5000, 1000);
+  		$("a[name=pzStart]").click(function(){
+  			rolling2._start();
+  		});
+  		$("a[name=pzStop]").click(function(){
+  			rolling2._stop();
+  		});
+  		$("a[name=pzIndex]").mouseover(function(){
+  			rolling2._stop();
+  		});
+  		$("a[name=pzIndex]").mouseout(function(){
+  			rolling2._start();
+  		});
+
+  		//메인 퀵메뉴 세팅
+  		fn_topMenuView();
+
+		//메인 사업분류 인덱스 클릭
+  		$("ul.group_list li a[name=busiIdx]").click(function(){
+  			fn_getPositon(this);
+  		});
+		//메인 사업분류 콘텐츠 클릭
+  		$("div[name=tab_event]").click(function(){
+  			fn_getPositonRemove();
+  		});
+		//메인 사업분류 콘텐츠 클릭
+  		$("div[name=noticeNo]").click(function(){
+  			fn_getPositonRemove();
+  		});
+
+		/* 원페이지 섹션이동 기능 삭제 요청 _전산요청 204722(채희범 연구원)
+  		var trg = navigator.platform.toLowerCase();
+  		var filter = "win16|win32|win64|mac";
+  		if(navigator.platform && filter.indexOf(trg) >= 0){
+  			$(function(){
+  				$.scrollify({
+  					section:".section",
+  					setHeights:false,
+  					scrollbars:false,
+  					scrollSpeed:1100,
+  					before:function(i,panels) {
+  				      	var ref = panels[i].attr("name");
+  						$(".pagination .active").removeClass("active");
+  				      	$(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+  				    },
+  				    afterRender:function() {
+   				       	$(".pagination a").on("click",function() {
+   				    		var ref = $(this).attr("href");
+    				        $.scrollify.move(ref);
+    				   	});
+   				    	$(".pagination a").on("click",$.scrollify.move);
+  				    }
+  				});
+  			});
+  		}
+		*/
+		$("#bizinfoUl").html(
+				"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+				+"<img src='/images/main/loading.gif' alt='로딩중' />"
+			);
+
+  		$.ajax({
+  			type: "POST",
+  			url: "/front/main/bizInfo.do",
+  			dataType: "json",
+  			timeout: 5000,
+  			success: function(result){
+  				var bizInfoContents = "";
+  				for(var i=0 ; i<result.length; i++){
+  					bizInfoContents = bizInfoContents + "<li>";
+  					bizInfoContents = bizInfoContents + "<a href='" + result[i].link + "'>" + result[i].allTitleShort + "</a>";
+  					bizInfoContents = bizInfoContents + "<span>" + result[i].pubDate + "</span>";
+  					bizInfoContents = bizInfoContents + "</li>";
+  				}
+  				$("#bizinfoUl").html(bizInfoContents);
+  			},
+  			error: function(){
+  				$("#bizinfoUl").html("");
+  			}
+  		});
+
+  		$("#allmenuview").css("height", window.outerHeight);
+  	});
+
+
+	$(window).resize(function(){
+		$("#allmenuview").css("height", window.outerHeight);
+
+	});
+
+  	//메인 과제검색
+  	function fn_sbjtPrgSearch(){
+
+		var loginYn = 'N';
+		if(loginYn!='Y'){
+	  		alert("로그인 사용자의 수행과제만 조회가 가능합니다.");
+	  		return;
+		}
+
+		var cd = $("#sbjtPrgInput").val();
+
+  		$.ajax({
+  			type: "POST",
+  			url: "/front/main/sbjtPrgSearch.do",
+  			data: "cd="+cd,
+  			dataType: "json",
+  			timeout: 5000,
+  			success: function(data){
+  				var contents = "";
+  				var len = data.length;
+
+  				if(len>0){
+  					fn_sbjtPrgSearchDtl();
+  				}else{
+  					alert("수행과제 검색결과가 존재하지 않습니다.");
+  				}
+  			},
+  			error: function(jqXHR,textStatus,errorThrown){
+  				alert("수행과제 검색결과가 존재하지 않습니다.");
+  			}
+  		});
+
+  	}
+
+  	//본인 수행과제가 존재시 과제조회
+  	function fn_sbjtPrgSearchDtl(){
+
+		var cd = $("#sbjtPrgInput").val();
+
+
+
+  		$.ajax({
+  			type: "POST",
+  			url: "/front/main/sbjtPrgSearchDtl.do",
+  			data: "cd="+cd,
+  			dataType: "json",
+  			timeout: 5000,
+  			success: function(data){
+
+  				var contents = "";
+  				var len = data.length;
+
+  				if(len>0){
+  					var curStepIndex = "";
+  					var flatCardValue = "";
+  					var index = 0;
+
+  					for(var i=0 ; i<len ; i++){
+
+						var visibled = data[i].visibled;
+						if(visibled=="HIDE"){
+							continue;
+						}
+
+						index++;
+
+						if(data[i].rn=="1" && data[i].dutyClStep=="4"){
+							fn_sbjtPrgClose();
+							alert("수행과제 검색결과가 존재하지 않습니다.");
+							return;
+						}
+
+						flatCardValue = flatCardValue + "," + "flat" + index;
+
+  						var curStep = data[i].curStep;
+  						var curState = "";
+  						var curStateDd = "";
+  						if(curStep=="Y"){
+  							curState = "_on";
+  							curStateDd = "on";
+  							contents = contents + "<li id='flat"+index+"' class='ing_on'>";
+
+  							curStepIndex = "flat"+index;
+  						}else{
+  							contents = contents + "<li id='flat"+index+"'>";
+  						}
+
+  						contents = contents + "<dl>";
+  						contents = contents + "<dt class='step"+curState+"'>Step"+index+". "+data[i].dutyClNm+"</dt>";
+  						contents = contents + "<dd class='step"+data[i].dutyClStep+curStateDd+"'>";
+
+  						var lbl = data[i].lbl + "";
+  						lbl = lbl.replace("|","<br/>");
+  						lbl = lbl.replace("null","");
+
+  						contents = contents + lbl;
+  						contents = contents + "</dd>";
+  						contents = contents + "</dl>";
+
+  						if(index!=len){
+  							contents = contents + "<span class='arr'></span>";
+  						}
+  						contents = contents + "</li>";
+  					}
+
+  					flatCardValue = flatCardValue.substring(1);
+  					$("#flatCardValue").val(flatCardValue);
+  					$("div.progress_con ul.detail").html(contents);
+
+  					var flatArr = flatCardValue.split(',');
+  					var flatIndex = flatArr.indexOf(curStepIndex);
+
+  					if(flatIndex < 5){
+  						for(var i=5;i<flatArr.length;i++){
+							$("li#"+flatArr[i]).css("display","none");
+  						}
+  					}else if(flatIndex >= 5 ){
+						for(var i=0;i<flatArr.length-5;i++){
+							$("li#"+flatArr[i]).css("display","none");
+  						}
+  					}
+
+					//******5번재 화살표 숨김
+  			  		var li = $("ul.detail li");
+  			  		var len = li.length;
+  			  		var arr_out_idx = -1;
+
+  			  		for(var i=0;i<len;i++){
+  			  			var node = li.eq(i);
+  			  			var display = node.css("display");
+  			  			if(display=="none"){
+  			  				if(arr_out_idx>-1) continue;
+  			  				arr_out_idx = i-1;
+  			  			}
+  			  		}
+
+  			  		li.eq(arr_out_idx).find("span").css("display","none");
+  			  		$("ul.detail li#"+flatArr[flatArr.length-1]).find("span").css("display","none");
+
+  			  		var firstIndex = -1;
+  			  		var lastIndex = -1;
+
+  			  		for(var i=0;i<li.length;i++){
+  			  			var node = li.eq(i);
+  			  			var display = node.css("display");
+  			  			if(display!="none"){
+  			  				if(firstIndex>-1) continue;
+  			  				firstIndex = i;
+  			  			}
+  			  		}
+
+  			  		for(var i=li.length-1;i>=0;i--){
+  			  			var node = li.eq(i);
+  			  			var display = node.css("display");
+  			  			if(display!="none"){
+			  				if(lastIndex>-1) continue;
+			  				lastIndex = i;
+			  			}
+  			  		}
+
+  			  		var firstArr = flatArr[0]
+  			  		var lastArr = flatArr[flatArr.length-1];
+
+  			  		$("#sbjt_next_bt").css("display","");
+  			  		$("#sbjt_prev_bt").css("display","");
+
+  		  			var node = li.eq(firstIndex);
+  		  			var id = node.attr("id");
+  		  			if(firstArr==id){
+  		  				$("#sbjt_prev_bt").css("display","none");
+  		  			}
+
+  		  			var node = li.eq(lastIndex);
+  		  			var id = node.attr("id");
+
+  		  			if(lastArr==id){
+  		  				$("#sbjt_next_bt").css("display","none");
+  		  			}
+
+  		  			$("#sbjtPrg").css("display","");
+
+  				}else{
+  					alert("수행과제 검색결과가 존재하지 않습니다.");
+  				}
+  			},
+  			error: function(jqXHR,textStatus,errorThrown){
+  				alert("수행과제 검색결과가 존재하지 않습니다.");
+  			}
+  		});
+  	}
+
+  	function sbjt_searchBtn_clicked(idx){
+
+  		var flatCardValue = $("#flatCardValue").val() + "";
+  		var flatCardArr = flatCardValue.split(",");
+  		var flatCardLen = flatCardArr.length;
+
+  		if(idx=="NEXT"){
+  			var returnYn = false;
+  	  		var firstLi = $("ul.detail li:first");
+  	  		firstLi.css("display","none");
+
+  	  		var lastLi = $("ul.detail li:last");
+  	  		lastLi.after(firstLi);
+
+  	  		var li = $("ul.detail li");
+  	  		var len = li.length;
+
+  	  		for(var i=0;i<len;i++){
+  	  			var node = li.eq(i);
+  	  			var display = node.css("display");
+  	  			if(display=="none"){
+  	  				if(returnYn){
+  	  					continue;
+  	  				}
+  	  				node.css("display","");
+  	  				returnYn = true;
+  	  			}
+  	  		}
+  		}
+
+  		if(idx=="PREV"){
+  			var li = $("ul.detail li");
+  			var len = li.length;
+
+  			for(var i=0;i<len;i++){
+  				var target = li.eq(i);
+  				var display = target.css("display");
+  				if(display=="none"){
+  					var node = $("ul.detail li:last");
+  					node.after(target);
+  				}
+  			}
+
+  	  		var li = $("ul.detail li");
+  	  		var len = li.length;
+  	  		var out_idx = 0;
+  	  		var out_li;
+
+  			var node = li.eq(0);
+  			node.before(li.eq(len-1));
+
+  			li = $("ul.detail li");
+
+  			var count = 0;
+  	  		for(var i=0;i<len;i++){
+  	  			var target = li.eq(i);
+  	  			target.css("display","");
+  	  			target.find("span").css("display","");
+  				if(i>=5){
+  					target.css("display","none");
+  				}
+  	  		}
+  		}
+
+  		$("ul.detail li span").css("display","none");
+
+  		var li = $("ul.detail li");
+  		var firstArr = flatCardArr[0]
+  		var lastArr = flatCardArr[flatCardLen-1];
+
+  		if(idx=="PREV"){
+  			var node = li.eq(0);
+  			var id = node.attr("id");
+  			if(firstArr==id){
+  				$("#sbjt_prev_bt").css("display","none");
+	  			$("#sbjt_next_bt").css("display","");
+  			}else{
+  				var lastLi = $("ul.detail li:last").css("display");
+  				if(lastLi=="none"){
+  					$("#sbjt_next_bt").css("display","");
+  				}
+  			}
+  		}else if(idx=="NEXT"){
+  			var node = li.eq(4);
+  			var id = node.attr("id");
+
+  			if(lastArr==id){
+  				$("#sbjt_next_bt").css("display","none");
+	  			$("#sbjt_prev_bt").css("display","");
+  			}else{
+  				var lastLi = $("ul.detail li:last").css("display");
+  				if(lastLi=="none"){
+  					$("#sbjt_prev_bt").css("display","");
+  				}
+  			}
+  		}
+
+  		var li = $("ul.detail li");
+  		var len = li.length;
+  		for(var i=0;i<len;i++){
+  			if(i==4 || i == len-1){
+  				continue;
+  			}
+  			var node = li.eq(i);
+  			node.find("span").css("display","");
+  		}
+  	}
+
+
+  	function fn_sbjtPrgValueClear(){
+		$("#sbjtPrgInput").val("");
+  	}
+  	function fn_sbjtPrgClose(){
+		$("#sbjtPrg").css("display","none");
+  	}
+
+	//공고박스
+	function fn_getPositonRemove(obj){
+  		var tab_event = $("div[name=tab_event]");
+  		tab_event.css("display","none");
+
+  		var tab_eventN = $(".noticeNo");
+  		if(tab_eventN.css("display")!="none"){
+  			tab_eventN.css("display","none");
+  		}
+	}
+  	function fn_getPositon(obj){
+
+  		var trgObj = $(obj);
+  		var trgObjId = $(obj).attr("id");
+  		var busiCd = $(obj).attr("busiCd");
+  		var trgObjIdArr = trgObjId.split("_");
+
+  		var objClass = trgObj.attr("class");
+  		var objArr = objClass.split("_");
+  		var objGbn = objArr[0];
+  		var objOnGbn = objArr[1];
+
+  		var trgOffset = trgObj.offset();
+  		var trgPosition = trgObj.position();
+
+  		var trgX = trgPosition.left + 25;
+  		var trgY = trgOffset.top - 321;
+
+  		var liIndex = $(".group_list li").index(trgObj.parent());
+
+  		if(liIndex==2){
+  			trgY = trgY - 175;
+  		}
+
+  		if(trgObj.hasClass("last")){
+  			//
+  			trgX = trgX - 175 - 25;
+  		}else if(objGbn!="blue"){
+  			trgX = trgX - 25;
+  		}else{
+			if(!trgObj.hasClass("first")){
+				trgX = trgX - 25;
+			}
+  		}
+
+  		var popTitle = trgObj.text();
+
+  		var tab_event1 = $(".tab_event1");
+  		var tab_event2 = $(".tab_event2");
+  		var tab_event3 = $(".tab_event3");
+  		var tab_event4 = $(".tab_event4");
+  		var tab_eventN = $(".noticeNo");
+
+  		if(objClass.indexOf("off")>-1){
+  			fn_getPositonRemove(obj);
+
+  	  		tab_eventN.css("display","");
+  	  		tab_event1.css("display","none");
+			tab_event2.css("display","none");
+			tab_event3.css("display","none");
+			tab_event4.css("display","none");
+
+			tab_eventN.css("left",trgX);
+			tab_eventN.css("top",trgY);
+  			return;
+  		}
+
+  		$.ajax({
+  			type: "POST",
+  			url: "/front/main/busiAncmDtl.do",
+  			data: "busiCd="+busiCd,
+  			dataType: "json",
+  			timeout: 5000,
+  			success: function(data){
+  				var contents = "";
+  				var len = data.length;
+
+				contents = contents = "<dl>"
+     	               + "<dt>"
+     	               + popTitle
+     	               + "<a href='/front/sig/st/prjtIntro.do' class='more_bt'>사업소개 바로가기</a>"
+                  	   + "<span>공고진행"+ data[0].cnt +"건</span>"
+                  	   + "<a class='list' href='/front/ifg/no/notice02_list.do'>목록보기</a>"
+              		   + "</dt>";
+  				for(var i=0 ; i<len ; i++){
+  					contents = contents + "<dd><span>" + data[i].stat +"</span>"
+  					+ "<a href='/front/ifg/no/notice02_detail.do?buclYy=&ancmId="+data[i].ancmId+"&buclCd="+data[i].buclCd+"&dtlAncmSn="+data[i].dtlAncmSn+"&schdSe="+data[i].schdSe+"&aplySn="+data[i].aplySn+"&searchCondition=&searchKeyword=&pageIndex=1'>"
+  					+ data[i].ancmTlNm+"</a></dd>";
+  				}
+  				contents = contents + "</dl>";
+
+  				tab_eventN.css("display","none");
+  		  		if(objGbn=="blue"){
+  		  			tab_event1.css("left",trgX);
+  		  			tab_event1.css("top",trgY);
+  		  			tab_event1.css("display","");
+  		  			tab_event2.css("display","none");
+  		  			tab_event3.css("display","none");
+  		  			tab_event4.css("display","none");
+
+  		  			tab_event1.html(contents);
+  		  		}else if(objGbn=="riverB"){
+  		  			tab_event2.css("left",trgX);
+  		  			tab_event2.css("top",trgY);
+  		  			tab_event1.css("display","none");
+  		  			tab_event2.css("display","");
+  		  			tab_event3.css("display","none");
+  		  			tab_event4.css("display","none");
+
+  		  			tab_event2.html(contents);
+  		  		}else if(objGbn=="yellow"){
+  		  			tab_event3.css("left",trgX);
+  		  			tab_event3.css("top",trgY);
+  		  			tab_event1.css("display","none");
+  		  			tab_event2.css("display","none");
+  		  			tab_event3.css("display","");
+  		  			tab_event4.css("display","none");
+
+  		  			tab_event3.html(contents);
+  		  		}else if(objGbn=="purple"){
+  		  			tab_event4.css("left",trgX);
+  		  			tab_event4.css("top",trgY);
+  		  			tab_event1.css("display","none");
+  		  			tab_event2.css("display","none");
+  		  			tab_event3.css("display","none");
+  		  			tab_event4.css("display","");
+
+  		  			tab_event4.html(contents);
+  		  		}
+  			},
+  			error: function(jqXHR,textStatus,errorThrown){
+  			}
+  		});
+  	}
+
+  	function fn_topMenuCont(index){
+  		//myService현황
+  		if(index==1){
+  			var loginYn = 'N';
+  			if(loginYn=='Y'){
+  		  		$("#topBox1").css("display","none");
+  		  		$("#topBox2").css("display","none");
+  		  		$("#topBox3").css("display","");
+  			}else{
+  		  		$("#topBox1").css("display","none");
+  		  		$("#topBox2").css("display","");
+  		  		$("#topBox3").css("display","none");
+  			}
+		//메뉴설정하기
+  		}else if(index==2){
+  			var dis = $("#topBox1 #menu_add").css("display");
+  			if(dis!="none"){
+  				fn_topMenuClose();
+  			}else{
+  	  			fn_topMenuClose();
+  	  			$("#topBox1 #menu_add").css("display","");
+  			}
+  		}
+  	}
+
+  	//메뉴초기화 닫기
+  	function fn_topMenuClose(){
+  		$("#topBox1").css("display","");
+  		$("#topBox2").css("display","none");
+  		$("#topBox3").css("display","none");
+  		$("#topBox1 #menu_add").css("display","none");
+  	}
+
+  	//메뉴초기화
+  	function fn_topMenuRefresh(){
+  		var defaultChk = ["ck1","ck4","ck7","ck13","ck14","ck17"];
+
+  		$("input[name=myTopcheckbox]:checkbox").each(function(){
+  			$(this).prop("checked",false);
+  		});
+  		for(var i=0;i<6;i++){
+  			$("input[name=myTopcheckbox]:checkbox#"+defaultChk[i]).prop("checked",true);
+  		}
+  	}
+
+  	//메뉴세팅
+  	function fn_topMenuSetting(){
+  		var defaultChk = ["ck1","ck4","ck7","ck13","ck14","ck17"];
+  		var checkedChk = new Array();
+
+  		var val = "";
+  		var varCount = 0;
+
+  		$("input[name=myTopcheckbox]:checkbox:checked").each(function(){
+  			var id = $(this).attr("id");
+  			console.log('id = '+ id);
+  			if(varCount<6){
+  	  			checkedChk.push(id);
+  	  			val = val+"|"+id;
+
+  	  			varCount++;
+  			}
+  		});
+
+		//중복된 id를 제외하고 6개 미만으로 선택하면 디폴트 메뉴를 세팅하여 6개로 맞춤
+  		if(varCount<6){
+  	  		for(var i=0;i<defaultChk.length;i++){
+  	  			var defaultChkValue = defaultChk[i];
+  	  			var dup=0;
+  	  			for(var c=0;c<checkedChk.length;c++){
+  	  				if(checkedChk[c]==defaultChkValue){
+  	  					dup++;
+  	  				}
+  	  			}
+  	  			if(dup==0){
+  	  				if(varCount==6)continue;
+
+  	  				varCount++
+  	  				val = val+"|"+defaultChkValue;
+  	  			}
+  	  		}
+  		}
+
+		val = val.substring(1);
+		$.cookie("smtech_menuMain",val,{expires:30}); /*30일 만료로 설정*/
+		fn_topMenuView();
+		fn_topMenuClose();
+  	}
+
+  	//최초 로딩시 메뉴세팅
+  	function fn_topMenuView(){
+  		var obj = $.cookie("smtech_menuMain");
+  		var menuStr = obj + ""; //형변환
+  		var n = menuStr.indexOf("|");
+  		//console.log('menuStr = ' + menuStr);
+  		var menuArr;
+  		if(n < 0){
+  			menuArr = ["ck1","ck4","ck7","ck13","ck14","ck17"];
+  		}else{
+  			menuArr = menuStr.split('|');
+  		}
+		console.log('menuArr = ' + menuArr);
+
+  		$("input[name=myTopcheckbox]:checkbox").each(function(){
+  			$(this).prop("checked",false);
+  		});
+
+  		$("ul.menu_icon").find("li").remove();
+  		for(var i=0;i<menuArr.length;i++){
+  			var id = menuArr[i];
+  			var idx = id.replace("ck","favicon");
+			//console.log('id = ' + id);
+			//console.log('idx = ' + idx);
+
+
+
+  			$("ul.menu_icon").append("<li><a class='"+idx+"' href='"+$("a[name="+id+"]").attr("href")+"'>"+$("label[for="+id+"]").text()+"</a><span>"+$("label[for="+id+"]").text()+"</span></li>");
+  			$("input[name=myTopcheckbox]:checkbox#"+id).prop("checked",true);
+  		}
+  	}
+
+  	//메인변경
+  	function fn_mainIdx(index){
+  		$("#mainIdx").val(index);
+  		if(index==1){
+  			$("div[name=ancmList2]").hide('normal');
+  			$("div[name=ancmList1]").show('slow');
+  		}else{
+  			$("div[name=ancmList1]").hide('normal');
+  			$("div[name=ancmList2]").show('slow');
+  		}
+  	}
+
+  	//메인목록보기
+  	function fn_mainDtl(){
+  		var index = $("#mainIdx").val();
+  		if(index==1){
+  			window.location.href='/front/ifg/no/notice02_list.do';
+  		}else{
+  			window.location.href='/front/ifg/no/notice02_list.do';
+  		}
+  	}
+
+  	//한줄알림
+  	jQuery(function($){
+  	    var ticker = function(){
+  	        timer = setTimeout(function(){
+  	        $('#ticker li:first').animate(
+  	            {marginTop: '-35px'}, 400, function(){
+  	            	$(this).detach().appendTo('ul#ticker').removeAttr('style');
+  	            });
+  	            ticker();
+  	            }, 3000);
+  	        };
+
+  	        var autoplay = true;
+  	        $(document).on('click','.pause',function(){
+  	            if(autoplay==true){
+  	                clearTimeout(timer);
+  	                autoplay=false;
+  	            }else{
+  	                autoplay=true;
+  	                ticker();
+  	            }
+  	        }); // 재생정지기능 끝
+  	        // 3. 재생정지 함수 시작. 2와 기능 동일함.
+  	        var tickerpause = function(){
+  	            $('#pause').click(function(){
+  	                $this = $(this);
+  	                if($this.text() == 'Pause'){
+  	                    $this.text('Unpause');
+  	                    clearTimeout(timer);
+  	                }else {
+  	                    ticker();
+  	                    $this.text('Pause');
+  	                }
+  	            });
+  	        };
+  	        tickerpause();
+  	        //3 재생정지 함수 끝
+  	        //4 마우스를 올렸을 때 기능 정지
+  	        var tickerover = function()
+  	        {
+  	        $('#ticker').mouseover(function(){
+  	            clearTimeout(timer);
+  	        });
+  	        $('#ticker').mouseout(function(){
+  	            ticker();
+  	        });
+  	    };
+  	    tickerover();
+  	    ticker();
+  	});
+
+    //메인공고
+  	jQuery(function($){
+  		 var bestShowImgMin=1;
+  		 var bestShowImgMax=8;
+  		 for (var i=1; i<=bestShowImgMax; i++) {
+  		  	$("#ancmDetail_idx" + i).css('display','');
+  		 }
+
+  		 $("#ancm_prev1").click(function(){
+  			var ancm_conValue = $('#ancm_conValue').val();
+  			if(ancm_conValue==1){
+  				ancm_conValue = 2;
+  			}else if(ancm_conValue==2){
+  				ancm_conValue = 3;
+  			}else if(ancm_conValue==3){
+  				ancm_conValue = 4;
+  			}else if(ancm_conValue==4){
+  				ancm_conValue = 5;
+  			}else if(ancm_conValue==5){
+  				ancm_conValue = 6;
+  			}else if(ancm_conValue==6){
+  				ancm_conValue = 7;
+  			}
+  			else{
+  				ancm_conValue = 1;
+  			}
+	   		$("div[name=ancmList]").find('li').css('display','none');
+  			if(ancm_conValue==1){
+	  			bestShowImgMin = 1;
+		   		bestShowImgMax = 8;
+  			}else if(ancm_conValue==2){
+	  			bestShowImgMin = 9;
+		   		bestShowImgMax = 16;
+  			}else if(ancm_conValue==3){
+				//메뉴추가시 추가 20190218
+				bestShowImgMin = 17;
+				bestShowImgMax = 24;
+  			}else if(ancm_conValue==4){
+				//메뉴추가시 추가 20190218
+				bestShowImgMin = 25;
+				bestShowImgMax = 32;
+  			}else if(ancm_conValue==5){
+				//메뉴추가시 추가 20190218
+				bestShowImgMin = 33;
+				bestShowImgMax = 40;
+  			}else if(ancm_conValue==6){
+				//메뉴추가시 추가 20190218
+				bestShowImgMin = 41;
+				bestShowImgMax = 48;
+  			}else if(ancm_conValue==7){
+				//메뉴추가시 추가 20190218
+				bestShowImgMin = 49;
+				bestShowImgMax = 56;
+  			}
+	   		for (var i=bestShowImgMin; i<=bestShowImgMax; i++) {
+	    		$("#ancmDetail_idx" + i).css('display','');
+	   		}
+	   		$('#ancm_conValue').val(ancm_conValue);
+  		 });
+
+  		 $("#ancm_next1").click(function(){
+   			var ancm_conValue = $('#ancm_conValue').val();
+  			if(ancm_conValue==1){
+  				ancm_conValue = 2;
+  			}else if(ancm_conValue==2){
+  				ancm_conValue = 3;
+  			}else if(ancm_conValue==3){
+  				ancm_conValue = 4;
+  			}else if(ancm_conValue==4){
+  				ancm_conValue = 5;
+  			}else if(ancm_conValue==5){
+  				ancm_conValue = 6;
+  			}else if(ancm_conValue==6){
+  				ancm_conValue = 7;
+  			}else{
+  				ancm_conValue = 1;
+  			}
+  			$("div[name=ancmList]").find('li').css('display','none');
+  			if(ancm_conValue==1){
+	  			bestShowImgMin = 1;
+		   		bestShowImgMax = 8;
+  			}else if(ancm_conValue==2){
+	  			bestShowImgMin = 9;
+		   		bestShowImgMax = 16;
+  			}else if(ancm_conValue==3){
+				//메뉴추가시 추가 20190218
+  				bestShowImgMin = 17;
+				bestShowImgMax = 24;
+  			}else if(ancm_conValue==4){
+				//메뉴추가시 추가 20190218
+  				bestShowImgMin = 25;
+				bestShowImgMax = 32;
+  			}else if(ancm_conValue==5){
+				bestShowImgMin = 33;
+				bestShowImgMax = 40;
+  			}else if(ancm_conValue==6){
+				bestShowImgMin = 41;
+				bestShowImgMax = 48;
+  			}else if(ancm_conValue==7){
+				bestShowImgMin = 49;
+				bestShowImgMax = 56;
+  			}
+
+	   		for (var i=bestShowImgMin; i<=bestShowImgMax; i++) {
+	    		$("#ancmDetail_idx" + i).css('display','');
+	   		}
+	   		$('#ancm_conValue').val(ancm_conValue);
+  		 });
+  	});
+
+  	//사업별보기 게시판
+  	function news_con_clicked(index){
+  		if(index==0){
+  			$(".news_con .notice_list:eq(0)").css("display","block");
+  			$(".news_con .notice_list:eq(1)").css("display","none");
+  			$(".news_con .notice_list:eq(2)").css("display","none");
+  			$("a[name=news_con_idx]:eq(0)").attr("class","title1 title_on");
+  			$("a[name=news_con_idx]:eq(1)").attr("class","title2 title_off");
+  			$("a[name=news_con_idx]:eq(2)").attr("class","title3 title_off");
+
+  		}else if (index==1){
+  			$(".news_con .notice_list:eq(1)").css("display","block");
+  			$(".news_con .notice_list:eq(0)").css("display","none");
+  			$(".news_con .notice_list:eq(2)").css("display","none");
+  			$("a[name=news_con_idx]:eq(1)").attr("class","title2 title_on");
+  			$("a[name=news_con_idx]:eq(0)").attr("class","title1 title_off");
+  			$("a[name=news_con_idx]:eq(2)").attr("class","title3 title_off");
+  		} else {
+  			$(".news_con .notice_list:eq(2)").css("display","block");
+  			$(".news_con .notice_list:eq(0)").css("display","none");
+  			$(".news_con .notice_list:eq(1)").css("display","none");
+  			$("a[name=news_con_idx]:eq(2)").attr("class","title3 title_on");
+  			$("a[name=news_con_idx]:eq(0)").attr("class","title1 title_off");
+  			$("a[name=news_con_idx]:eq(1)").attr("class","title2 title_off");
+  		}
+  	}
+
+  	//div 팝업
+	function mmDz(obj) {
+		$("a[name=dzIndex]").attr("class","navi_off");
+		$(obj).attr("class","navi_on");
+
+		var id = obj.id;
+		var idx = id.substring(3);
+
+		$("div[name=dzCon]").css("display","none");
+		$("#dz"+idx).css("display","");
+	}
+	//배너
+	function mmPz(obj) {
+		$("a[name=pzIndex]").attr("class","navi_off");
+		$(obj).attr("class","navi_on");
+
+		var id = obj.id;
+		var idx = id.substring(3);
+
+		$("div[name=pzCon]").css("display","none");
+		$("#pz"+idx).css("display","");
+	}
+
+
+
+  	//faq탭
+  	function faq_tab_clicked(index){}
+  	//faq콘
+  	function faq_con_clicked(index){}
+  	//faq탭 선택시 con bind
+  	function faq_ajax_request(idx,cd){
+		var faq_tabValue = $('#faq_tabValue').val();
+		if(faq_tabValue==1){
+			bestShowImgMin = 1;
+	 		bestShowImgMax = 7;
+		}else if(faq_tabValue==2){
+			bestShowImgMin = 8;
+	 		bestShowImgMax = 12;
+		}else if(faq_tabValue==3){
+			bestShowImgMin = 10;
+	 		bestShowImgMax = 13;
+		}else if(faq_tabValue==4){
+		//메뉴추가시 추가
+		}
+   		for (var i=bestShowImgMin; i<=bestShowImgMax; i++) {
+    		$("#faqCount_idx" + i).css('display','');
+    		if(idx==i){
+    			$('#faqCount_idx'+i).attr('class','tab_on');
+    		}else{
+    			$('#faqCount_idx'+i).attr('class','tab');
+    		}
+   		}
+  		$.ajax({
+  			type: "POST",
+  			url: "/front/main/faqInfo.do",
+  			data: "cd="+cd,
+  			dataType: "json",
+  			timeout: 5000,
+  			success: function(data){
+  				var contents = "";
+  				var len = data.length;
+  				for(var i=0 ; i<len ; i++){
+  					contents = contents + "<li id='faqDetail_idx"+ (i+1) +"' style='";
+  					if(i<4){
+  						contents = contents + "display:";
+  					}else{
+  						contents = contents + "display:none";
+  					}
+  					contents = contents + "'>"
+                    + "<dl>"
+                    + "<a href='/front/csg/fq/faq_detail.do?bitmSeq="+data[i].bitmSeq+"'>"
+                    + "<dt>"+data[i].bitmTl+"</dt>"
+                    + "<dd>"+data[i].rplTl+"</dd>"
+                	+ "</dl></li>";
+  				}
+  				$(".faq_list").html(contents);
+
+  			},
+  			error: function(jqXHR,textStatus,errorThrown){
+  				//alert('에러' + textStatus + errorThrown);
+  				//$(".faq_list").html("");
+  			}
+  		});
+  	}
+
+  	//자주묻는질문 인덱스
+  	jQuery(function($){
+  		 var bestShowImgMin=1;
+  		 var bestShowImgMax=7;
+  		 for (var i=1; i<=bestShowImgMax; i++) {
+  		  	$("#faqCount_idx" + i).css('display','');
+  		 }
+
+  		 $("#faq_prev").click(function(){
+  			var faq_tabValue = $('#faq_tabValue').val();
+  			if(faq_tabValue==1){
+  				faq_tabValue = 3;
+  			}else{
+  				faq_tabValue--;
+  			}
+	   		$("div.faq_navi").find('a[name=faqCount]').css('display','none');
+  			if(faq_tabValue==1){
+	  			bestShowImgMin = 1;
+		   		bestShowImgMax = 7;
+  			}else if(faq_tabValue==2){
+	  			bestShowImgMin = 8;
+		   		bestShowImgMax = 12;
+  			}else if(faq_tabValue==3){
+	  			bestShowImgMin = 10;
+		   		bestShowImgMax = 13;
+  			}else if(faq_tabValue==4){
+				//메뉴추가시 추가
+  			}
+	   		$('#faq_tabValue').val(faq_tabValue);
+	   		$('#faqCount_idx'+bestShowImgMin).click();
+  		 });
+
+  		 $("#faq_next").click(function(){
+   			var faq_tabValue = $('#faq_tabValue').val();
+  			if(faq_tabValue==3){
+  				faq_tabValue = 1;
+  			}else{
+  				faq_tabValue++;
+  			}
+	   		$("div.faq_navi").find('a[name=faqCount]').css('display','none');
+  			if(faq_tabValue==1){
+	  			bestShowImgMin = 1;
+		   		bestShowImgMax = 7;
+  			}else if(faq_tabValue==2){
+	  			bestShowImgMin = 8;
+		   		bestShowImgMax = 12;
+  			}else if(faq_tabValue==3){
+	  			bestShowImgMin = 10;
+		   		bestShowImgMax = 13;
+  			}else if(faq_tabValue==4){
+				//메뉴추가시 추가
+  			}
+	   		$('#faq_tabValue').val(faq_tabValue);
+	   		$('#faqCount_idx'+bestShowImgMin).click();
+  		 });
+  	});
+
+  //자주묻는질문 콘텐츠
+  	jQuery(function($){
+  		 var bestShowImgMin=1;
+  		 var bestShowImgMax=4;
+  		 for (var i=1; i<=bestShowImgMax; i++) {
+  		  	$("#faqDetail_idx" + i).css('display','');
+  		 }
+
+  		 $("#faq_prev1").click(function(){
+  			var faq_conValue = $('#faq_conValue').val();
+  			if(faq_conValue==1){
+  				faq_conValue = 2;
+  			}else{
+  				faq_conValue = 1;
+  			}
+	   		$(".faq_list").find('li').css('display','none');
+  			if(faq_conValue==1){
+	  			bestShowImgMin = 1;
+		   		bestShowImgMax = 4;
+  			}else if(faq_conValue==2){
+	  			bestShowImgMin = 5;
+		   		bestShowImgMax = 8;
+  			}else if(faq_conValue==3){
+				//메뉴추가시 추가
+  			}
+	   		for (var i=bestShowImgMin; i<=bestShowImgMax; i++) {
+	    		$("#faqDetail_idx" + i).css('display','');
+	   		}
+	   		$('#faq_conValue').val(faq_conValue);
+  		 });
+
+  		 $("#faq_next1").click(function(){
+   			var faq_conValue = $('#faq_conValue').val();
+  			if(faq_conValue==1){
+  				faq_conValue = 2;
+  			}else{
+  				faq_conValue = 1;
+  			}
+	   		$(".faq_list").find('li').css('display','none');
+  			if(faq_conValue==1){
+	  			bestShowImgMin = 1;
+		   		bestShowImgMax = 4;
+  			}else if(faq_conValue==2){
+	  			bestShowImgMin = 5;
+		   		bestShowImgMax = 8;
+  			}else if(faq_conValue==3){
+				//메뉴추가시 추가
+  			}
+	   		for (var i=bestShowImgMin; i<=bestShowImgMax; i++) {
+	    		$("#faqDetail_idx" + i).css('display','');
+	   		}
+	   		$('#faq_conValue').val(faq_conValue);
+  		 });
+  	});
+
+
+ 	// 메서드와 프로퍼티를 담을 생성자(클래스)를 생성
+  	function RollingBanner(selector,indexer,timerId,speed, animateSpeed) {
+  	// 프로퍼티 생성 및 초기화
+	  	// 배너 목록을 담을 프로퍼티 생성
+	  	// (객체 내부에서만 사용할 프로퍼티이기 때문에 private이라는 의미로 언더바(_)를 사용)
+	  	this._$banners = null;
+	  	this._$indexer = null;
+	  	// 초기 활성화된 인덱스 정보를 담을 프로퍼티 생성
+	  	this._currentIndex = 0;
+	  	this._timerId = 0;
+	  	this._timerPid = 0;
+	  	this._speed = speed;
+	  	this._aniSpeed = animateSpeed;
+
+	  	this._init(selector);
+	  	this._init_indexer(indexer);
+	  	this._initEvent(timerId);
+  	}
+
+  	RollingBanner.prototype = {
+	  	// 요소 초기화
+	  	'_init': function(selector) {
+		  	this._$banners = $(selector);
+	  	},
+	  	'_init_indexer': function(indexer) {
+		  	this._$indexer = $(indexer);
+	  	},
+	  	// 이벤트 처리
+	  	'_initEvent': function(timerId) {
+		  	//this._initBanner();
+		  	this._timerId = timerId;
+		  	this._timerPid = timerId;
+		  	this._start();
+	  	},
+	  	'_initBanner': function() {
+		  	// 배너  모두 숨기기
+		  	this._$banners.css({
+		  		display : 'none',
+		  	});
+		  	this._$banners.eq(this._currentIndex).css({
+		  		display : '',
+		  	});
+
+		  	this._$indexer.attr({
+		  		'class' : 'navi_off',
+		  	});
+		  	this._$indexer.eq(this._currentIndex).attr({
+		  		'class' : 'navi_on',
+		  	});
+	  	},
+	  	'_start': function() {
+	  		var _self = this;
+
+	  	// 타이머가 두 번이상 실행되지 않도록 조건 처리
+		  	if (this._timerPid == this._timerId) {
+			  	this._timerPid = setInterval(function() {
+			  		_self._nextBanner();
+			  	}, this._speed); // 인터벌 지정
+		  	}
+	  	},
+	  	'_stop': function() {
+	  		clearInterval(this._timerPid);
+	  		this._timerPid = this._timerId;
+	  	},
+	  	'_nextBanner': function() {
+		  	// 현재 인덱스값 구하기
+		  	var outIndex = this._currentIndex;
+
+		  	// 다음 배너 인덱스값 구하기
+		  	this._currentIndex++;
+
+		  	// 마지막 배너까지 롤링되면 다시 0번째부터 롤링되도록 인덱스값 설정하기
+		  	if (this._currentIndex >= this._$banners.length) {
+		  		this._currentIndex = 0;
+		  	}
+		  	// 현재 배너 구하기
+		  	var $outBanner = this._$banners.eq(outIndex);
+		  	// 다음 배너 구하기
+		  	var $inBanner = this._$banners.eq(this._currentIndex);
+		  	// 롤링 준비 - 나타날 다음 배너 위치 초기화
+		  	this._initBanner();
+		  	$inBanner.css({
+		  		display : '',
+		  	});
+		  	var $inIndexer = this._$indexer.eq(this._currentIndex);
+		  	$inIndexer.attr({
+		  		'class' : 'navi_on',
+		  	});
+		}
+  	}
+
+	//질의및응답 조회 권한체크
+	function fn_qnaRead(bitmSeq,openYn){
+  		var cd = bitmSeq;
+  		var readYn = "N";
+
+  		if(openYn=='Y'){
+  			document.location.href='/front/csg/qn/qna_detail.do?bitmSeq='+bitmSeq;
+  		}else{
+	 		$.ajax({
+	  			type: "POST",
+	  			url: "/front/main/getQNARead.do",
+	  			data: "cd="+cd,
+	  			dataType: "json",
+	  			timeout: 5000,
+	  			success: function(data){
+	  				var contents = "";
+	  				var len = data.length;
+
+	  				readYn = data.readYn;
+
+	  				if(readYn=="Y"){
+	  					document.location.href='/front/csg/qn/qna_detail.do?bitmSeq='+bitmSeq;
+	  				}else{
+	  					alert("읽기 권한이 없습니다.");
+	  				}
+
+	  			},
+	  			error: function(jqXHR,textStatus,errorThrown){
+	  				readYn = "N";
+	  				alert("읽기 권한이 없습니다.");
+	  			}
+	  		});
+  		}
+	}
+  	</script>
+
+<script type="text/javascript">
+
+	// 중복로그인 여부
+	var isOverlapAccnt = "N";
+		$(document).ready(function(){
+
+
+				var protocol ="https";
+				var server ="oper";
+
+		});
+
+		function loginAction(url)
+		{
+			location.href=url;
+		}
+		function fn_noSSOLogin(){
+
+			var RSAModulus = "bde97eaa73a38a8adb457dd31478a1724a08aa6332ed23a1e9d707ca09948180a218fcf7dd9edbd90283f9d5a9d5b24b005ab63f1213534044e35a46e3fdfd2753f7efe4e4dd6c0b25965c8bb0efd5cf85cf043bf785221c52a2cf1a4232aae9a5f05f68a7bbe7a0bcf3cb1d72ea9e48e5d973942270f34dcbdbf89102104c37663702963756034cbb218c3c8cbee4ff2ea8e6dcf15e29ca345fba5d631465071a2854ef414e07d9b979710c03d30396b675a80d21981920cb5c81eec53a133a86c6e8edd990fb3cdc6a7d0941712899e4af15de512ca5915dbde2e3f251566b6a82de4848779797be419de69bda0e7e02e0c005a4211f6a2e2105db001e9dfd";
+	        var RSAExponent = "10001";
+	        var rsa = new RSAKey();
+	        rsa.setPublic(RSAModulus, RSAExponent);
+
+			var returnUrl = "/front/main/main.do";
+			var loginId = rsa.encrypt($("#id01").val());
+	        var loginPasswd = rsa.encrypt($("#pw01").val());
+			//var loginId = $("#id01").val();
+			//var loginPasswd = $("#pw01").val();
+			var rtnStr = "";
+
+			$("#id01").val("");
+			$("#pw01").val("");
+
+			$.ajax({
+				url:"https://www.smtech.go.kr/front/log/ajaxTmpLoginProc.do",
+				data:"loginId="+loginId+"&loginPasswd="+encodeURIComponent(loginPasswd)+"&returnUrl="+returnUrl+"&RSAModulus="+RSAModulus+"&RSAExponent="+RSAExponent,//+"&isOverlapAccnt="+isOverlapAccnt,
+				async:false,
+				dataType:"jsonp",
+				success:fn_noSSOLogin_Success,
+				error: function( jqXHR, textStatus, errorThrown )
+				{
+					alert("로그인 중 에러가 발생하였습니다.");
+				}
+			});
+		}
+
+		function fn_noSSOLogin_Success(result){
+			var url = "http://www.smtech.go.kr:80/front/main/main.do";
+			if ( result.resultCode == "J01" ) {
+				//alert("url=="+url);
+				document.loginForm.loginPasswd.value = "";
+				document.loginForm.loginId.value = "";
+				document.loginForm.action = url;
+				document.loginForm.target="_parent";
+				document.loginForm.submit();
+			} else if(result.resultCode == "J02") {
+				if ( confirm(result.Message) ) {
+					document.loginForm.action = "http://www.smtech.go.kr:80/front/log/insertEmailAddress.do";
+					document.loginForm.target="_parent";
+					document.loginForm.submit();
+				} else {
+					document.loginForm.action = url;
+					document.loginForm.target="_parent";
+					document.loginForm.submit();
+				}
+			} else if(result.resultCode == "J03") {
+				document.loginForm.action = url;
+				document.loginForm.target="_parent";
+				document.loginForm.submit();
+			} else if(result.resultCode == "LCK00") {
+				alert("이미 로그인 5회가 실패하여 계정이 잠겼습니다.\n\n본인인증 후에 재시도 하시기 바랍니다.");
+
+				document.chkPersonForm.isLckSe.value = "LCK00";
+
+				// 본인인증 url
+				document.chkPersonForm.action = "http://www.smtech.go.kr:80/front/log/chkPersonCert.do";
+				document.chkPersonForm.target = "_parent";
+				document.chkPersonForm.submit();
+			} else if(result.resultCode == "LCK01") {
+				alert("현재 입력하신 비밀번호로 5회 실패하여 계정이 잠겼습니다.\n\n본인인증 화면으로 이동합니다.");
+
+				document.chkPersonForm.isLckSe.value = "LCK01";
+
+				// 본인인증 url
+				document.chkPersonForm.action = "http://www.smtech.go.kr:80/front/log/chkPersonCert.do";
+				document.chkPersonForm.target = "_parent";
+				document.chkPersonForm.submit();
+			} else if(result.resultCode == "LCK02") {
+				alert("현재 입력하신 계정이 휴면상태입니다.\n\n본인인증 화면으로 이동합니다.");
+
+				document.chkPersonForm.isLckSe.value = "LCK02";
+
+				// 본인인증url
+				document.chkPersonForm.action = "http://www.smtech.go.kr:80/front/log/chkPersonCert.do";
+				document.chkPersonForm.target = "_parent";
+				document.chkPersonForm.submit();
+			} else if ( result.resultCode == "E01" || result.resultCode == "LCK03") {
+				alert("현재 입력하신 아이디가 등록되어 있지 않거나, \n아이디 또는 비밀번호를 잘못 입력 하셨습니다.\n비밀번호가 "+ result.failCnt + "회 틀렸습니다.");
+			} else if(result.resultCode == "P01") {	// 비밀번호 3개월 미변경시 변경안내로 이동
+				document.chkPersonForm.action = "http://www.smtech.go.kr:80/front/log/goChngPwd.do";
+				document.chkPersonForm.target = "_parent";
+				document.chkPersonForm.submit();
+			}/* else if(result.resultCode == "FAIL_OVERLAP") {
+				if( confirm("이미 접속중입니다. 기존의 접속을 종료하시겠습니까?\n\n※기존 로그아웃을 하지 않고 비정상적으로 인터넷 창만 닫을 시 이미 접속중이라고 나타날 수 있습니다.") ) {
+					isOverlapAccnt = "Y";
+					fn_noSSOLogin();
+				}
+			}*/
+		}
+
+		function loginProc(subDiv){
+			if(subDiv == 'usual'){
+				if(form_validation(document.loginForm, subDiv)){
+
+					/* $.ajax({
+						type: "POST",
+						url: "/front/log/ajaxLoginProc.do",
+						data: "fId="+$("#id01").attr("value")+"&fPw="+$("#pw01").attr("value"),
+						dataType: "json",
+						success: whenSuccess,
+						error: function(xhr, status, error) { alert(error); }
+					}); */
+
+					// SSO 제외 로그인 처리시 주석 해제
+					fn_noSSOLogin();
+
+					//정상적으로 사용할때
+					//document.loginForm.submit();
+				}
+			}else{
+				if(form_validation(document.actfLoginForm, subDiv)){
+					document.actfLoginForm.idNum.value = document.actfLoginForm.juminNo01.value + document.actfLoginForm.juminNo02.value;
+					document.actfLoginForm.action = '/log/actfLoginProc.do';
+					document.actfLoginForm.submit();
+				}
+				/*
+				alert("공인인증서 로그인이 점검 중 입니다\n일반 로그인을 이용하여 주십시오!");
+				return false;
+				*/
+			}
+		}
+
+		function whenSuccess(result){
+			if ( result.resultCode == "J01" ) {
+				location.href=result.resultUrl;
+			} else if(result.resultCode == "J02") {
+				if ( confirm(result.message) ) {
+					location.href="/front/log/insertEmailAddress.do";
+				} else {
+					location.href=result.resultUrl;
+				}
+			} else if ( result.resultCode == "E01" ) {
+				alert(result.message);
+			}
+		}
+
+		function whenError(){
+			//서버오류 화면으로 이동
+			alert("서버에서 응답이 없습니다.");
+		}
+
+		function form_validation(wForm, subDiv){
+
+			if(subDiv == 'usual'){
+				if(wForm.loginId.value == ""){
+					alert("아이디를 입력하세요.");
+					return false;
+				}
+
+				if(wForm.loginPasswd.value == ""){
+					alert("비밀번호를 입력하세요.");
+					return false;
+				}
+			}else{
+				if(wForm.juminNo01.value == ""){
+					alert("주민등록번호를 입력하세요.");
+					return false;
+				}
+
+				if(wForm.juminNo01.value == ""){
+					alert("주민등록번호를 입력하세요.");
+					return false;
+				}
+				var juminNo = wForm.juminNo01.value+wForm.juminNo02.value;
+
+				if(juminNo.length != 13){
+					alert("주민번호가 맞지 않습니다. 다시 입력하십시오.");
+					return false;
+				}
+			}
+			return true;
+		}
+		function fnIpinCheck(){
+			//아이핀창띄우기
+ 			 var wWidth = 360;
+			var wHight = 120;
+
+			var wX = (window.screen.width - wWidth) / 2;
+			var wY = (window.screen.height - wHight) / 2;
+
+		    var win =window.open("/front/gpin/gPinAuthRequest.do?res_type=main", "gPinLoginWin_smtech", "directories=no,toolbar=no,left="+wX+",top="+wY+",width="+wWidth+",height="+wHight);
+		    win.focus();
+
+		}
+
+
+		/* ================================================ 188248_채희범_민간아이핀 적용 요청 Start ======================================= */
+
+		//  I-Pin 팝업 호출
+		function fn_ipinOpenPopup(){
+			var ipinOpenWin;
+
+			ipinOpenWin = window.open("/front/log/selectIpinOpenPopup.do?res_type=main", 'popupIPIN2', 'width=450, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+			ipinOpenWin.focus();
+		}
+
+		/* ================================================ 188248_채희범_민간아이핀 적용 요청 End ======================================= */
+
+
+
+		function login(){
+			if(window.event.keyCode == 13){
+				loginProc('usual');
+			}
+		}
+
+		var getCookie4 = function(name) {
+			var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+			return value? value[2] : null;
+		};
+
+		// from as-is
+		function getCookie3(name) {
+			var Found = false;
+			var start, end;
+			var i = 0;
+
+			while(i <= document.cookie.length) {
+				start = i;
+				end = start + name.length;
+
+				if(document.cookie.substring(start, end) == name) {
+					Found = true;
+					break;
+				}
+				i++;
+			}
+
+			if(Found == true) {
+				start = end + 1;
+				end = document.cookie.indexOf(";", start);
+				if(end < start) {
+					end = document.cookie.length;
+				}
+				return document.cookie.substring(start, end);
+			}
+			return "";
+		}
+
+		function getCookie2( name ){
+			var nameOfCookie = name + "=";
+			var x = 0;
+			while ( x <= document.cookie.length ) {
+				var y = (x+nameOfCookie.length);
+				if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+					if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+						endOfCookie = document.cookie.length;
+					return unescape( document.cookie.substring( y, endOfCookie ) );
+				}
+				x = document.cookie.indexOf( " ", x ) + 1;
+				if ( x == 0 )
+					break;
+			}
+			return "";
+		}
+
+		function openPopup(src, name, siz) {
+			var noticeCookie=getCookie(name);
+			if (noticeCookie != "no") {
+				window.open(src,name,siz);
+			}
+		}
+
+		function setCookie( name, value, expiredays ) {
+			var todayDate = new Date();
+				todayDate.setDate( todayDate.getDate() + expiredays );
+			document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+		}
+
+
+	</script>
+
+
+</body></html>

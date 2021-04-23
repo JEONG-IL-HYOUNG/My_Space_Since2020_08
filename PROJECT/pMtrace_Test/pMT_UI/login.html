@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>LOGIN</title>
+    <style>
+        /* 리셋 */
+        * {margin: 0;padding: 0;}
+
+        body {background-color: #f0f0f0;}
+        .cont{width: 1200px; height: 800px; background-color: #f0f0f0; margin: auto; margin-top: 138px; }        
+        #left{width: 306px; height:80px; background-color: #f0f0f0; float: left; padding: 360px 150px 360px 150px;}
+        #right{width: 440px; height: 85%; float: right; padding: 60px 75px  50px 75px;
+                border-radius: 20px;  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff;}
+        #login_text{ font-family: NotoSansCJKKR;  font-size: 40px;  font-weight: bold;  font-stretch: normal;
+                    font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050; background-color: #ffffff;}
+        #id_section{background-color: #ffffff; margin-top: 60px;font-family: Roboto;  font-size: 16px;  font-weight: 500;
+                    font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050;}                    
+        #pw_section{ background-color: #ffffff;; margin-top: 30px;font-family: Roboto;  font-size: 16px;  font-weight: 500;
+                    font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050;}
+        input[type=text]{width: 450px;  height: 1px;  margin: 30px 0;  background-color: #c4c4c4;}
+        #fail_section{background-color: #ffffff; margin-top: 10px; font-family: NotoSansCJKKR;  font-size: 16px;  font-weight: 300;  font-stretch: normal;
+                    font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #db0000;}
+        /*#login_btn{background-color: aqua; margin-top: 86px; width: 120px;  height: 20px; padding: 10px 0 10px 0; border-radius: 100px; font-family: NotoSansCJKKR;
+                      border: solid 2px #505050;  background-color: #505050; margin-left: 320px; text-align: center; font-weight: 500;  
+                      font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: center;  color: #ffffff;}*/
+        #login_btn input[type=button]{background-color: aqua; margin-top: 86px; width: 120px;  height: 40px; border-radius: 100px; font-family: NotoSansCJKKR;
+                      border: solid 2px #505050;  background-color: #505050; margin-left: 320px; text-align: center; font-weight: 500;  
+                      font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: center;  color: #ffffff;}
+                      
+        #return_main input[type=button] { width:450px; height:60px; margin-top: 170px; background-color: #505050; text-align: center; border-radius: 100px;
+                        font-family: NotoSansCJKKR;  font-size: 16px;  font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;
+                        letter-spacing: normal;  text-align: center;  color: #ffffff;}
+        #mlogo{width: 132px; height: 100px;  float: right; padding: 0 50px 0 0 ;}
+    </style>
+</head>
+<body>
+    <div class="cont">
+
+        <div id="left">
+            <img src="img/logo_L.png" alt="">
+        </div>
+
+        <div id="right">
+            <div id="login_text">
+                로그인
+            </div>
+            <div id="id_section">
+                <p>ID</p>
+                <input type="text" id="id_input">
+            </div>
+            <div id="pw_section">
+                <p>password</p>
+                <input type="text" id="pw_input">
+            </div>
+            <div id="fail_section">
+                로그인이 실패했습니다. 아이디 및 비번을 새로 입력해주세요.
+            </div>
+            <div id="login_btn">
+               <input type="button" value="로그인">
+            </div>
+            <div id="return_main">
+                <input type="button" value="메인으로 돌아가기">
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="mlogo">
+        <img src="img/logo_mlab.png" alt="">
+    </div>
+  
+    
+
+</body>
+
+</html>
+
+
+<!-- <table>
+    <tr>
+        <td>
+            <img id="logo_L"src="img/logo_L.png" alt="">
+        </td>
+        <td>
+            <form action="index.html" method="post" id="loginForm">
+                <h2>로그인</h2>
+                <div id="idForm">
+                    <input type="text" id="id" placeholder="ID">
+                </div>
+                <div id="passForm">
+                    <input type="password" id="pw" placeholder="PW">
+                </div>
+                <button type="button" id="btn" onclick="button()">
+                    LOG IN
+                </button>
+                <script>
+                    let button = () => {
+                        alert('login Button !')
+                    }
+                </script>
+                <div id="bottomText">
+                    Don't you have ID? <a href="#">sign up</a>
+                </div>
+            </form>
+            <div></div>
+
+            <div style="position: relative">
+                <div style="position:absolute; top:0; left:0;">ID</div>
+                <input type="text">
+
+            </div>
+            <div></div>
+
+            <div></div>
+        </td>
+    </tr>
+</table> -->

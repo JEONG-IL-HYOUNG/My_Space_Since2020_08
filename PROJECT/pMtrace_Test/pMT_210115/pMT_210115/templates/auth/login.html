@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>LOGIN</title>
+    <style>
+        /* 리셋 */
+        * {margin: 0;padding: 0;}
+
+        body {background-color: #f0f0f0;}
+        .cont{width: 1200px; height: 800px; background-color: #f0f0f0; margin: auto; margin-top: 100px; }
+        #left{width: 306px; height:80px; background-color: #f0f0f0; float: left; padding: 360px 150px 360px 150px;}
+        #right{width: 440px; height: 670px; float: right; padding: 80px 75px  50px 75px;
+                border-radius: 20px;  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff;}
+        #login_text{ font-family: NotoSansCJKKR;  font-size: 40px;  font-weight: bold;  font-stretch: normal; padding-bottom: 40px;
+                    font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050; background-color: #ffffff;}
+        #id_section{background-color: #ffffff; font-family: Roboto;  font-size: 16px;  font-weight: 500; position: relative; height: 46px;
+                    font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050;}
+        #log_in_id_text{position: absolute; top: 0px; left: 0px;}
+        #log_in_pw_text{}
+        #pw_section{ background-color: #ffffff;; margin-top: 30px;font-family: Roboto;  font-size: 16px;  font-weight: 500;
+                    font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #505050;}
+        input[type=text]{width: 450px;  height: 20px;  border:none; border-bottom: 1px solid #c4c4c4; vertical-align: bottom; font-size:25px; padding-top:15px; padding-left:25px}
+        #fail_section{background-color: #ffffff; margin-top: 10px; font-family: NotoSansCJKKR;  font-size: 16px;  font-weight: 300;  font-stretch: normal;
+                    font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;  color: #db0000;}
+        /*#login_btn{background-color: aqua; margin-top: 86px; width: 120px;  height: 20px; padding: 10px 0 10px 0; border-radius: 100px; font-family: NotoSansCJKKR;
+                      border: solid 2px #505050;  background-color: #505050; margin-left: 320px; text-align: center; font-weight: 500;
+                      font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: center;  color: #ffffff;}*/
+        #login_btn input[type=submit]{background-color: aqua; margin-top: 86px; width: 120px;  height: 40px; border-radius: 100px; font-family: NotoSansCJKKR;
+                      border: solid 2px #505050;  background-color: #505050; margin-left: 320px; text-align: center; font-weight: 500;
+                      font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: center;  color: #ffffff;}
+
+        #return_main input[type=button] { width:450px; height:60px; margin-top: 100px; background-color: #505050; text-align: center;
+                        font-family: NotoSansCJKKR;  font-size: 16px;  font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;
+                        letter-spacing: normal;  text-align: center;  color: #ffffff; border-radius: 30px;}
+    </style>
+</head>
+<body>
+    <div class="cont">
+
+        <div id="left">
+            <img src="../../static/logo_L.png" alt="">
+        </div>
+
+        <div id="right">
+            <form method="post" action="{{url_for('auth.login')}}">
+                {{ form.csrf_token }}
+                <div id="login_text">
+                    로그인
+                </div>
+                <div id="id_section">
+                    <span id="log_in_id_text">ID</span>
+                    <input type="text" id="id_input" name="user_nm" value="{{ form.user_nm.data or '' }}">
+                </div>
+                <div id="pw_section">
+                    <span id="log_in_pw_text">Password</span>
+                    <input type="text" id="pw_input" name="pw" value="{{ form.pw.data or '' }}">
+                </div>
+
+                <div id="fail_section">
+                    로그인이 실패했습니다. 아이디 및 비번을 새로 입력해주세요.
+                </div>
+
+                <div id="login_btn">
+                    <input type="submit" value="로그인">
+                </div>
+            </form>
+
+            <a href="{{ url_for('main.index') }}">
+                <div id="return_main">
+                    <input type="button" value="메인으로 돌아가기">
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- <table>
+    <tr>
+        <td>
+            <img id="logo_L"src="img/logo_L.png" alt="">
+        </td>
+        <td>
+            <form action="index.html" method="post" id="loginForm">
+                <h2>로그인</h2>
+                <div id="idForm">
+                    <input type="text" id="id" placeholder="ID">
+                </div>
+                <div id="passForm">
+                    <input type="password" id="pw" placeholder="PW">
+                </div>
+                <button type="button" id="btn" onclick="button()">
+                    LOG IN
+                </button>
+                <script>
+                    let button = () => {
+                        alert('login Button !')
+                    }
+                </script>
+                <div id="bottomText">
+                    Don't you have ID? <a href="#">sign up</a>
+                </div>
+            </form>
+            <div></div>
+
+            <div style="position: relative">
+                <div style="position:absolute; top:0; left:0;">ID</div>
+                <input type="text">
+
+            </div>
+            <div></div>
+
+            <div></div>
+        </td>
+    </tr>
+</table> -->
+
+{#{% extends "base.html" %}#}
+{#{% block content %}#}
+{#<div class="container my-3">#}
+{#    <form method="post" class="post-form">#}
+{#        {{ form.csrf_token }}#}
+{#        {% include "form_errors.html" %}#}
+{#        <div class="form-group">#}
+{#            <label for="username">사용자 이름</label>#}
+{#            <input type="text" class="form-control" name="user_nm" id="username"#}
+{#                   value="{{ form.user_nm.data or '' }}">#}
+{#        </div>#}
+{#        <div class="form-group">#}
+{#            <label for="password">비밀번호</label>#}
+{#            <input type="password" class="form-control" name="pw" id="password"#}
+{#                   value="{{ form.pw.data or '' }}">#}
+{#        </div>#}
+{#        <button type="submit" class="btn btn-primary">로그인</button>#}
+{#    </form>#}
+{#</div>#}
+{#{% endblock %}#}

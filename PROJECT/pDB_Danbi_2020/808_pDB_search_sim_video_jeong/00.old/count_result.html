@@ -1,0 +1,120 @@
+ <!doctype html>
+<html lang="ko">
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+	maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+
+<title>MLAB MSTUV</title>
+     <!-- Bootstrap core CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--// css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/resources/css/common.css">
+	<link rel="stylesheet" href="/resources/css/style.css">
+	<link rel="stylesheet" href="/resources/css/swiper.min.css">
+	<link rel="stylesheet" href="/resources/css/category.css">
+	<link rel="stylesheet" href="/resources/css/goods.css">
+<style>
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .entry-content img,
+    .entry-content iframe,
+    .entry-content object,
+    .entry-content embed {
+    max-width: 100%;
+    }
+.card-title {
+    text-indent:20px;
+}
+button[type=submit]{
+    background-color: #318448;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold
+}
+
+</style>
+
+
+<script language="javascript">
+    function showClock(){
+        var currentDate = new Date();
+        var divClock = document.getElementById("divClock");
+
+        var msg = "현재 시:분:초 = "+ currentDate.getHours()+"시:";
+        msg += currentDate.getMinutes()+"분:";
+        msg += currentDate.getSeconds()+"초 ";
+
+        divClock.innerText = msg;
+        setTimeout(showClock,1000);
+    }
+</script>
+</head>
+<body onload="showClock()">
+    <div id="divClock" class="clock">
+
+    </div>
+    <br>
+
+     <form method="post" action="/post">
+		<table cellpadding=1 cellspacing=0>
+
+            {% for kk in result.items() %}
+
+            <tr>
+            <td><input type="text" value="{{ kk }}" style="width:250; height:40;
+            border:2px solid #9036c2"></td>
+            <td><input type="text" value="{{ kk }}" style="width:250; height:40;
+            border:2px solid #9036c2"></td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+<!--
+<body onload="printClock()">
+	<div style="border:1px solid #dedede; width:600px; height:250px; line-height:250px;
+color:#666;font-size:100px; text-align:center;" id="clock">
+	</div>
+
+
+ <h2><font size="3" color="#1a5aa8" font-weight: bold><center>태그기반 유사동영상 검색 모바일 시연</font></h2>
+<main role="main">
+  <section class="jumbotron" style="color: #54efea; min-height: 10px">
+    <div class="container">
+      <font size="4" color="#082e3b" font-weight: bold><center>
+        <h3 class="jumbotron-heading">기준 동영상 검색결과</h3><br>
+                    <p class="jumbotron-heading">
+                        <p type="text" name="현재날짜:" value="시:분:초:current_time"></p>
+
+          <form action = "/result" method = "POST">
+                <input type="text" id="value" name ="분:초", value="current_time">
+          <input type="submit">시:분:초: SUBMIT(HIDDEN 상태)</button>
+                  </form></div></div>
+        </div></center>
+
+  </section>
+-->
+
+      </body>
+</html>

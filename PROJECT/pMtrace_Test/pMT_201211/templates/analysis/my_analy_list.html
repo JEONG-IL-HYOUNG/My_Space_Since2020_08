@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="item-center py-5 px-3">
+        <br>
+        <br>
+        <br>
+        <h3>#200</h3>
+        <h3>나의 작업 목록</h3>
+        <p>각 작업의 프로젝트명을 클릭하면 상세 내용을 확인 할 수 있습니다.</p>
+        <br>
+        <div class="col-md-6">
+                <form action="{{url_for('analysis.new_work')}}" method="">
+                    <input type="submit" value="신규작업생성#400">
+                </form>
+        </div>
+        <br>
+
+        <table class="table">
+            <tr>
+                <td>아이디</td>
+                <td>생성일자</td>
+                <td>프로젝트명</td>
+                <td>진행상태</td>
+                <td>검색갯수</td>
+            </tr>
+            <tr>
+                <td>-----</td>
+                <td>-----</td>
+                <td><a href="{{url_for('analysis.my_detail_list')}}">테스트#300</a></td>
+                <td>-----</td>
+                <td>-----</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

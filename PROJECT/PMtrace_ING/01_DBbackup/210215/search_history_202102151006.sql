@@ -1,0 +1,76 @@
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=vKX-y6z6sVU',NULL,'2021-01-15 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=vKX-y6z6sVU',NULL,'2021-01-15 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=khw3R5bvB48','user','2021-01-15 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=WqyfWyK5CpM','user','2021-01-15 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=MB-Pz7WWfiw','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=9p0k0D5x85A','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=9p0k0D5x85A','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=9p0k0D5x85A','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=9p0k0D5x85A','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=9p0k0D5x85A','user','2021-01-18 00:00:00.0');
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=9p0k0D5x85A','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=AgfRQ2jt13Y','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=AgfRQ2jt13Y','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=dMoSywFoy1o','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=PRgHKxMuE0M','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0');
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=B_TZxNa6QBc','user','2021-01-18 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=GbcXGewxEGE',NULL,'2021-01-20 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=GbcXGewxEGE','user','2021-01-20 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=Y8d7yl2y6Kc','user','2021-01-25 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=Y8d7yl2y6Kc','user','2021-01-25 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=M5iIyHUwHJE',NULL,'2021-01-26 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=M5iIyHUwHJE',NULL,'2021-01-26 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=23dZ5Aazy0Y',NULL,'2021-01-26 00:00:00.0');
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=zRXGSpLkHtg',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=zp1UD16WEo0','user','2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=dp7DdH_7BaU','user','2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=TqrQDgMUaKQ',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=TqrQDgMUaKQ',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=TqrQDgMUaKQ',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=TqrQDgMUaKQ',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=TqrQDgMUaKQ',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=TqrQDgMUaKQ',NULL,'2021-02-01 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0');
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0');
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI',NULL,'2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=kjduDAt6wSI','user','2021-02-02 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=XNmeZ0yZ5ek',NULL,'2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=XNmeZ0yZ5ek',NULL,'2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=XNmeZ0yZ5ek',NULL,'2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=XNmeZ0yZ5ek',NULL,'2021-02-04 00:00:00.0');
+INSERT INTO test_mtrace.search_history (seq,user_nm,`date`) VALUES
+	 ('https://www.youtube.com/watch?v=uIhKDGz2ENo',NULL,'2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=uIhKDGz2ENo','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=rLqtDTw_BW8','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=rLqtDTw_BW8','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=zp1UD16WEo0','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=zp1UD16WEo0','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=zp1UD16WEo0','user','2021-02-04 00:00:00.0'),
+	 ('https://www.youtube.com/watch?v=uIhKDGz2ENo','user','2021-02-04 00:00:00.0');

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>FLASK</title>
+    <style>
+        /* 리셋 */
+        * {margin: 0; padding: 0;}
+
+        /* 전체 레이아웃 */
+        body{background-color: #f0f0f0;}
+        #header{width: 100%;  height: 48px; background-color: #ffffff;}
+        #logo_s{margin: 5px 5px 5px 5px; float: left;}
+        #login_round{width: 96px;  height: 36px;  float: right;  border-radius: 100px;  border: solid 2px #505050;  background-color: #505050;
+            text-align: center;  margin-top:3px; margin-right: 20px}
+        #login_text{margin: 7px auto; font-family: Roboto;  font-size: 20px;  font-weight: 500;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;
+            text-align: center;  color: #ffffff;}
+        #wk_round{width: 96px;  height: 36px;  float: right;  border-radius: 100px;  border: solid 2px #505050;  background-color: white;
+            text-align: center; margin-right: 20px; margin-top: 3px;}
+        #wk_text{margin: 7px auto; font-family: Roboto;  font-size: 20px;  font-weight: 500;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;
+            text-align: center;  color: #555555;}
+        #wrap{text-align: center;}
+        #search_main{ width: 960px;  height: 400px;  margin: 70px auto 30px;  border-radius: 20px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff; text-align: center;}
+        #logo_m{width:100%; height: 58px; padding-top: 50px; }
+        #text_100{ margin-top: 20px; font-family: NotoSansCJKKR;  font-size: 18px;  font-weight: 900;  font-stretch: normal;  font-style: normal;
+            font-style: normal;  line-height: 1;  letter-spacing: normal;  color: #505050; }
+
+        input[type=text]{width:300px; height:40px; margin:60px 30px auto; padding: 0px 352px 0px 30px; border-radius: 100px;
+            border: solid 2px #505050; background-color: #ffffff; background-image: url(/static/icon_search.png);  background-repeat:no-repeat; background-position: 7px 7px }
+        input[type=text]:focus{outline: none; }
+        input[type=submit]:focus{outline: none;}
+
+        input[type=submit]{ width: 120px;  height: 40px;  margin: 20px auto;  padding: 12px 40px;  border-radius: 100px;
+            border: solid 2px #505050; background-color: #505050;  font-size: 16px;  font-weight: 500;  font-stretch: normal;  font-style: normal;
+            line-height: 1; letter-spacing: normal;  text-align: center;  color: #ffffff; margin-top: 30px}
+        #search_content{width: 920px;  height: 200px;  margin: 50px auto 0;  padding: 20px 20px ;  border-radius: 20px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);  background-color: #ffffff; text-align: start; display: inline-block;}
+        #ytb_section{width: 326px; height: 100%; display: inline-block; }
+        #content_section{width: 580px; height: 190px;  display: inline-block; padding-top: 10px; font-family: Roboto;
+            font-size: 20px;  font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: left;
+            color: #505050; display: inline-block;}
+
+        #content_section1{width: 110px; height: 20px;  float: left; padding-bottom: 14px;}
+        #content_section2{width: 450px; height: 20px; float: right; font-size: 16px; padding-bottom: 14px;
+            font-weight: bold;  font-stretch: normal;  font-style: normal;  line-height: 1;  letter-spacing: normal;  text-align: right;  color: #505050;
+            overflow-x: hidden;    white-space: nowrap;    text-overflow: ellipsis;}
+
+        #content_section2 > input[type=submit]{width: 70px;  height: 20px;  border-radius: 100px;
+            border: solid 2px #505050; background-color: #505050;  font-size: 16px;  font-weight: 500;  font-stretch: normal;  font-style: normal;
+            line-height: 1; letter-spacing: normal;  text-align: center;  color: #ffffff;}
+
+
+
+        #content_section3{width: 24px; float: right; padding-right: 10px; border-radius: 20px; border: 1px solid;}
+        #mlogo{width: 132px; height: 100px;  float: right; padding: 0 20px 0 0 ;}
+
+    </style>
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">-->
+</head>
+<body>
+<div id="wrap">
+    <!-- 헤더부분 -->
+    <div id="header">
+            <span id="logo_s">
+                <a href="{{ url_for('main.index') }}">
+                    <img src="/static/logo_s.png">
+                </a>
+            </span>
+        {#    test#}
+        {#            <a href="{{ url_for('analysis.test') }}">test</a>#}
+        {#    test#}
+
+        {% if g.user %}
+            <a href="{{ url_for('auth.logout') }}">
+                    <span id="login_round">
+                        <div id="login_text">Log out</div>
+                    </span>
+            </a>
+
+            <a href="{{ url_for('analysis.my_analy_list') }}">
+                    <span id="wk_round">
+                        <div id="wk_text">My_Works</div>
+                    </span>
+            </a>
+        {% else %}
+            <a href="{{ url_for('auth.login') }}">
+            <span id="login_round">
+                <div id="login_text">Log In</div>
+            </span>
+            </a>
+            <a href="{{ url_for('auth.signup') }}">
+            <span id="wk_round">
+                <div id="wk_text">Sign-up</div>
+            </span>
+            </a>
+        {% endif %}
+    </div>
+    <!-- 헤더 end -->
+
+    <!-- #UI-100 메인 -->
+    <div id="search_main">
+        <div id="logo_m">
+            <img src="/static/logo_m.png" alt="">
+        </div>
+        <div id="text_100">
+            -유사 영상 검색 및 분석-
+        </div>
+        <form action="{{ url_for('analysis.search_main') }}", method="post">
+            <div id="input">
+                <input type="text" name="video_url" value="" placeholder="유튜브 URL을 입력하세요."><br>
+                {% for message in get_flashed_messages() %}
+                <div>
+                    {{message}}
+                </div>
+                {% endfor %}
+                <input type="submit" name="" value="검색">
+            </div>
+        </form>
+    </div>
+
+    <!-- #UI-100_1검색 버튼 눌렀을 때 나오는 페이지 -->
+
+    {% if aaa %}
+        <div id="search_content">
+            <div id="ytb_section">
+                <iframe  height="200" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div id="content_section">
+                <div id="content_section1">URL</div>
+                <div id="content_section2">{{aaa}}</div>
+
+                <div id="content_section1">Title</div>
+                <div id="content_section2">{{ccc}}</div>
+
+                <div id="content_section1">Channel</div>
+                <div id="content_section2">{{fff}}</div>
+
+                <div id="content_section1">Key-word</div>
+                <div id="content_section2">{{ddd}}</div>
+
+                <div id="content_section1">View</div>
+                <div id="content_section2">{{bbb}}</div>
+
+                <div id="content_section1"></div>
+                <div id="content_section2">
+                    <form action="{{ url_for('analysis.go_work') }}">
+                        <input type="submit" name="gogo" value="분석" style="width: 70px;  height: 20px;  border-radius: 100px;
+            border: solid 2px #505050; background-color: #505050;  font-size: 16px;  font-weight: 500;  font-stretch: normal;  font-style: normal;
+            line-height: 1; letter-spacing: normal;  text-align: center;  color: #ffffff; padding: 0; margin: 0;" >
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% else %}
+    {% endif %}
+    <div id="mlogo" style="position: absolute; bottom: 0; right: 0; margin: 0 10px 10px 0;">
+        <img src="/static/logo_mlab.png">
+    </div>
+    <!-- <footer class="footer bottom position-absolute w-100 text-center" style="position: static; text-align: center; width: 100%;">
+         copyright mLab inc. all rights reserved.
+     </footer>-->
+</div>
+
+
+
+</body>
+</html>
+<!-- <table border="1" width="900" height="250">
+                <tr>
+                    <td rowspan="3"><iframe id="ytb_section" width="300"height="220" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>aa</td>
+                    <td>aa</td>
+                    <td>aa</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table> -->
+
+
+
+{#{% extends 'base.html' %}#}
+{#{% block content %}#}
+{#    <div class="container-fluid bg-light">#}
+{#        <div class="container bg-white">#}
+{#            <header class="blog-header py-3">#}
+{#                <div class="row flex-nowrap justify-content-between align-items-center">#}
+{#                    <div class="col-4 pt-1">#}
+{#                        <a class="link-secondary" href="#">Subscribe</a>#}
+{#                    </div>#}
+{#                    <div class="col-4 text-center">#}
+{#                        <a class="blog-header-logo text-dark" href="#">Large</a>#}
+{#                    </div>#}
+{#                    <div class="col-4 d-flex justify-content-end align-items-center">#}
+{#                        <a class="link-secondary" href="#" aria-label="Search">#}
+{#                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>#}
+{#                        </a>#}
+{#                        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </header>#}
+{##}
+{#            <section class="jumbotron">#}
+{#                <div class="container">#}
+{#                    <h1 class="jumbotron-heading">M_TRACE</h1>#}
+{#                </div>#}
+{#            </section>#}
+{##}
+{##}
+{##}
+{##}
+{#            <div class="border border-4 rounded-3 text-center  py-5 px-3">#}
+{#                <br>#}
+{#                <br>#}
+{#                <br>#}
+{#                {{tst}}#}
+{#                <h1>#100</h1>#}
+{#                <h1>M TRACE</h1>#}
+{##}
+{#                <br>#}
+{#                <br>#}
+{#                <br>#}
+{#                <br>#}
+{#                <br>#}
+{#                <!--로그인 상태일때와 비로그인 상태일때 form으로 넘겨주는 페이지가 다름-->#}
+{#                <form action="{{ url_for('analysis.search_main') }}", method="post">#}
+{#                    <p>유튜브 영상검색#}
+{#                        <input type="text" name="video_url" >#}
+{#                        <input type="submit" value="검색">#}
+{#                    </p>#}
+{#                </form>#}
+{##}
+{#        <table class="table border-primary" width ="1300" height="315" align = "center" >#}
+{#            <div class="row">#}
+{#                <td class="col-md-6"rowspan="4" align = "center" >#}
+{#                    <iframe width="460" height="315" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1"#}
+{#                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>#}
+{##}
+{#                    </iframe>#}
+{#                </td>#}
+{#                <td class="col-md-6">타이틀</td>#}
+{#                <td>{{ccc}}</td>#}
+{#            </div>#}
+{#        </table>#}
+{##}
+{##}
+{#                <!--    {% if not g.user %}disabled{% endif %}-->#}
+{#                <br>#}
+{#                {% if aaa %}#}
+{#                    <div class="container">#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-7">#}
+{#                                <div class="card">#}
+{#                                    <iframe width="560" height="415" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"#}
+{#                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>#}
+{#                                    </iframe>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-sm-5">#}
+{#                                <div class="card">#}
+{#                                    <form action="{{ url_for('analysis.go_work') }}">#}
+{#                                        <input type="submit" name="gogo" value="분석">#}
+{#                                    </form>#}
+{#                                    타이틀::  {{ccc}} <br>#}
+{#                                    URL::   {{aaa}} <br>#}
+{#                                    조회수::   {{bbb}} <br>#}
+{#                                    키워드::   {{ddd}} <br>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% else %}#}
+{#                {% endif %}#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{##}
+{##}
+{##}
+{#{% endblock %}#}

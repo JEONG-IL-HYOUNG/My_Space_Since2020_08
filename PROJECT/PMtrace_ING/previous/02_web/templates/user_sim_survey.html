@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+        <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+        <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+        <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+        <meta name="description" content="The Overflowing church website's main page" />
+        <meta name="author" content="unikys@gmail.com" />
+        <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+        <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <script src="/static/js/includeHTML.js"></script>
+    <script src="/static/js/includeRouter.js"></script>
+</head>
+
+<script language="javaScript">
+  function formChk(){
+      if(document.scoreform.score.value==''){
+        alert("설문조사를 입력하세요!!");
+      }
+      else{
+        document.scoreform.submit();
+        return true;
+      }
+  }
+</script>
+
+<body>
+      <nav include-html="/static/html/nav.html">
+      </nav>
+      <br>
+      <!-- <section class="jumbotron text-center"> -->
+        <font size="3" color="#04243e" font-weight: bold>
+          <center>
+            <h1 style="text-indent:-5px; padding: 0px; width: 60%; text-align: left;">
+                (주)엠랩의 엠스터브에서 제공하고 있는 동영상 서비스에 동영상의 검색 및 추천 서비스 성능향상을 위해서 동영상마다 
+                제공하고 있는 태그정보의 정확도에 대한 설문조사를 진행하고 있습니다.
+                <br>베타테스터 분들은 아래 동영상들을 보시고 동영상과 함께 제공되고 있는 태그정보가 정확한지에 대한 설문조사 응답을 부탁드립니다.
+            </h1>
+          </center>
+        <br>
+        <section class="jumbotron text-center">
+            <h3 style="display:inline" id="description">
+                <b>현재 설문응답 수(시청동영상 수): {{ vote_total_cnt}}건</b>
+            </h3>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <h3 style="display:inline" id="description">
+                <b>현재 태그정확도 스코어: {{ score }}%</b>
+            </h3>
+      </section>
+      <center>
+    
+    <!-- ------------------응답 영역------------------------------>
+    <div class="row">
+		  <div class="cell" style="vertical-align: top; border-style:none">
+	    	<iframe width="760"
+			  height="420"
+			  src="https://www.youtube.com/embed/{{youtube_id}}"
+			  frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+		    </iframe>
+      </div>
+		    <div class="cell" style="vertical-align: top; border-style:none" >
+            <fieldset>
+            <div class="cell" style="vertical-align: top; text-align: center;">
+                <label><font size="4" color="#04243e" font-weight: bold>
+                  <b>동영상정보</b>
+                </font></label>
+            </div>
+            <div>
+                <label id="name-label" for="name">동영상 제목: {{ title }}
+                </label>
+            </div>
+            <br>
+            <div>
+                <label for="address-label">
+                  동영상 URL: https://www.youtube.com/embed/{{youtube_id}}
+                </label>
+            </div>
+            <br>
+            <div>
+              <label id="number-label" for="phone">동영상 태그: {{ tag }}
+              </label>
+            </div>
+            </fieldset>
+            <!-- ------------------Radio Buttons-------------------------------- -->
+            <fieldset>
+              <div class="cell" style="vertical-align: top; text-align: center;">
+                  <legend>
+                      <font size="4" color="#062b51" font-weight: bold><b>설문조사</b>
+                      </font>
+                  </legend>
+                  <form name=scoreform action = "user_sim_survey" method = "POST" 
+                  onSubmit="formChk();return false"
+                  style="width: max-content; height: fit-content;">       
+                    <p> 
+                      <input type="radio" name="score" value=5>매우정확
+                      <input type="radio" name="score" value=4>정확
+                      <input type="radio" name="score" value=3>보통
+                      <input type="radio" name="score" value=2>부정확
+                      <input type="radio" name="score" value=1>매우부정확
+                    </p>
+                  <input type="hidden" name="youtube_id" value= {{ youtube_id }}>
+                  <div id="submitbutton">
+                    <input type="submit" value="클릭" style="border:2px solid #2e94d7"
+                   onclick="check_onclick()">
+                  </div>
+                  </form>
+              </div>
+            </fieldset>
+        </div>
+  </center>
+</body>
+<script>
+  includeHTML( function () {
+    includeRouter( function () {
+      // do something in the future
+    });
+  });
+</script>
+</html>

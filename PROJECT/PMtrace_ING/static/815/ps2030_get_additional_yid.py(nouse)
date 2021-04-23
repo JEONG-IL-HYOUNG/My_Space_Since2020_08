@@ -1,0 +1,72 @@
+import os
+import shutil
+from urllib.request import urlopen
+import urllib.request
+import re
+from bs4 import BeautifulSoup
+import pandas as pd
+import sys
+import time
+
+if os.path.exists('../python/oaislib_org.py'):
+    shutil.copy('../python/oaislib_org.py', 'oaislib.py')
+import oaislib
+
+#20-20에서 가져온 유튜브 아이디 값으로 웹페이지 접속했을때
+#옆에 보이는 관련동영상 부분의 유튜브 아이디를 가져 오는 코드
+def ps2030():
+    # I/O name
+    input_filepath = 'output/ps20-20/youtube_ids.csv'
+    youtube_ids_df = pd.read_csv(input_filepath)
+    output_filepath = 'output/ps20-30/youtube_ids_additional.csv'
+    prefix = 'ps20_30'
+    output_df = pd.DataFrame()
+
+    ### data load
+    ## 당일 키워드만 가지고 옴
+    today_str = oaislib.fn_get_date_str()
+    youtube_ids_df = youtube_ids_df[youtube_ids_df['udate'] == today_str]
+    ids_cnt = len(youtube_ids_df)
+
+    ## 당일 데이터가 없는 경우
+    if ids_cnt == 0:
+        print('ps20_30:: today keywords number is 0')
+        sys.exit()
+        
+    for i in range(ids_cnt):
+        
+        oaislib.fn_disploop(prefix, i, 10, ids_cnt)
+        
+        url_str = youtube_ids_df['y_url'].iloc[i]
+        keyword_str = youtube_ids_df['keyword'].iloc[i]
+        target_url = url_str
+        html = urllib.request.urlopen(target_url).read()
+        soup = BeautifulSoup(html, 'html.parser')
+        pattern = '"videoId":".{11}"'
+        result = re.findall(pattern, str(soup), re.MULTILINE | re.IGNORECASE)
+        youtube_ids = [x[11:-1] for x in result]
+        youtube_urls = ["https://www.youtube.com/watch?v=" + x for x in youtube_ids]
+        youtube_df = pd.DataFrame(columns=['youtube_id', 'y_url','keyword'])  # ps10-30 데이터 프레임 생성
+        youtube_df['youtube_id'] = youtube_ids
+        youtube_df['y_url'] = youtube_urls
+        youtube_df['keyword'] = keyword_str
+
+        output_df = pd.concat([output_df, youtube_df])
+        time.sleep(5)
+
+    #for문 벗어나서 열을 추가해서 코드 돌린 날짜를 넣기
+    output_df['udate'] = today_str
+    
+    output_df.drop_duplicates(inplace=True, subset=['youtube_id', 'y_url'])
+    if os.path.isfile(output_filepath):
+        print("yes exist")
+        previous_df = pd.read_csv(output_filepath)
+        output_df = pd.concat([previous_df, output_df], axis=0)
+        output_df.to_csv(output_filepath, index=False)
+    else:
+        print('nothing, makemake')
+        output_df.to_csv(output_filepath, index=False)
+
+if __name__ == '__main__':
+    ps2030()
+
