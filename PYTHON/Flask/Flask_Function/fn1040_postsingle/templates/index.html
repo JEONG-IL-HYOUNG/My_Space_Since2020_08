@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+    <h2>fn10_40 flask_post_single</h2>
+    <h2>post방식으로 입력값 받기</h2>
+    <h3>로그인 기능은 일단 안씀</h3>
+    <a href="{{ url_for('main.aaa') }}">로그인을 해야 볼수 있는 페이지</a><br>
+
+    <form action="{{ url_for('analysis.analysis') }}", method="post">
+        <p>유튜브 영상검색
+        <input type="text" name="video_url" >
+        <input type="submit" value="분석">
+        </p>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <th>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/t3KZnCgiMW0?autoplay=1&mute=1"
+             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    </th>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+    <h1>fn10_43 FLASK_mariadb_post_multi_</h1>
+    <h1>로그인 상황에서 POST multi방식 추가</h1>
+    <a href="{{ url_for('main.aaa') }}">로그인을 해야 볼수 있는 페이지</a><br>
+
+    <form action="{{ url_for('analysis.analysis') }}", method="post">
+        <p>유튜브 영상검색
+        <input type="text" name="video_url" {% if not g.user %}disabled{% endif %}></p>
+
+        <p>키워드 입력
+        <input type="text" name="keyword" {% if not g.user %}disabled{% endif %}></p>
+        <input type="submit" value="분석"{% if not g.user %}disabled{% endif %}>
+    </form>
+
+    <br>
+    <br>
+
+
+    <br>
+    <br>
+    <th>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/t3KZnCgiMW0?autoplay=1&mute=1"
+             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </th>
+
+{% endblock %}

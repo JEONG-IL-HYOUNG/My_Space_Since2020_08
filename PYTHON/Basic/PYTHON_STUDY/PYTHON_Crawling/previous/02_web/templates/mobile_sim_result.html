@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+      <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+      maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+      <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+      <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+      <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+      <title>MLAB MSTUV</title>
+      <!-- Bootstrap core CSS -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+      
+      <script src="/static/js/includeHTML.js"></script>
+      <script src="/static/js/includeRouter.js"></script>
+
+  </head>
+  <body>
+      <nav include-html="/static/html/nav.html">
+      </nav>
+      <h2>
+        <font size="3" color="#1a5aa8" font-weight: bold>
+          <center>태그기반 유사동영상 검색 모바일 시연</center>
+        </font>
+        </h2>
+
+        <main role="main">
+        <section class="jumbotron" 
+        style="color: #54efea; min-height: 10px" text-center>
+          <div class="container">
+            <center>
+            <font size="4" color="#3d0b5a" font-weight: bold>
+              <h2 class="jumbotron-heading">기준비디오</h2>    
+            </center>
+          </div>
+          <div style="display:inline" > 클릭시각: </div>
+          <div style="display:inline" id = "pre_min_str" data-min_str="{{ min_str }}"> {{min_str}} </div>
+          <div style="display:inline" > 분</div>
+          <div style="display:inline" id = "pre_sec_str" data-sec_str="{{ sec_str }}"> {{sec_str}} </div>
+          <div style="display:inline" > 초</div>
+          <div style="display:inline" > 완료시각: </div>
+          <div style="display:inline" id="now_min_prepend"> 분 </div>
+          <div style="display:inline" id="now_sec_prepend"> 초 </div>
+          <div style="display:inline" id="result"> 소요시간: </div>
+          <div style="display:inline" > 초</div>
+        
+  <!-- 기준비디오 VIDEO 정보 -->
+          <div id="wrap">
+          <!-- container -->
+          <div id="container">
+              <div class="video_list_wrap view">
+                  <div class="broadcast_area view">
+                      <div class="area_content">
+                          <div class="video-container">
+                              <div class="row">
+                  <h5 style="text-indent:10px;text-align: left">
+                  <iframe width="560" height="315" 
+                  src="https://www.youtube.com/embed/{{std_youtube_id}}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                  </iframe>
+                  </h5>
+                            </div>
+                        </div>
+            <!-- 동영상 정보 시작 -->
+            <!-- <div class="content_head view"></div>
+                <div class="card-body"> -->
+                <font size="2.5" color="#010b26" font-weight: bold>
+                <h6 class="card-text">{{std_title}}</h6>
+                <h6 class="card-text">동영상ID: {{std_video_id}}</h6>
+                </div>
+              </div>
+            </div>
+        </section>
+  {% if sim_video_cnt == 0 %}
+  유사 비디오가 없습니다.
+
+  {% else %}
+    <section class="jumbotron" text-center">
+      <center>
+      <div class="container">
+        <font size="4" color="#010b26" font-weight: bold>
+        <h2 class="jumbotron-heading">유사비디오</h2>
+      </div>
+      </center>
+
+  {% for item in sim_video_info %}
+
+  <!-- 유사비디오 VIDEO 정보 -->
+          <div id="wrap">
+          <!-- container -->
+          <div id="container">
+              <div class="video_list_wrap view">
+                  <div class="broadcast_area view">
+                      <div class="area_content">
+                          <div class="video-container">
+                              <div class="row">
+                  <p style="text-indent:10px;text-align: left">
+                  <iframe width="560" height="315"  src="https://www.youtube.com/embed/{{ item[0]}}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                  </iframe>
+                  </p>
+                            </div>
+                        </div>
+            <!-- 동영상 정보 시작 -->
+              <!-- <p style="text-indent:10px"></p>
+                <div class="card-body">-->
+                <!--<font size="2.5" color="#010b26" font-weight: bold>-->
+                <h6 class="card-text">{{ item[1] }}</h6>
+                <h6 class="card-text">동영상ID: {{ item[3] }}</h6>
+                <h6 class="card-text">유사도: {{ item[2] }}</h6>
+                </div>
+              </div>
+            </div><hr>
+
+  {% endfor %}
+  {% endif %}
+    </section>
+    </main>
+  </body>
+  <script>
+    includeHTML( function () {
+      includeRouter( function () {
+        // do something in the future
+      });
+    });
+ 
+    var today = new Date()
+    var now_min_val = today.getMinutes();
+    var now_sec_val = today.getSeconds();
+
+    var pre_min_val = document.querySelector('#pre_min_str').dataset["min_str"]
+    var pre_sec_val = document.querySelector('#pre_sec_str').dataset["sec_str"]
+    var pre_min_int = parseInt(pre_min_val)
+    var pre_sec_int = parseInt(pre_sec_val)
+
+    var est_time = (now_min_val * 60 + now_sec_val) - (pre_min_int * 60 + pre_sec_int)
+    console.log(pre_min_int);
+    console.log(pre_sec_int);
+    console.log(now_min_val);
+    console.log(now_sec_val);
+    console.log(est_time);
+    document.getElementById("result").append(est_time)
+    document.getElementById("now_min_prepend").prepend(now_min_val)
+    document.getElementById("now_sec_prepend").prepend(now_sec_val)
+    </script>
+  </html>

@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <title>MLAB MSTUV</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+
+<!-- DROP DOWN MENU BAR 만들기 -->
+<style type="text/css">
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  
+  /*body 초기화*/
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(90deg, #051937, #004d7a, #218d97, #004d7a, #051937);
+  }
+  nav ul {
+      position:relative;
+    }
+  nav li {
+    position:relative;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+  
+  #main-menu > li {
+    float: left;
+    position: relative;
+  }
+  
+  #main-menu > li > a {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: block;
+    padding: 14px 36px;
+    border-right: 1px solid rgba(0,0,0,0.15);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    width:300px;
+    position: relative;
+    font-weight:bold;
+
+  }
+  
+  #main-menu > li:nth-child(1) > a {
+    border-left: 1px solid rgba(0,0,0,0.15);
+
+  }
+  
+  #sub-menu {
+    position: absolute;
+    background: #182952;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.10s ease-in;
+    width:300px;
+    font-size: 16px;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  #sub-menu > li {
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    width:300px;
+    position:relative;
+  }
+  
+  #sub-menu > li >  a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+  }
+  
+  #main-menu > li:hover #sub-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #sub-menu > li >  a:hover {
+   text-decoration: underline;
+   position:relative;
+  }
+  div.container{
+    color: #334a72;
+  }
+
+  div, ul, li { 
+    margin:0; 
+    padding:0;
+    position:relative;
+    }
+      a.id {
+        background: #f6f6f6;
+        margin-left: 0px;
+        color:#200f5f;
+        font-size:16px;
+        padding:8px 12px;
+        border-radius:3px;
+        height:40
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+        text-decoration:none;
+        display: inline-block;
+        width: 420px;
+        fonr-color: 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+      #outside {
+        background-color: lightgoldenrodyellow;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: capitalize;
+      }
+      form {
+        /* Just to center the form on the page */
+        margin: 0 auto;
+        width: 100%;
+        /* To see the limits of the form */
+        padding: 0em;
+        border: 0px solid rgb(252, 252, 250);
+        border-radius: 0.5em;
+        text-indent:0px;
+      }
+      #survey-form {
+        background-color: #f3edb8;
+      }
+      fieldset {
+        border:1px solid #f5f3f3;
+        margin: 0em;
+        padding: 1em;
+        min-width: 80%;
+        text-align: left;
+        vertical-align: top;
+        border-radius: 1.0em;
+        background: #f6f6f6;
+        font-size: 14.5px;
+      }
+      legend {
+        font-weight: 700;
+      }
+      #number {
+        width: 150px;
+      }
+      div + div {
+        margin-top: 0em;
+      }
+      /* label {
+        /* To make sure that all label have the same size and are properly align */
+        /* display: inline-block; */
+        /* width: 80px; */
+        /* text-align: right; */
+      } */
+      input, textarea {
+        /* To make sure that all text field have the same font settings
+          By default, textarea are set with a monospace font */
+        /* font: 1em sans-serif; */
+  
+        /* To give the same size to all text field */
+        width: 200px;
+      /*   -moz-box-sizing: border-box;
+            box-sizing: border-box; */
+  
+        /* To harmonize the look & feel of text field border */
+        border: 1px solid #999;
+      }
+      input:focus, textarea:focus {
+        /* To give a little highligh on active elements */
+        border-color: OrangeRed;
+      }
+      textarea {
+        /* To properly align multiline text field with their label */
+        vertical-align: top;
+        /* To give enough room to type some text */
+        height: 5em;
+        /* To allow users to resize any textarea vertically
+          It works only on Chrome, Firefox and Safari */
+        resize: vertical;
+      }
+  
+      button {
+        margin: .5em;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: #2b4f86;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 2
+      }
+      .submit {
+        margin: .5em;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: #2b4f86;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 2
+      }
+      #submitbutton {
+        display: flex;
+        justify-content: center;
+      }
+      h6 {
+        text-indent:10px;
+        text-align: left
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+      }
+      .video-container iframe,
+      .video-container object,
+      .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .entry-content img,
+      .entry-content iframe,
+      .entry-content object,
+      .entry-content embed {
+        max-width: 100%;
+      }
+      .card {
+        border-radius: 0 !important;
+        border: 0 none;
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+      .video_list_wrap .content_head .content_copy {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #6450c9;
+        line-height: 1.4em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+      .content_head .content_copy {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #6450c9;
+        line-height: 1.4em;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+     .iframe {
+      border: linear-gradient( to right, #a8eb12 #F6F6F6,#a8eb12, #a2b854);
+      background: linear-gradient( 90deg, #a8eb12 #00bf72, #F6F6F6, #a2b854);
+    }
+      .row {
+        display:table-row;
+        margin-left: 20%;
+      }
+      .cell {
+        border: 0px solid #fcfcfc;
+        display:table-cell;
+        width: 500px;
+        padding: 0px;
+        margin-left: 0.5;
+      }
+      #table1_copyright {
+        border: 1px
+        border: transparent;
+        cellpadding=1.5;
+        cellspacing=0.5;
+        background: #F6F6F6;
+        color:#ffffff;
+        font-size:16px;
+        padding:8px 12px;
+        border-radius:3px;
+        height:40
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+        text-decoration:none;
+        display: inline-block;
+        width: 600px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+      div {
+        border: 0px solid #bcbcbc;
+        }
+      #table2_sim, td{
+        width: 100%;
+        vertical-align: top;
+        text-align: left;
+      }
+      .table-row {
+        display: table-row;
+        }
+      .table-cell {
+        display: table-cell;
+        height: 150px;
+        }
+      .jb-top {
+        vertical-align: top;
+        }
+      .jb-middle {
+        vertical-align: middle;
+        }
+      .jb-bottom {
+        vertical-align: bottom;
+        }
+      input[type=submit]{
+        background-color: #2b4f86;
+        border: 2px;
+        border-color: #00ffc4;
+        color: white;
+        text-decoration: none;
+      }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+      }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .entry-content img,
+    .entry-content iframe,
+    .entry-content object,
+    .entry-content embed {
+       max-width: 100%;
+    }
+    input[type=hidden]{
+      background-color: #318448;
+      border: none;
+      color: white;
+      text-decoration: none;
+      text-indent:20px;
+    }
+    input[type=text]{
+      text-align: center;
+    }
+    .first {
+      border: 0px solid #fcfcfc;
+      float: left;
+      margin-left: 10%;
+    }
+    .second{
+      border: none;
+      float: right;
+      margin-right: 10%;
+    }
+    iframe {
+      border: linear-gradient( to right, #a8eb12 #F6F6F6,#a8eb12, #a2b854);
+      background: linear-gradient( 90deg, #a8eb12 #00bf72, #F6F6F6, #a2b854);
+    }
+    .card-text {
+      text-indent:0px;
+      word-break: break-all;
+    }
+    .card {
+      border-radius: 0 !important;
+      border: 0 none;
+      -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    button[type=submit]{
+      background-color: #0d6ff0af;
+      border: 1px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px ;
+    }
+    body {
+      font-family: "Malgun Gothic", serif;
+      background-repeat: no-repeat;
+      background-size : cover ;
+      background-image: url("/static/img/mlab_inc.jpg");
+      padding-top: 10px;
+      /* 생략 */
+    }
+    }
+    .jumbotron {
+      color: #f2f3f5;
+      background: #334a72;
+      margin-top: 0px;
+      font-weight: bold; 
+      font-family: "Malgun Gothic", serif;
+      min-height: 0.1px;
+      width: 100%;
+      padding-top: 0.5px;
+      padding-bottom: 0.5px;
+      text-emphasis-color: #334a72;
+    }
+    .jumbotron-heading {
+      color:  #334a72;
+      background: #f2f3f5;
+      margin-top: 0px;
+      font-weight: bold; 
+      font-family: "Malgun Gothic", serif;
+      min-height: 0.1px;
+      width: 100%;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      text-emphasis-color: #334a72;
+    }
+    th.card-text{
+      vertical-align: top;
+      text-align: left;
+    }
+    .card-text{
+      vertical-align: top;
+      text-align: left;
+      font-weight: bold;
+      color: #09162d;
+    }
+    p {
+      color:  #09162d;
+      font-weight: bold; 
+      font-family: "Malgun Gothic", serif;
+      text-emphasis-color: #334a72;
+    }
+
+
+  </style>
+
+<nav role="navigation">
+  <ul id="main-menu">
+    <li><a
+      href="/"
+      route-link="/static/html/articles/section1.html">
+      HOME
+    </a>
+</li>
+    <li><a
+      href="#"
+      route-link="/static/html/articles/section2.html">
+      웹
+    </a>
+      <ul id="sub-menu">
+        <li><a href="/web_search_similar_video">01. 태그기반 유사동영상 검색</a></li>
+        <li><a href="/copyright_home">02. 불법/유사 콘텐츠 검색</a></li>
+        <li><a href="/wordcloud_img">03. 빅데이터 가시화</a></li>
+        <li><a href="/user_sim_survey">04. 사용자 설문조사</a></li>
+      </ul>
+    </li>
+    <li>    <a
+      href="#"
+      route-link="/static/html/articles/section3.html"
+    >
+      모바일
+    </a>
+      <ul id="sub-menu">
+        <li><a href="/mobile_search_similar_notime">01. 태그기반 유사동영상 검색(미측정)</a></li>
+        <li><a href="http://web.mstuv.com:81/home">02. 동영상-상품 매칭</a></li>
+        <li><a href="/mobile_search_similar_video">03. 태그기반 유사동영상 검색(속도측정)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+      <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+      <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+      <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+      <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+      <meta name="description" content="The Overflowing church website's main page" />
+      <meta name="author" content="unikys@gmail.com" />
+      <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+      <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+      <title>
+        M.LAB Presentation
+      </title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+      
+      <script src="/static/js/includeHTML.js"></script>
+      <script src="/static/js/includeRouter.js"></script>
+      
+</head>
+<body>
+    <center>
+      <nav include-html="/static/html/nav.html">
+      </nav>
+      <br>
+      <font size="6" color="white" font-weight: bold>
+        <br>
+        <h1>유사 콘텐츠 검색 및 태그 정보 자동 구축 기술</h1>
+        <!--일단 놔두고-->
+        <br>
+        <br>
+        <section class="jumbotron">
+            <div class="container">
+            <h4 class="jumbotron-heading" style="text-align: center">
+            유사 동영상이 없습니다. 뒤로 돌아가세요.
+            </h4>
+            <SCRIPT language="javaScript">
+                function goBack(){
+                    window.history.back();
+                }
+            </SCRIPT>
+            <input type = 'button' value='뒤로가기' onclick="goBack();" />
+        <!--기존에 있던 index.html양식 가져와서 뒤로가기 버튼 추가.-->
+        
+            </div>
+        </section>
+          <br>
+          <img src=
+          {{ url_for('static', filename="./img/wordcloud.png")}} 
+          style="width:60%; border-radius: 1.8em;">
+
+    <!-- <A HREF = "menu_bar">태그기반 유사 동영상 검색 <br>WEB Version</A>
+    <br><br>
+    <A HREF = "mobile">태그기반 유사 동영상 검색 <br>MOBILE</A>
+    <br>-->
+    <br><font size="5" color="#284c8a" font-weight: bold>
+    <!--
+        <A HREF = "http://www.google.com/">Google Search Engine</A>
+        -->
+</body>
+    <script>
+      includeHTML( function () {
+        includeRouter( function () {
+          // do something in the future
+        });
+      });
+    </script>
+</html>
