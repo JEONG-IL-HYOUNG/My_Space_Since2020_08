@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout06</title>
+    <style>
+        * {margin: 0; padding: 0;} /*약식으로 전체선택자를 이용해서 여백부분 처리 모든 태그는 약간의 테두리를 가지고있다?*/
+        /*실무에서는 전체선택자를 사용하지 않음*/
+        #wrap {width: 100%; color: #fff; font-size: 30px; text-align: center; text-transform: uppercase;}
+        #header-wrap {width: 100%; background-color: #8d6e63; }/*가로 전체를 다쓸거라 100%*/
+        #banner-wrap {width: 100%; background-color: #a1887f;}/*width 100이 기본이라 안써도 됨*/
+        #content-wrap {width: 100%; background-color: #bcaaa4;}/*height값은 자식한테 있으니까 부모는 안써도 된다.*/
+        #footer-wrap {width: 100%; background-color: #d7ccc8;}
+
+        .header-container {width: 1000px; margin: 0 auto; height: 100px; line-height: 100px; background-color: #3e2723;}
+        .banner-container {width: 1000px; margin: 0 auto; height: 300px; line-height: 300px; background-color: #4e342e;}
+        .content-container {width: 1000px; margin: 0 auto; height: 500px; line-height: 500px; background-color: #5d4037;}
+        .footer-container {width: 1000px; margin: 0 auto; height: 100px; line-height: 100px; background-color: #6d4c41;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header-wrap"><!--전체영역 표시할거라 wrap이라고 이름 지었음. html은 DOM구조라 상하 관계가 딱딱 맞아야함.-->
+            <div class="header-container">header</div><!--컨테이너는 가운데 영역? 이라고 생각해두자.-->
+        </div>
+        <div id="banner-wrap">
+            <div class="banner-container">banner</div>
+        </div>
+        <div id="content-wrap">
+            <div class="content-container">content</div>
+        </div>
+        <div id="footer-wrap">
+            <div class="footer-container">footer</div>
+        </div>
+    </div>
+</body>
+</html>
