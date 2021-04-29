@@ -1,0 +1,41 @@
+<!--  
+  Prioritize One Style Over Another
+Sometimes your HTML elements will receive multiple styles that conflict with one another.
+
+For example, your h1 element can't be both green and pink at the same time.
+
+Let's see what happens when we create a class that makes text pink, then apply it to an element. 
+Will our class override the body element's color: green; CSS property?
+
+  한 스타일보다 다른 스타일 우선 순위 지정
+HTML 요소에는 서로 충돌하는 여러 스타일이 수신되는 경우가 있습니다.
+
+예를 들어, h1 요소는 녹색과 분홍색을 동시에 사용할 수 없습니다.
+
+텍스트를 분홍색으로 만드는 클래스를 만든 다음 요소에 적용하면 어떻게 되는지 살펴보겠습니다. 
+우리 클래스가 본문 요소의 색상인 녹색; CSS 속성을 재정의할까요?
+-->
+
+<!--  
+Create a CSS class called pink-text that gives an element the color pink.
+
+Give your h1 element the class of pink-text.
+
+Your h1 element should have the class pink-text.
+
+Your <style> should have a pink-text CSS class that changes the color.
+
+Your h1 element should be pink.
+-->
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text{
+    color:pink;
+  }
+</style>
+<h1 class="pink-text">Hello World!</h1>

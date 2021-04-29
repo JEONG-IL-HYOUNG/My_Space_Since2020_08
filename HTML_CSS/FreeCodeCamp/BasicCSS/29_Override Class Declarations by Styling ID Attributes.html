@@ -1,0 +1,67 @@
+<!--  
+  Override Class Declarations by Styling ID Attributes
+We just proved that browsers read CSS from top to bottom in order of their declaration. 
+That means that, in the event of a conflict, the browser will use whichever CSS declaration came last. 
+Notice that if we even had put blue-text before pink-text in our h1 element's classes, 
+it would still look at the declaration order and not the order of their use!
+
+But we're not done yet. There are other ways that you can override CSS. Do you remember id attributes?
+
+Let's override your pink-text and blue-text classes, 
+and make your h1 element orange, by giving the h1 element an id and then styling that id.
+
+ID 특성을 스타일링하여 클래스 선언 재정의
+우리는 단지 브라우저가 선언의 순서에 따라 CSS를 위에서 아래로 읽는다는 것을 증명했다.
+즉, 충돌이 발생할 경우 브라우저는 마지막으로 CSS 선언을 사용하게 됩니다.
+만약 우리가 h1 요소의 수업에서 핑크색 텍스트보다 파란색 텍스트를 먼저 썼다면,
+그것은 여전히 선언 순서를 바라볼 것이고, 그들의 사용 순서를 바라볼 것이다!
+
+하지만 우린 아직 끝나지 않았어. CSS를 재정의할 수 있는 다른 방법이 있습니다. id 속성을 기억하십니까?
+
+핑크 텍스트와 블루 텍스트 클래스를 재정의해 보겠습니다.
+그리고 h1 요소를 id를 주고 그 id를 스타일링해서 당신의 h1 요소를 주황색으로 만드세요.
+-->
+
+<!--  
+Give your h1 element the id attribute of orange-text. Remember, id styles look like this:
+
+<h1 id="orange-text">
+Leave the blue-text and pink-text classes on your h1 element.
+
+Create a CSS declaration for your orange-text id in your style element. Here's an example of what this looks like:
+#brown-text {
+  color: brown;
+}
+Note: It doesn't matter whether you declare this CSS above or below pink-text class, since the id attribute will always take precedence.
+Your h1 element should have the class pink-text.
+
+Your h1 element should have the class blue-text.
+
+Your h1 element should have the id of orange-text.
+
+There should be only one h1 element.
+
+Your orange-text id should have a CSS declaration.
+
+Your h1 should not have any style attributes.
+
+Your h1 element should be orange.
+-->
+
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+  #orange-text{
+    color:orange;
+  }
+</style>
+<h1 class="pink-text blue-text" id="orange-text">Hello World!</h1>

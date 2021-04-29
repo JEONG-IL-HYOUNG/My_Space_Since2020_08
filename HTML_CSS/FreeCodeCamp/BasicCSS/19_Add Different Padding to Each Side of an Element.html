@@ -1,0 +1,65 @@
+<!--  
+    Add Different Padding to Each Side of an Element
+Sometimes you will want to customize an element so that it has different amounts of padding on each of its sides.
+
+CSS allows you to control the padding of all four individual sides of an element with the padding-top, padding-right, padding-bottom, 
+and padding-left properties.
+
+요소의 각 측면에 다른 패딩 추가
+때때로 요소를 사용자 정의하여 각 측면에 서로 다른 양의 패딩이 있도록 할 수 있습니다.
+
+CSS를 사용하면 패딩-톱, 패딩-오른쪽, 패딩-바텀 및 패딩-왼쪽 속성을 사용하여 요소의 네 개별 측면의 패딩을 모두 제어할 수 있습니다.
+-->
+<!--  
+Give the blue box a padding of 40px on its top and left side, but only 20px on its bottom and right side.
+Your blue-box class should give the top of the elements 40px of padding.
+
+Your blue-box class should give the right of the elements 20px of padding.
+
+Your blue-box class should give the bottom of the elements 20px of padding.
+
+Your blue-box class should give the left of the elements 40px of padding.    
+-->
+
+<style>
+    .injected-text {
+      margin-bottom: -25px;
+      text-align: center;
+    }
+  
+    .box {
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      text-align: center;
+    }
+  
+    .yellow-box {
+      background-color: yellow;
+      padding: 10px;
+    }
+  
+    .red-box {
+      background-color: crimson;
+      color: #fff;
+      padding-top: 40px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+    }
+  
+    .blue-box {
+      background-color: blue;
+      color: #fff;
+      padding-top: 40px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+    }
+  </style>
+  <h5 class="injected-text">margin</h5>
+  
+  <div class="box yellow-box">
+    <h5 class="box red-box">padding</h5>
+    <h5 class="box blue-box">padding</h5>
+  </div>
