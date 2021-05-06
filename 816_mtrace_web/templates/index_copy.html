@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="text-center py-5 px-3">
+        <br>
+        <br>
+        <br>
+        {{tst}}
+        <h1>#100</h1>
+        <h1>유사 영상 검색 및 분석</h1>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--로그인 상태일때와 비로그인 상태일때 form으로 넘겨주는 페이지가 다름-->
+        <form action="{{ url_for('analysis.search_main') }}", method="post">
+            <p>유튜브 영상검색
+                <input type="text" name="video_url" >
+                <input type="submit" value="검색">
+            </p>
+         </form>
+
+{#        <table class="table border-primary" width ="1300" height="315" align = "center" >#}
+{#            <div class="row">#}
+{#                <td class="col-md-6"rowspan="4" align = "center" >#}
+{#                    <iframe width="460" height="315" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1"#}
+{#                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>#}
+{##}
+{#                    </iframe>#}
+{#                </td>#}
+{#                <td class="col-md-6">타이틀</td>#}
+{#                <td>{{ccc}}</td>#}
+{#            </div>#}
+{#        </table>#}
+
+
+        <!--    {% if not g.user %}disabled{% endif %}-->
+        <br>
+        {% if aaa %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="card">
+                            <iframe width="560" height="415" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="card">
+                            <form action="{{ url_for('analysis.go_work') }}">
+                                <input type="submit" name="gogo" value="분석">
+                            </form>
+                            타이틀::  {{ccc}} <br>
+                            URL::   {{aaa}} <br>
+                            조회수::   {{bbb}} <br>
+                            키워드::   {{ddd}} <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+{% endblock %}

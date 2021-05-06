@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New_work</title>
+    <style>
+        /* 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            width: 100%;
+            height: 48px;
+            background-color: #ffffff;
+        }
+
+        .header div {
+            display: inline-block;
+        }
+
+        #logo_s {
+            width: 158px;
+            height: 40px;
+            margin: 5px;
+        }
+
+        #wk_btn {
+            width: 96px;
+            height: 36px;
+            float: right;
+            border-radius: 100px;
+            border: solid 2px #505050;
+            background-color: white;
+            text-align: center;
+            margin-right: 20px;
+            margin-top: 3px;
+        }
+
+        #wk_text {
+            margin: 7px auto;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: center;
+            color: #555555;
+        }
+
+        #logout_btn {
+            width: 96px;
+            height: 36px;
+            float: right;
+            border-radius: 100px;
+            border: solid 2px #505050;
+            background-color: #505050;
+            text-align: center;
+            margin-right: 20px;
+            margin-top: 3px;
+        }
+
+        #logout_text {
+            margin: 7px auto;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+        }
+
+
+        #cont {
+            width: 600px;
+            height: 825px;
+            background-color: white;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        #cont_top {
+            width: 500px;
+            height: 765px;
+            padding: 50px 50px 20px 50px;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        #top_1 {
+            background-color: white;
+            height: 40px;
+            margin: 0 0 20px 0;
+            font-family: NotoSansCJKKR;
+            font-size: 40px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #505050;
+        }
+        #top_2 {
+            background-color: white;
+            height: 16px;
+            margin: 0 0 50px 0;
+            font-family: NotoSansCJKKR;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #505050;
+        }
+        #top_3 {
+            background-color: #ffffff;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            height: 46px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #505050;
+            margin-bottom: 50px;
+        }
+        #top3_1{
+            top: 0px;
+            left: 10px;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+
+        }
+        input[type=text] {
+            width: 450px;
+            height: 20px;
+            border: none;
+            border-bottom: 1px solid #c4c4c4;
+            vertical-align: bottom;
+            font-size: 18px;
+            padding-top: 15px;
+            padding-left: 25px;
+        }
+        #top_4{
+            font-family: NotoSansCJKKR;
+            font-size: 20px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #505050;
+            margin-bottom: 30px;
+        }
+        #top_5{
+            background-color: #ffffff;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            height: 46px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #505050;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        #top_6_0{
+            direction: rtl;
+            margin-bottom: 20px;
+        }
+        #top_6{
+            width: 100px;
+            height: 40px;
+            border-radius: 100px;
+            border: solid 2px #505050;
+            background-color: #505050;
+            text-align: center;
+            margin-right: 20px;
+            margin-top: 2px;
+        }
+        #top_6_1{
+            margin: 7px auto;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            margin: 11px;
+        }
+        input[type=text]:focus{outline: none;}
+        input[type=submit]{
+            width: 100px;  height: 40px;   border-radius: 100px;
+            border: solid 2px #505050; background-color: #505050;  font-size: 16px;  font-weight: 500;  font-stretch: normal;  font-style: normal;
+            line-height: 1; letter-spacing: normal;  text-align: center;  color: #ffffff;
+        }
+        input[type=button]{
+            width: 100px;  height: 40px;   border-radius: 100px;
+            border: solid 2px #505050; background-color: #505050;  font-size: 16px;  font-weight: 500;  font-stretch: normal;  font-style: normal;
+            line-height: 1; letter-spacing: normal;  text-align: center;  color: #ffffff;
+        }
+        input[type=submit]:focus{outline: none;}
+        input[type=button]:focus{outline: none;}
+        #top_file{
+            background-color: #ffffff;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            height: 90px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: left;
+            color: #505050;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .fileBox .fileName {display:inline-block;width:465px;height:30px;padding-left:10px;line-height:30px;
+                            background-color:#fff;vertical-align:middle;border: none; border-bottom: 1px solid #c4c4c4;}
+        .fileBox .btn_file {display:inline-block; border:solid 2px #505050; width:100px;height:40px; font-size:16px; line-height:40px;text-align:center;vertical-align:middle;border-radius: 100px;
+            margin-top: 16px; float: right; margin-right: 20px; background-color: #505050; color: white;}
+        .fileBox input[type="file"] {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <a href="{{ url_for('main.index') }}">
+        <div id="logo_s">
+            <img src="/static/logo_s.png" alt="">
+        </div>
+    </a>
+    <a href="{{ url_for('auth.logout') }}">
+        <div id="logout_btn">
+            <div id="logout_text">Log out</div>
+        </div>
+    </a>
+    <a href="{{ url_for('analysis.my_analy_list') }}">
+        <div id="wk_btn">
+            <div id="wk_text">My_Works</div>
+        </div>
+    </a>
+</div>
+<div id="cont">
+    <div id="cont_top">
+        <div id="top_1">
+            신규작업생성
+        </div>
+        <div id="top_2">
+            영상등록 종류를 선택해주세요.
+        </div>
+
+
+
+
+{#  form      #}
+        <form action="{{url_for('analysis.make_work')}}" method="post" enctype="multipart/form-data">
+            <div id="top_3">
+                <span id="top_3_1">프로젝트 명</span>
+                <input type="text" name="work_nm">
+            </div>
+
+            <div id="top_4">
+                <input type="radio" name="foo" value="smov_id" checked="checked">
+                <span id="top_4_1">유튜브 등록</span>
+            </div>
+
+            <div id="top_5">
+                <span id="top_3_1">URL</span>
+                <input type="text" name="smov_id">
+            </div>
+
+            <div id="top_6_0">
+                <div id="top_6">
+                    <input type="button" value="URL 확인" onclick="url_test()">
+                </div>
+            </div>
+
+            <div id="top_4">
+                <input type="radio" name="foo" value="local_file">
+                <span id="top_4_1">영상 업로드</span>
+            </div>
+            <div id="top_file">
+                <div class="fileBox">
+                    <input type="text" class="fileName" readonly="readonly">
+                    <label for="uploadBtn" class="btn_file">찾아보기</label>
+                    <input type="file" id="uploadBtn" class="uploadBtn">
+                </div>
+            </div>
+
+
+            <div id="top_5">
+                <span id="top_3_1">영상 설명</span>
+                <input type="text" name="descript">
+            </div>
+            <div id="top_5">
+                <span id="top_3_1">키워드</span>
+                <input type="text" name="keyword">
+            </div>
+            {% for message in get_flashed_messages() %}
+                <div style="font-size: 1em; color:red; text-align: right">
+                    {{message}}
+                </div>
+            {% endfor %}
+            
+            <div id="top_6_0">
+                <div id="top_6">
+                    <input type="submit" value="저장">
+                </div>
+            </div>
+
+        </form>
+
+{#  /form     #}
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
+
+{% block endscript %}
+<script>
+    function url_test(){
+          var text_data = $('input[name=smov_id]').val();
+                $.ajax({
+                        type : 'POST',                                  <!--GET / POST-->
+                        url : "{{url_for('analysis.url_test')}}",
+                        data : {
+                                smov_id:text_data                       //<!-- key : "value" -->
+                        },
+                        dataType : 'JSON',
+                        success : function(result){
+                                alert("result = "+ result["status"]);
+                        },
+                        error : function(xtr,status,error){
+                                alert(xtr +":"+status+":"+error);
+                        }
+                });
+    }
+</script>
+
+    <script>
+            var uploadFile = $('.fileBox .uploadBtn');
+            uploadFile.on('change', function(){
+                if(window.FileReader){
+                    var filename = $(this)[0].files[0].name;
+                } else {
+                    var filename = $(this).val().split('/').pop().split('\\').pop();
+                }
+                $(this).siblings('.fileName').val(filename);
+            });
+
+        </script>
+
+{% endblock %}
+
+</body>
+
+</html>

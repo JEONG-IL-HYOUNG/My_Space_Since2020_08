@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="item-center py-5 px-3">
+        <br>
+        <br>
+        <br>
+        <h3>#200</h3>
+        <h3>나의 작업 목록</h3>
+        <p>각 작업의 프로젝트명을 클릭하면 상세 내용을 확인 할 수 있습니다.</p>
+        <br>
+        <div class="col-md-6">
+                <form action="{{url_for('analysis.new_work')}}" method="">
+                    <input type="submit" value="신규작업생성#400">
+                </form>
+        </div>
+        <br>
+
+        <table class="table">
+            <tr>
+                <td>아이디</td>
+                <td>생성일자</td>
+                <td>프로젝트명</td>
+                <td>진행상태</td>
+                <td>검색갯수</td>
+            </tr>
+            {% if my_analy_list1 %}
+                {% for x in my_analy_list1 %}
+                <tr>
+                    <td>{{x.work_id}}</td>
+                    <td>{{x.cdate}}</td>
+                    <td>
+{#                        여기 다시 공부#}
+                    <form id='form_{{x.work_id}}' action="{{url_for('analysis.my_detail_list')}}" method="post">
+<!--                    <td><a href="{{url_for('analysis.my_detail_list')}}">{{x.work_nm}}#300</a></td>-->
+<!--                        <td><input type="hidden">{{x.work_nm}}</td>-->
+                        <!--여기 밸류값을 UI-300에서 보여주는거임 중요함-->
+                        <input type="hidden" name="test" value="{{x.smov_id}}"/>
+                        <a href="javascript:onSubmit({{x.work_id}})">{{x.work_nm}}#{{x}}{{x.smov_id}}</a>
+                    </form>
+{#                        여기까지#}
+                    </td>
+                    <td>{{x.status}}</td>
+                    <td>-----</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+            <p>받아오는 게 없다..실패!</p>
+            {% endif %}
+        </table>
+    </div>
+</div>
+<script>
+function onSubmit(id){
+    document.getElementById('form_' + id).submit();
+}
+</script>
+
+{% endblock %}

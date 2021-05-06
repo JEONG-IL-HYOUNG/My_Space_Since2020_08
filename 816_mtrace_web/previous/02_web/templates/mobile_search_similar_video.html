@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name ="viewport", content="width=device-width", initial-scale="1.0", minimum-scale="1.0">
+    <meta http-equiv ="X-UA-Compatible", content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,
+    maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate"> <!--// cache가 되지 않도록 정의 -->
+    <meta http-equiv="expires" content="0"> <!--// cache 시간 정의 (0분) -->
+    <meta http-equiv="pragma" content="no-cache"> <!--// http 1.0 server의 cache control header 호환 -->
+    <title>MOBILE SEARCH</title>
+      <!-- Bootstrap core CSS -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+      
+      <script src="/static/js/includeHTML.js"></script>
+      <script src="/static/js/includeRouter.js"></script>
+
+ <body>
+   <center>
+      <nav include-html="/static/html/nav.html">
+      </nav>
+      <br>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <font size="6" font-weight: bold>
+          <h1 class="jumbotron-heading">태그기반 유사동영상 검색 모바일 시연</h1>
+          </div>
+      </section>
+
+          <font size="5" color="#f6f6f6" font-weight: bold>
+          <h1>기준 영상 검색</h1><br>
+          <!-- <p>Navigate the similar videos on MSTUV</p> -->
+          <form action="mobile_search_result" method="post" >
+                <input type="text" name="mobile_search_keyword"
+                      style="width:250; border:transparent">
+                      <input type="submit" value="검색" style="border:2px solid #2e94d7" >
+                <br>
+                <br>YouTube 영상 중 유사 동영상을 찾기 위한
+                <br>기준동영상을 검색어로 검색합니다
+            </form>
+  </body>
+  <script>
+    includeHTML( function () {
+      includeRouter( function () {
+        // do something in the future
+      });
+    });
+  </script>
+</html>

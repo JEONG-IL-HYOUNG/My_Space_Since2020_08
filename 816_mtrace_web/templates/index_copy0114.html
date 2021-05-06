@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid bg-light">
+        <div class="container bg-white">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4 pt-1">
+                        <a class="link-secondary" href="#">Subscribe</a>
+                    </div>
+                    <div class="col-4 text-center">
+                        <a class="blog-header-logo text-dark" href="#">Large</a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center">
+                        <a class="link-secondary" href="#" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+                        </a>
+                        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                    </div>
+                </div>
+            </header>
+
+            <section class="jumbotron">
+                <div class="container">
+                    <h1 class="jumbotron-heading">M_TRACE</h1>
+                </div>
+            </section>
+
+
+
+
+            <div class="border border-4 rounded-3 text-center  py-5 px-3">
+                <br>
+                <br>
+                <br>
+                {{tst}}
+                <h1>#100</h1>
+                <h1>M TRACE</h1>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <!--로그인 상태일때와 비로그인 상태일때 form으로 넘겨주는 페이지가 다름-->
+                <form action="{{ url_for('analysis.search_main') }}", method="post">
+                    <p>유튜브 영상검색
+                        <input type="text" name="video_url" >
+                        <input type="submit" value="검색">
+                    </p>
+                </form>
+
+                {#        <table class="table border-primary" width ="1300" height="315" align = "center" >#}
+                {#            <div class="row">#}
+                {#                <td class="col-md-6"rowspan="4" align = "center" >#}
+                {#                    <iframe width="460" height="315" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1"#}
+                {#                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>#}
+                {##}
+                {#                    </iframe>#}
+                {#                </td>#}
+                {#                <td class="col-md-6">타이틀</td>#}
+                {#                <td>{{ccc}}</td>#}
+                {#            </div>#}
+                {#        </table>#}
+
+
+                <!--    {% if not g.user %}disabled{% endif %}-->
+                <br>
+                {% if aaa %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div class="card">
+                                    <iframe width="560" height="415" src="https://www.youtube.com/embed/{{eee}}?autoplay=1&mute=1" frameborder="0"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="card">
+                                    <form action="{{ url_for('analysis.go_work') }}">
+                                        <input type="submit" name="gogo" value="분석">
+                                    </form>
+                                    타이틀::  {{ccc}} <br>
+                                    URL::   {{aaa}} <br>
+                                    조회수::   {{bbb}} <br>
+                                    키워드::   {{ddd}} <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
