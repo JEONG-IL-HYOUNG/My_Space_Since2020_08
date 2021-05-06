@@ -1,0 +1,64 @@
+<!--  
+  Change an Element's Relative Position
+ CSS treats each HTML element as its own box, which is usually referred to as the CSS Box Model. 
+ Block-level items automatically start on a new line (think headings, paragraphs, and divs)
+while inline items sit within surrounding content (like images or spans). 
+ The default layout of elements in this way is called the normal flow of a document, but CSS offers the position property to override it.
+
+ When the position of an element is set to relative, 
+it allows you to specify how CSS should move it relative to its current position in the normal flow of the page. 
+ It pairs with the CSS offset properties of left or right, and top or bottom. 
+ These say how many pixels, percentages, or ems to move the item away from where it is normally positioned. 
+ 요소의 상대 위치 변경
+CSS는 각 HTML 요소를 자신의 상자로 취급하며, 일반적으로 CSS 박스 모델이라고 부른다.
+블록 레벨 항목은 자동으로 새 줄에서 시작됩니다(생각 제목, 단락 및 점).
+인라인 항목은 이미지 또는 범위와 같은 주변 콘텐츠 내에 위치합니다.
+이러한 방식으로 요소의 기본 레이아웃을 문서의 일반 흐름이라고 하지만 CSS는 이를 재정의할 위치 속성을 제공합니다.
+
+요소의 위치가 상대적인 위치로 설정되면
+CSS가 페이지의 정상적인 흐름에서 현재 위치를 기준으로 CSS를 이동하는 방법을 지정할 수 있습니다.
+왼쪽 또는 오른쪽, 위쪽 또는 아래쪽의 CSS 오프셋 속성과 쌍을 이룹니다.
+항목이 정상적으로 배치되는 위치에서 멀리 이동할 픽셀, 백분율 또는 ems의 수를 나타냅니다.
+ The following example moves the paragraph 10 pixels away from the bottom:
+
+p {
+  position: relative;
+  bottom: 10px;
+}
+Changing an element's position to relative does not 
+remove it from the normal flow - other elements around it still behave as if that item were in its default position.
+
+Note: Positioning gives you a lot of flexibility and power over the visual layout of a page. 
+It's good to remember that no matter the position of elements, 
+the underlying HTML markup should be organized and make sense when read from top to bottom. 
+This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.
+요소의 위치를 상대 위치로 변경하지 않음
+일반 흐름에서 제거합니다. 주변의 다른 요소는 여전히 항목이 기본 위치에 있는 것처럼 작동합니다.
+
+참고: 위치를 지정하면 페이지의 시각적 레이아웃에 대한 유연성과 성능이 크게 향상됩니다.
+요소들의 위치에 상관 없이
+기초적인 HTML 마크업이 조직되어야 하고 위에서 아래로 읽었을 때 이치에 맞아야 한다.
+이렇게 하면 시각 장애가 있는 사용자(화면 판독기와 같은 보조 장치에 의존하는 사용자)가 콘텐츠에 액세스할 수 있습니다.
+-->
+
+<!--  
+Change the position of the h2 to relative, 
+and use a CSS offset to move it 15 pixels away from the top of where it sits in the normal flow. 
+Notice there is no impact on the positions of the surrounding h1 and p elements.
+
+The h2 element should have a position property set to relative.
+
+Your code should use a CSS offset to relatively position the h2 15px away from the top of where it normally sits.
+-->
+<style>
+  h2 {
+    position:relative;
+    top:15px;
+
+  }
+</style>
+<body>
+  <h1>On Being Well-Positioned</h1>
+  <h2>Move me!</h2>
+  <p>I still think the h2 is where it normally sits.</p>
+</body>
